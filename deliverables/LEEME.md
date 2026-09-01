@@ -89,7 +89,8 @@ Compartir el mismo repo (contiene el pipeline de mecanismo + fuentes).
       (`docs/decision_reads_no_analizados.md`).
 - [x] Veredicto médico del manejo clínico MVA1 (`consorcio/VERIFICACION_MANEJO_CLINICO.md`).
 - [ ] Track 2: **grabar el pitch de 3 min** y pegar la URL (YouTube/Vimeo) en la tab Submit-Track2.
-- [ ] Preparar el **GitHub repo público** con el código reproducible y pegar la URL en la tab de submit.
+- [x] **GitHub repo** creado y pusheado: `https://github.com/bestpricegye-ai/mva-hackathon-2026`
+      (privado; pegar la URL en la tab de submit — el LEEME recomienda hacerlo público al cierre).
 - [ ] Tras el evento: **borrar todos los datos locales** y confirmar a
       RarediseaserealkidMVAhackathon2026@synapse.org (regla de las 30 días).
 - [ ] Incluir la citación/acknowledgement oficial en cualquier publicación.
