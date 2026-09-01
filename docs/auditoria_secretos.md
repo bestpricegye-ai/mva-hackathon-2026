@@ -34,5 +34,11 @@
 ## Acciones registradas
 
 - [x] Escaneo working tree + historial (2026-09-01) — sin secretos versionados.
+- [x] **Re-verificación pre-publicación** (2026-09-01) con `src/auditar_repo.py` v2:
+  scan sobre **archivos trackeados** (los que se publicarían) + historial completo.
+  Resultado: `tree=0 history=0` (exit 0). Discriminación de PII real (contexto
+  identitario) para evitar falsos positivos de coordenadas genómicas, rsIDs, PMIDs,
+  HPO/OMIM y IDs de fármacos.
+- [ ] Hacer repo público al cierre del evento (`gh repo edit --visibility public`).
 - [ ] Rotar token GitHub `ghp_*` al cierre.
 - [ ] (Opcional) Rotar `HF_TOKEN` local en `.env`.
