@@ -1,0 +1,97 @@
+{
+  "schema": "fase6_elegibilidad_v1",
+  "proband_id": "PROBAND01",
+  "target": "BUB1B / MVA1 (OMIM 257300)",
+  "nivel": "ALTA",
+  "score_total": 95.0,
+  "criterios": [
+    {
+      "id": "E1",
+      "criterio": "Monogenicia",
+      "peso": 15,
+      "score": 2.0,
+      "contribucion": 15.0,
+      "evidencia": [
+        "gen causal unico: ['BUB1B']",
+        "excluidos CEP57([0]) TRIP13([0])"
+      ]
+    },
+    {
+      "id": "E2",
+      "criterio": "Herencia",
+      "peso": 10,
+      "score": 2.0,
+      "contribucion": 10.0,
+      "evidencia": [
+        "caveat: segregacion parental pendiente",
+        "soporte HPO: ['miscarriage', 'recurrent']",
+        "mecanismo: compound-heterozygous (biallelic, in-trans) BUB1B loss of function"
+      ]
+    },
+    {
+      "id": "E3",
+      "criterio": "Mecanismo molecular (SNV)",
+      "peso": 20,
+      "score": 2.0,
+      "contribucion": 20.0,
+      "evidencia": [
+        "chr15:40209701 T>G SNV",
+        "chr15:40220612 T>G SNV"
+      ]
+    },
+    {
+      "id": "E4",
+      "criterio": "Funcion-perdida (restauracion)",
+      "peso": 20,
+      "score": 2.0,
+      "contribucion": 20.0,
+      "evidencia": [
+        "ACMG: Pathogenic + Likely Pathogenic",
+        "mecanismo: compound-heterozygous (biallelic, in-trans) BUB1B loss of function"
+      ]
+    },
+    {
+      "id": "E5",
+      "criterio": "Tejido diana",
+      "peso": 10,
+      "score": 1.5,
+      "contribucion": 7.5,
+      "evidencia": [
+        "soporte HPO tejido: ['rhabdo', 'sarcoma', 'nephro']",
+        "HSC objetivo ex-vivo; afectacion multiorganica = reto sistemico"
+      ]
+    },
+    {
+      "id": "E6",
+      "criterio": "Severidad / unmet need",
+      "peso": 15,
+      "score": 2.0,
+      "contribucion": 15.0,
+      "evidencia": [
+        "soporte HPO severidad: ['rhabdo', 'sarcoma', 'stature', 'thrive', 'muscle']",
+        "sin tratamiento establecido (literatura: manejo sintomatico)"
+      ]
+    },
+    {
+      "id": "E7",
+      "criterio": "Ventana pediatrica",
+      "peso": 10,
+      "score": 1.5,
+      "contribucion": 7.5,
+      "evidencia": [
+        "soporte HPO ventana: ['prematur', 'birth weight', 'low birth']"
+      ]
+    }
+  ],
+  "traits_hpo": [
+    "Rhabdomyosarcoma",
+    "Nephrocalcinosis present since birth",
+    "Short stature",
+    "Failure to thrive",
+    "Low muscle mass",
+    "Prematurity (32 weeks)",
+    "Very low birth weight (~1 kg)",
+    "Recurrent miscarriages (parents)"
+  ],
+  "nota": "Cruce historia clinica (HPO) + genotipo VCF vs criterios Zhang (Fase 6)."
+}
