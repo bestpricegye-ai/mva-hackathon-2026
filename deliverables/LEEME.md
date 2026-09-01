@@ -1,4 +1,4 @@
-# Entregables — MVA Hackathon 2026 (byronzunigao)
+?# Entregables — MVA Hackathon 2026 (byronzunigao)
 
 Esta carpeta reúne los entregables según los formatos solicitados por el challenge.
 Revisión completa de las pestañas: Overview, Leaderboard, Submit-Track1, Submit-Track2, FAQ, Official Rules.
@@ -88,7 +88,7 @@ Compartir el mismo repo (contiene el pipeline de mecanismo + fuentes).
       (`docs/verificacion_dirigida_vcf.md`) y registro de decisión sobre reads
       (`docs/decision_reads_no_analizados.md`).
 - [x] Veredicto médico del manejo clínico MVA1 (`consorcio/VERIFICACION_MANEJO_CLINICO.md`).
-- [ ] Track 2: **grabar el pitch de 3 min** y pegar la URL (YouTube/Vimeo) en la tab Submit-Track2.
+- [x] Track 2: **pitch grabado** (`track2/pitch_byronzunigao.mp4`, 3:01) — **falta pegar la URL** (YouTube/Vimeo) en la tab Submit-Track2.
 - [x] **GitHub repo** creado y pusheado: `https://github.com/bestpricegye-ai/mva-hackathon-2026`
       (privado; pegar la URL en la tab de submit — el LEEME recomienda hacerlo público al cierre).
 - [ ] Tras el evento: **borrar todos los datos locales** y confirmar a
@@ -104,3 +104,4 @@ Track 1 es un track *fundacional* (así lo declara la FAQ): el score satura al i
 causal. Nuestro CSV **también alcanza 100/1.000**, por lo que **empatamos** con los top en el score
 automático. La diferenciación real se decide en el **methods write-up** (rigor, innovación, escalabilidad)
 por el panel de jueces — de ahí la importancia del reporte alineado al template.
+
