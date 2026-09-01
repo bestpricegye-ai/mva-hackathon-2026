@@ -1,11 +1,11 @@
 ﻿# FASE 2 - Paso 1: Hard Filtering + recopilacion de variantes exonicas sobre union de paneles
-import gzip, io, json
-VCF=r'C:\starquake\hackathonmva\WGS_EX2312012_HGWCNDSX7.vcf.gz'
+import gzip, io, json, os
+from config import VCF, resolve_panel, ROOT, RESULTS_DIR
+
 def loadj(f):
-    import os
     return json.load(open(f,encoding='utf-8')) if os.path.exists(f) else {}
 # union de paneles
-panels={'MVA':None,'SAC':loadj('_panel_sac.json'),'panel2':loadj('_panel2.json'),'ACMG':loadj('_acmg_exons.json')}
+panels={'MVA':None,'SAC':loadj(resolve_panel('sac')),'panel2':loadj(resolve_panel('panel2')),'ACMG':loadj(resolve_panel('acmg'))}
 lookup={}  # chrom -> [(start,end,gene,panel)]
 for pname,p in panels.items():
     if not p: continue
@@ -59,7 +59,7 @@ with gzip.open(VCF,'rt') as f:
 print('=== HARD FILTERING ===')
 for k,v in stats.items(): print('  %s: %d'%(k,v))
 print('  genes con supervivientes:',len(results))
-json.dump(results,open('_fase2_variants.json','w',encoding='utf-8'))
+json.dump(results,open(os.path.join(RESULTS_DIR,'fase2_hardfilter_variants.json'),'w',encoding='utf-8'))
 # resumen por gen
 tot=sum(len(v) for v in results.values())
 print('  total variantes supervivientes (por gen):',tot)

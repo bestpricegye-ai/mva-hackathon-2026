@@ -1,7 +1,7 @@
 import gzip, io, json
+from config import VCF, resolve_panel, resolve_output
 
-VCF = r'C:\starquake\hackathonmva\WGS_EX2312012_HGWCNDSX7.vcf.gz'
-PANEL = json.load(open(r'C:\starquake\hackathonmva\_panel_sac.json', encoding='utf-8'))
+PANEL = json.load(open(resolve_panel('sac'), encoding='utf-8'))
 
 # build lookup: (chrom -> [(start,end,gene)])
 lookup = {}
@@ -45,5 +45,5 @@ for g in sorted(results):
     for r in v:
         out.write("  chr=x pos=%d %s>%s GT=%s AD=%s DP=%s FILTER=%s Q=%s\n"%(r['pos'],r['ref'],r['alt'],r['gt'],r['ad'],r['dp'],r['filter'],r['qual']))
 out.write("\n\nTOTAL variantes exonicas en panel SAC (excl. MVA core): %d\n"%total)
-open(r'C:\starquake\hackathonmva\vcf_sac_panel_variants.txt','w',encoding='utf-8').write(out.getvalue())
+open(resolve_output('vcf_sac_panel_variants.txt'),'w',encoding='utf-8').write(out.getvalue())
 print(out.getvalue())

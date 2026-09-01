@@ -1,6 +1,8 @@
 ﻿import gzip, io, json
-VCF=r'C:\starquake\hackathonmva\WGS_EX2312012_HGWCNDSX7.vcf.gz'
-PANEL=json.load(open(r'C:\starquake\hackathonmva\_acmg_exons.json',encoding='utf-8'))
+from config import VCF, resolve_panel, resolve_output
+
+VCF  # noqa: F841 (path used for reproducibility, kept in config)
+PANEL=json.load(open(resolve_panel('acmg'),encoding='utf-8'))
 lookup={}
 for gene,info in PANEL.items():
     ch=info.get('chr')
@@ -40,7 +42,7 @@ out.write("\n\nTOTAL variantes exonicas en genes ACMG: %d (en %d genes)\n"%(tota
 out.write("\n# CANDIDATOS RAROS/INDELS por gen (para anotacion gnomAD):\n")
 for g,rr in sorted(cand.items()):
     for r in rr: out.write("%s\t%s:%d\t%s>%s\tGT=%s\n"%(g,g,r['pos'],r['ref'],r['alt'],r['gt']))
-open(r'C:\starquake\hackathonmva\vcf_acmg_scan.txt','w',encoding='utf-8').write(out.getvalue())
+open(resolve_output('vcf_acmg_scan.txt'),'w',encoding='utf-8').write(out.getvalue())
 print("variantes en genes ACMG:",total_in,"en",len(results),"genes")
 print("genes con candidatos raros/indels:",list(cand.keys()))
 print("total candidatos:",sum(len(v) for v in cand.values()))

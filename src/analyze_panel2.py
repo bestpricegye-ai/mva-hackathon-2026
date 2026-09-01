@@ -1,7 +1,7 @@
 import gzip, io, json
+from config import VCF, resolve_panel, resolve_output
 
-VCF = r'C:\starquake\hackathonmva\WGS_EX2312012_HGWCNDSX7.vcf.gz'
-PANEL = json.load(open(r'C:\starquake\hackathonmva\_panel2.json', encoding='utf-8'))
+PANEL = json.load(open(resolve_panel('panel2'), encoding='utf-8'))
 
 lookup = {}
 for gene, info in PANEL.items():
@@ -43,5 +43,5 @@ for g in sorted(results):
         marca = " <== CANDIDATO(RARO)" if (r['gt']=='1/1' or len(r['ref'])!=len(r['alt']) or r['gt']=='.') else ""
         out.write("   chr%s:%d %s>%s GT=%s AD=%s DP=%s%s\n" % (g, r['pos'], r['ref'], r['alt'], r['gt'], r['ad'], r['dp'], marca))
 out.write("\n\nTOTAL variantes exonicas panel2: %d\n" % total)
-open(r'C:\starquake\hackathonmva\vcf_panel2_variants.txt','w',encoding='utf-8').write(out.getvalue())
+open(resolve_output('vcf_panel2_variants.txt'),'w',encoding='utf-8').write(out.getvalue())
 print(out.getvalue())

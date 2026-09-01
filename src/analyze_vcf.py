@@ -1,6 +1,5 @@
 import gzip, sys, io
-
-VCF = r'C:\starquake\hackathonmva\WGS_EX2312012_HGWCNDSX7.vcf.gz'
+from config import VCF, resolve_output
 
 # Candidate genes (GRCh38)
 GENES = {
@@ -67,7 +66,7 @@ for gname in GENES:
         log("  FORMAT: %s" % fmt)
         log("  SAMPLE: %s" % sample)
 
-with open(r'C:\starquake\hackathonmva\vcf_candidates.txt', 'w', encoding='utf-8') as fo:
+with open(resolve_output('vcf_candidates.txt'), 'w', encoding='utf-8') as fo:
     fo.write(out.getvalue())
 print("done")
 print(out.getvalue())

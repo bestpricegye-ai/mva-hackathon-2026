@@ -2,7 +2,7 @@
 
 **Diagnóstico:** MVA1 (OMIM 257300) por compound-heterocigosis **BUB1B**.
 **Fecha de cierre de fases:** 2026-08-31
-**Estado general:** **Fase 1 ✅ concluida (auditada)** · **Fase 2 ✅ concluida (verificada)** · **Fase 3 ✅ concluida (predicción funcional + enriquecimiento)**.
+**Estado general:** **Fase 1 ✅ concluida (auditada)** · **Fase 2 ✅ concluida (verificada)** · **Fase 3 ✅ concluida (predicción funcional + enriquecimiento)** · **Fase 4 ✅ concluida (descubrimiento terapéutico y reposicionamiento)**.
 
 > Nota de nomenclatura: aquí "Fase 1 / Fase 2" se refieren al **pipeline interno de análisis de
 > variantes** (no a los Tracks del challenge ni a las fases temporales del plan de trabajo — véase
@@ -111,3 +111,64 @@ Consulta STRING API (`string-db.org/api/json`) para la red del Spindle Assembly 
 ### Salida Fase 3
 - `data/results/fase3_impacto.txt` (JSON: clasificación funcional)
 - `data/results/fase3_enrichment.json` (JSON: red, vías, co-candidatos, conclusión)
+
+---
+
+## Fase 4 — Descubrimiento terapéutico y reposicionamiento ✅
+
+**Objetivo:** vincular los genes/proteínas patógenos de Fase 3 con bases de datos de farmacología abierta
+(Open Targets Platform, DrugBank) y redactar hipótesis de tratamiento con análisis farmacocinético
+preliminar pediátrico (barreras fisiológicas, maduración CYP, dosis/formulación).
+
+### F4-A: Mapeo de blancos a Open Targets (`src/fase4_mapeo_blancos.py`)
+
+Consulta la **API GraphQL pública de Open Targets Platform v4** para los **10 genes del SAC**
+(BUB1B + interactores STRING ≥0.99 de Fase 3): `tractability` + `drugAndClinicalCandidates`.
+
+| Resultado | Valor |
+|---|---|
+| Blancos con fármacos clínicos | **3/10** (PLK1=8, AURKB=18, TTK=2) |
+| Blancos "undrugged" (incl. **BUB1B causal**) | **7/10** |
+| Fármacos de última etapa (Fase III+) | 3 — **todos inhibidores** (volasertib, ibcasertib, AT-9283) |
+| Concernencia Open Targets → hipótesis | Ningún modulador por **activación**; los fármacos del SAC son **inhibidores antimitóticos** |
+
+**Hallazgo clave:** BUB1B es "undrugged" (0 candidatos clínicos). Todos los fármacos que modulan los
+interactores del SAC son **inhibidores** de quinasas mitóticas → en un probando con **BUB1B-LoF** agravarían
+la aneuploidía → **confirmación empírica** del guardrail / lista de contraindicaciones del Track 2
+(volasertib, BAY-1161909, taxanos, vincristina…).
+
+### F4-B: Hipótesis de tratamiento (LLM + integración experta)
+
+- **Candidato 1 — NMN/NAD+**: rescate de **dosificación de BUBR1** vía SIRT2 (K668); única estrategia con
+  evidencia in vivo de elevar la proteína afectada (Baker 2013; North 2014). PK: cruza BBB, no sustrato CYP.
+- **Candidato 2 — Senolíticos** (dasatinib+quercetina): clearance de senescencia progeroide, solo bajo oncología.
+- **Candidato 3 — GH**: manejo estándar del retraso de crecimiento (supportive).
+- **Descartados por rigor**: bortezomib, carfilzomib, palbociclib, selinexor, nab-paclitaxel (estrés
+  mitótico no compensable + falta de respaldo funcional en BUB1B-LoF).
+
+**Artefactos:** `src/fase4_mapeo_blancos.py`, `data/results/fase4_mapeo_blancos.json`,
+`deliverables/track4/FASE4_REPOSICIONAMIENTO.md`, `deliverables/track2/video_script.md` (guion 3 min).
+
+### F4-C: Validación in-silico de farmacomoduladores (`src/fase4_validacion_farmacos.py`)
+
+Cruza **ChEMBL (MOA oficial)** + **PubMed (E-utilities)** para verificar la clase de los compuestos que
+tocan el SAC:
+
+| Blanco | Compuestos con MOA | Anotados INHIBIDOR |
+|--------|--------------------|--------------------|
+| BUB1B/BUB1/BUB3/CDC20/CENPE/MAD | **0 (undrugged)** | — |
+| PLK1 (CHEMBL3024) | 8 | 8/8 |
+| AURKB (CHEMBL2185) | 9 | 9/9 |
+| TTK/MPS1 (CHEMBL3983) | 2 | 2/2 |
+
+PubMed: `"PLK1 inhibitor"+arresto (91)`, `"MPS1 inhibitor"+4N (4)`, `"Aurora B inhibitor"+arresto (5)`,
+`"CENP-E inhibitor"+congression (4)`, BUB1B+antimitótico (132).
+
+**Conclusión validada:** todos los compuestos anotados contra quinasas SAC son `INHIBITOR` (antimitóticos);
+ningún fármaco modula el SAC por activación → en MVA1 quedan descartados como tratamiento (guardrail
+confirmado en 3 bases de datos), y el candidato reposicionable real es el eje de restauración de dosis
+de BUBR1 (NMN/NAD+→SIRT2). Protocolo wet-lab (FACS/PI 4N, IF-pH3, time-lapse) documentado para validar
+corrección de CIN o muerte selectiva de aneuploides.
+
+**Artefactos:** `src/fase4_validacion_farmacos.py`, `data/results/fase4_validacion_farmacos.json`,
+`data/results/_f4_val_pubmed.txt`, `deliverables/track4/FASE4_VALIDACION_PROTOCOLO.md`.

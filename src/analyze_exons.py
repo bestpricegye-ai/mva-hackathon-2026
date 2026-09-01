@@ -1,6 +1,5 @@
 import gzip, io, json
-
-VCF = r'C:\starquake\hackathonmva\WGS_EX2312012_HGWCNDSX7.vcf.gz'
+from config import VCF, resolve_output
 
 EXONS = {
     'BUB1B': [(40161069,40161255),(40165053,40165196),(40170062,40170121),(40170537,40170681),
@@ -65,6 +64,6 @@ for g in EXONS:
 
 out.write("\n\nTOTAL variantes exonicas en 3 genes: %d\n" % total)
 
-with open(r'C:\starquake\hackathonmva\vcf_exonic_variants.txt', 'w', encoding='utf-8') as fo:
+with open(resolve_output('vcf_exonic_variants.txt'), 'w', encoding='utf-8') as fo:
     fo.write(out.getvalue())
 print(out.getvalue())
