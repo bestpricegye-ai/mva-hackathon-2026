@@ -1,0 +1,128 @@
+VARIANTES EXONICAS EN PANEL SAC (spindle assembly checkpoint) — excluye BUB1B/CEP57/TRIP13 ya analizados
+==============================================================================================================
+
+### AURKB (2 variantes exonicas)
+--------------------------------------------------------------------------------------------------------------
+  chr=x pos=8205013 A>G GT=1/1 AD=0,52 DP=52 FILTER=PASS Q=1866.77
+  chr=x pos=8205021 G>A GT=0/1 AD=31,21 DP=52 FILTER=PASS Q=591.77
+
+### BRCA1 (10 variantes exonicas)
+--------------------------------------------------------------------------------------------------------------
+  chr=x pos=43044391 G>A GT=0/1 AD=25,27 DP=52 FILTER=PASS Q=797.77
+  chr=x pos=43044804 CTT>C GT=0/1 AD=15,24 DP=40 FILTER=PASS Q=573.73
+  chr=x pos=43045257 C>A GT=0/1 AD=30,29 DP=59 FILTER=PASS Q=737.77
+  chr=x pos=43071077 T>C GT=0/1 AD=25,23 DP=48 FILTER=PASS Q=641.77
+  chr=x pos=43082453 A>G GT=0/1 AD=25,17 DP=42 FILTER=PASS Q=481.77
+  chr=x pos=43091983 T>C GT=0/1 AD=26,29 DP=55 FILTER=PASS Q=854.77
+  chr=x pos=43092418 T>C GT=0/1 AD=24,30 DP=54 FILTER=PASS Q=894.77
+  chr=x pos=43092919 G>A GT=0/1 AD=20,21 DP=41 FILTER=PASS Q=649.77
+  chr=x pos=43093220 A>G GT=0/1 AD=28,26 DP=54 FILTER=PASS Q=754.77
+  chr=x pos=43093449 G>A GT=0/1 AD=19,27 DP=46 FILTER=PASS Q=808.77
+
+### BUB1 (1 variantes exonicas)
+--------------------------------------------------------------------------------------------------------------
+  chr=x pos=110637585 A>AGT GT=1/1 AD=1,18 DP=19 FILTER=PASS Q=439.74
+
+### BUB3 (9 variantes exonicas)
+--------------------------------------------------------------------------------------------------------------
+  chr=x pos=123154480 C>T GT=0/1 AD=23,11 DP=34 FILTER=PASS Q=286.77
+  chr=x pos=123164886 C>T GT=0/1 AD=23,22 DP=45 FILTER=PASS Q=600.77
+  chr=x pos=123164968 CTT>C GT=0/1 AD=17,16 DP=35 FILTER=PASS Q=405.73
+  chr=x pos=123165692 A>G GT=0/1 AD=20,24 DP=44 FILTER=PASS Q=586.77
+  chr=x pos=123166277 A>G GT=0/1 AD=19,30 DP=49 FILTER=PASS Q=739.77
+  chr=x pos=123167312 C>T GT=0/1 AD=16,14 DP=30 FILTER=PASS Q=393.77
+  chr=x pos=123169436 T>C GT=0/1 AD=26,22 DP=48 FILTER=PASS Q=520.77
+  chr=x pos=123169755 G>A GT=0/1 AD=24,27 DP=51 FILTER=PASS Q=706.77
+  chr=x pos=123170247 T>C GT=0/1 AD=27,25 DP=52 FILTER=PASS Q=690.77
+
+### CDC20 (1 variantes exonicas)
+--------------------------------------------------------------------------------------------------------------
+  chr=x pos=43359973 T>C GT=0/1 AD=24,26 DP=50 FILTER=PASS Q=675.77
+
+### CENPE (5 variantes exonicas)
+--------------------------------------------------------------------------------------------------------------
+  chr=x pos=103138385 G>A GT=0/1 AD=23,23 DP=46 FILTER=PASS Q=607.77
+  chr=x pos=103145304 A>G GT=0/1 AD=14,20 DP=34 FILTER=PASS Q=559.77
+  chr=x pos=103161192 C>T GT=0/1 AD=22,28 DP=50 FILTER=PASS Q=779.77
+  chr=x pos=103181406 T>C GT=0/1 AD=26,27 DP=53 FILTER=PASS Q=733.77
+  chr=x pos=103196034 A>G GT=0/1 AD=19,19 DP=38 FILTER=PASS Q=522.77
+
+### KIF2C (4 variantes exonicas)
+--------------------------------------------------------------------------------------------------------------
+  chr=x pos=44739926 T>C GT=0/1 AD=21,19 DP=40 FILTER=PASS Q=494.77
+  chr=x pos=44753223 A>T GT=0/1 AD=28,27 DP=55 FILTER=PASS Q=768.77
+  chr=x pos=44759326 A>C GT=0/1 AD=30,27 DP=57 FILTER=PASS Q=803.77
+  chr=x pos=44760412 G>A GT=0/1 AD=29,31 DP=60 FILTER=PASS Q=904.77
+
+### KNL1 (6 variantes exonicas)
+--------------------------------------------------------------------------------------------------------------
+  chr=x pos=40606445 G>C GT=1/1 AD=0,56 DP=56 FILTER=PASS Q=1855.77
+  chr=x pos=40611486 A>G GT=1/1 AD=0,35 DP=35 FILTER=PASS Q=1173.77
+  chr=x pos=40621642 G>T GT=1/1 AD=0,59 DP=59 FILTER=PASS Q=2189.77
+  chr=x pos=40622992 A>G GT=1/1 AD=0,60 DP=60 FILTER=PASS Q=2097.77
+  chr=x pos=40624039 A>G GT=1/1 AD=0,46 DP=46 FILTER=PASS Q=1579.77
+  chr=x pos=40662871 G>A GT=1/1 AD=0,36 DP=36 FILTER=PASS Q=1295.77
+
+### MAD1L1 (2 variantes exonicas)
+--------------------------------------------------------------------------------------------------------------
+  chr=x pos=1815895 G>A GT=0/1 AD=26,26 DP=52 FILTER=PASS Q=818.77
+  chr=x pos=2225526 G>A GT=0/1 AD=24,23 DP=47 FILTER=PASS Q=695.77
+
+### MAD2L1 (4 variantes exonicas)
+--------------------------------------------------------------------------------------------------------------
+  chr=x pos=120057448 G>C GT=0/1 AD=27,22 DP=49 FILTER=PASS Q=595.77
+  chr=x pos=120057819 A>G GT=0/1 AD=32,18 DP=50 FILTER=PASS Q=458.77
+  chr=x pos=120058932 A>G GT=0/1 AD=21,19 DP=40 FILTER=PASS Q=478.77
+  chr=x pos=120060059 T>C GT=0/1 AD=20,30 DP=50 FILTER=PASS Q=865.77
+
+### NEK2 (4 variantes exonicas)
+--------------------------------------------------------------------------------------------------------------
+  chr=x pos=211662850 G>GA GT=0/1 AD=35,14 DP=49 FILTER=PASS Q=157.73
+  chr=x pos=211663447 T>C GT=0/1 AD=23,24 DP=47 FILTER=PASS Q=651.77
+  chr=x pos=211673534 A>G GT=0/1 AD=21,26 DP=47 FILTER=PASS Q=604.77
+  chr=x pos=211675465 A>C GT=0/1 AD=13,21 DP=34 FILTER=PASS Q=546.77
+
+### PPP2R1A (16 variantes exonicas)
+--------------------------------------------------------------------------------------------------------------
+  chr=x pos=52211466 C>T GT=0/1 AD=24,23 DP=47 FILTER=PASS Q=678.77
+  chr=x pos=52226446 T>A GT=0/1 AD=19,27 DP=46 FILTER=PASS Q=775.77
+  chr=x pos=52226545 A>T GT=0/1 AD=28,30 DP=58 FILTER=PASS Q=906.77
+  chr=x pos=52227089 A>G GT=1/1 AD=0,47 DP=47 FILTER=PASS Q=1653.77
+  chr=x pos=52227236 C>G GT=0/1 AD=23,22 DP=45 FILTER=PASS Q=590.77
+  chr=x pos=52227342 A>G GT=0/1 AD=24,27 DP=51 FILTER=PASS Q=773.77
+  chr=x pos=52227944 T>C GT=0/1 AD=26,13 DP=39 FILTER=PASS Q=332.77
+  chr=x pos=52228016 A>T GT=0/1 AD=18,19 DP=37 FILTER=PASS Q=505.77
+  chr=x pos=52228124 C>G GT=0/1 AD=14,30 DP=44 FILTER=PASS Q=837.77
+  chr=x pos=52228173 T>A GT=0/1 AD=13,22 DP=35 FILTER=PASS Q=643.77
+  chr=x pos=52228283 A>G GT=0/1 AD=12,24 DP=36 FILTER=PASS Q=626.77
+  chr=x pos=52229157 AT>A GT=0/1 AD=12,27 DP=39 FILTER=PASS Q=784.73
+  chr=x pos=52229348 G>A GT=0/1 AD=23,18 DP=41 FILTER=PASS Q=509.77
+  chr=x pos=52229452 A>G GT=0/1 AD=23,29 DP=52 FILTER=PASS Q=802.77
+  chr=x pos=52229510 T>C GT=0/1 AD=17,29 DP=46 FILTER=PASS Q=1138.77
+  chr=x pos=52229511 T>A GT=0/1 AD=17,29 DP=46 FILTER=PASS Q=1138.77
+
+### RAD21 (2 variantes exonicas)
+--------------------------------------------------------------------------------------------------------------
+  chr=x pos=116846150 G>A GT=1/1 AD=0,52 DP=52 FILTER=PASS Q=1797.77
+  chr=x pos=116846367 C>CAT GT=0/1 AD=30,19 DP=49 FILTER=PASS Q=667.73
+
+### SMC1A (2 variantes exonicas)
+--------------------------------------------------------------------------------------------------------------
+  chr=x pos=53375335 C>G GT=1/1 AD=0,24 DP=24 FILTER=PASS Q=820.77
+  chr=x pos=53422619 G>A GT=1/1 AD=0,15 DP=15 FILTER=PASS Q=490.77
+
+### TP53 (2 variantes exonicas)
+--------------------------------------------------------------------------------------------------------------
+  chr=x pos=7668836 GA>G GT=0/1 AD=14,16 DP=31 FILTER=PASS Q=196.77
+  chr=x pos=7676154 G>C GT=0/1 AD=23,25 DP=48 FILTER=PASS Q=578.77
+
+### ZW10 (1 variantes exonicas)
+--------------------------------------------------------------------------------------------------------------
+  chr=x pos=113733522 TAAAC>T GT=0/1 AD=29,19 DP=48 FILTER=PASS Q=673.73
+
+### ZWILCH (1 variantes exonicas)
+--------------------------------------------------------------------------------------------------------------
+  chr=x pos=66528912 A>G GT=0/1 AD=28,21 DP=49 FILTER=PASS Q=580.77
+
+
+TOTAL variantes exonicas en panel SAC (excl. MVA core): 72

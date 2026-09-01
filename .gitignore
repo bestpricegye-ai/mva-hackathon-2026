@@ -24,8 +24,6 @@ _*.csv
 /*gnomad_*.py
 /*gnomad_retry*.py
 /*fase2_*.py
-vcf_*.txt
-vcf_candidates.txt
 vcf_counts.txt
 /clinical_history.json
 

@@ -18,7 +18,14 @@ entregables/
 │   └── report/
 │       └── byronzunigao_track1_report.md              <- REPORTE DE MÉTODOS Track 1
 └── track2/
-    └── byronzunigao_track2_report.md                  <- REPORTE DE MÉTODOS Track 2
+│   ├── byronzunigao_track2_report.md                  <- REPORTE DE MÉTODOS Track 2
+│   └── video_script.md                                <- SCRIPT del pitch (pendiente grabación)
+├── track4/
+│   ├── FASE4_REPOSICIONAMIENTO.md                     <- Descubrimiento terapéutico (track 4)
+│   └── FASE4_VALIDACION_PROTOCOLO.md                  <- Validación en bases públicas
+└── consorcio/
+    ├── EVALUACION_5_FASES.md                          <- Auditoría interna de las 5 fases
+    └── VERIFICACION_MANEJO_CLINICO.md                 <- Veredicto médico del manejo MVA1
 ```
 
 ---
@@ -71,10 +78,18 @@ Compartir el mismo repo (contiene el pipeline de mecanismo + fuentes).
 
 ## ✅ Antes de subir
 
-- [ ] Renombrar/verificar `byronzunigao` en los nombres (ya aplicado).
-- [ ] Confirmar `proband_id` al hacer la primera subida (apuesta segura = `PROBAND01`).
-- [ ] Preparar el GitHub repo público con el código reproducible.
-- [ ] Track 2: grabar el pitch de 3 min.
+- [x] Renombrar/verificar `byronzunigao` en los nombres (ya aplicado).
+- [x] Confirmar `proband_id` = `PROBAND01` (apuesta segura = `PROBAND01`).
+- [x] Archivos de reproducibilidad versionados: `vcf_exonic_variants.txt`,
+      `vcf_acmg_scan.txt`, `vcf_sac_panel_variants.txt`, `vcf_panel2_variants.txt`
+      (en `data/results/`, byte-idénticos al pipeline reproducido) + `clinical_history.json`,
+      `src/config.py` y scripts parametrizados.
+- [x] Verificación dirigida de la región chr15:40.19-40.23 Mb desde VCF
+      (`docs/verificacion_dirigida_vcf.md`) y registro de decisión sobre reads
+      (`docs/decision_reads_no_analizados.md`).
+- [x] Veredicto médico del manejo clínico MVA1 (`consorcio/VERIFICACION_MANEJO_CLINICO.md`).
+- [ ] Track 2: **grabar el pitch de 3 min** y pegar la URL (YouTube/Vimeo) en la tab Submit-Track2.
+- [ ] Preparar el **GitHub repo público** con el código reproducible y pegar la URL en la tab de submit.
 - [ ] Tras el evento: **borrar todos los datos locales** y confirmar a
       RarediseaserealkidMVAhackathon2026@synapse.org (regla de las 30 días).
 - [ ] Incluir la citación/acknowledgement oficial en cualquier publicación.
