@@ -1,0 +1,1536 @@
+{
+  "blancos": {
+    "BUB1B": {
+      "ensembl": "ENSG00000156970",
+      "causal": true,
+      "tractabilidad": [
+        {
+          "modality": "SM",
+          "label": "Approved Drug",
+          "value": false
+        },
+        {
+          "modality": "SM",
+          "label": "Advanced Clinical",
+          "value": false
+        },
+        {
+          "modality": "SM",
+          "label": "Phase 1 Clinical",
+          "value": false
+        },
+        {
+          "modality": "SM",
+          "label": "Structure with Ligand",
+          "value": false
+        },
+        {
+          "modality": "SM",
+          "label": "High-Quality Ligand",
+          "value": true
+        },
+        {
+          "modality": "SM",
+          "label": "High-Quality Pocket",
+          "value": false
+        },
+        {
+          "modality": "SM",
+          "label": "Med-Quality Pocket",
+          "value": false
+        },
+        {
+          "modality": "SM",
+          "label": "Druggable Family",
+          "value": true
+        },
+        {
+          "modality": "AB",
+          "label": "Approved Drug",
+          "value": false
+        },
+        {
+          "modality": "AB",
+          "label": "Advanced Clinical",
+          "value": false
+        },
+        {
+          "modality": "AB",
+          "label": "Phase 1 Clinical",
+          "value": false
+        },
+        {
+          "modality": "AB",
+          "label": "UniProt loc high conf",
+          "value": false
+        },
+        {
+          "modality": "AB",
+          "label": "GO CC high conf",
+          "value": false
+        },
+        {
+          "modality": "AB",
+          "label": "UniProt loc med conf",
+          "value": false
+        },
+        {
+          "modality": "AB",
+          "label": "UniProt SigP or TMHMM",
+          "value": false
+        },
+        {
+          "modality": "AB",
+          "label": "GO CC med conf",
+          "value": false
+        },
+        {
+          "modality": "AB",
+          "label": "Human Protein Atlas loc",
+          "value": false
+        },
+        {
+          "modality": "PR",
+          "label": "Approved Drug",
+          "value": false
+        },
+        {
+          "modality": "PR",
+          "label": "Advanced Clinical",
+          "value": false
+        },
+        {
+          "modality": "PR",
+          "label": "Phase 1 Clinical",
+          "value": false
+        },
+        {
+          "modality": "PR",
+          "label": "Literature",
+          "value": true
+        },
+        {
+          "modality": "PR",
+          "label": "UniProt Ubiquitination",
+          "value": true
+        },
+        {
+          "modality": "PR",
+          "label": "Database Ubiquitination",
+          "value": true
+        },
+        {
+          "modality": "PR",
+          "label": "Half-life Data",
+          "value": false
+        },
+        {
+          "modality": "PR",
+          "label": "Small Molecule Binder",
+          "value": false
+        },
+        {
+          "modality": "OC",
+          "label": "Approved Drug",
+          "value": false
+        },
+        {
+          "modality": "OC",
+          "label": "Advanced Clinical",
+          "value": false
+        },
+        {
+          "modality": "OC",
+          "label": "Phase 1 Clinical",
+          "value": false
+        }
+      ],
+      "candidatos_clinicos": [],
+      "n_candidatos": 0,
+      "reposicionables_por_fase": [],
+      "investigacionales": []
+    },
+    "BUB1": {
+      "ensembl": "ENSG00000150479",
+      "causal": false,
+      "tractabilidad": [],
+      "candidatos_clinicos": [],
+      "n_candidatos": 0,
+      "error": "'NoneType' object is not subscriptable",
+      "reposicionables_por_fase": [],
+      "investigacionales": []
+    },
+    "MAD2L1": {
+      "ensembl": "ENSG00000064109",
+      "causal": false,
+      "tractabilidad": [],
+      "candidatos_clinicos": [],
+      "n_candidatos": 0,
+      "error": "'NoneType' object is not subscriptable",
+      "reposicionables_por_fase": [],
+      "investigacionales": []
+    },
+    "BUB3": {
+      "ensembl": "ENSG00000154473",
+      "causal": false,
+      "tractabilidad": [
+        {
+          "modality": "SM",
+          "label": "Approved Drug",
+          "value": false
+        },
+        {
+          "modality": "SM",
+          "label": "Advanced Clinical",
+          "value": false
+        },
+        {
+          "modality": "SM",
+          "label": "Phase 1 Clinical",
+          "value": false
+        },
+        {
+          "modality": "SM",
+          "label": "Structure with Ligand",
+          "value": false
+        },
+        {
+          "modality": "SM",
+          "label": "High-Quality Ligand",
+          "value": false
+        },
+        {
+          "modality": "SM",
+          "label": "High-Quality Pocket",
+          "value": false
+        },
+        {
+          "modality": "SM",
+          "label": "Med-Quality Pocket",
+          "value": false
+        },
+        {
+          "modality": "SM",
+          "label": "Druggable Family",
+          "value": false
+        },
+        {
+          "modality": "AB",
+          "label": "Approved Drug",
+          "value": false
+        },
+        {
+          "modality": "AB",
+          "label": "Advanced Clinical",
+          "value": false
+        },
+        {
+          "modality": "AB",
+          "label": "Phase 1 Clinical",
+          "value": false
+        },
+        {
+          "modality": "AB",
+          "label": "UniProt loc high conf",
+          "value": false
+        },
+        {
+          "modality": "AB",
+          "label": "GO CC high conf",
+          "value": false
+        },
+        {
+          "modality": "AB",
+          "label": "UniProt loc med conf",
+          "value": false
+        },
+        {
+          "modality": "AB",
+          "label": "UniProt SigP or TMHMM",
+          "value": false
+        },
+        {
+          "modality": "AB",
+          "label": "GO CC med conf",
+          "value": false
+        },
+        {
+          "modality": "AB",
+          "label": "Human Protein Atlas loc",
+          "value": false
+        },
+        {
+          "modality": "PR",
+          "label": "Approved Drug",
+          "value": false
+        },
+        {
+          "modality": "PR",
+          "label": "Advanced Clinical",
+          "value": false
+        },
+        {
+          "modality": "PR",
+          "label": "Phase 1 Clinical",
+          "value": false
+        },
+        {
+          "modality": "PR",
+          "label": "Literature",
+          "value": false
+        },
+        {
+          "modality": "PR",
+          "label": "UniProt Ubiquitination",
+          "value": true
+        },
+        {
+          "modality": "PR",
+          "label": "Database Ubiquitination",
+          "value": true
+        },
+        {
+          "modality": "PR",
+          "label": "Half-life Data",
+          "value": true
+        },
+        {
+          "modality": "PR",
+          "label": "Small Molecule Binder",
+          "value": false
+        },
+        {
+          "modality": "OC",
+          "label": "Approved Drug",
+          "value": false
+        },
+        {
+          "modality": "OC",
+          "label": "Advanced Clinical",
+          "value": false
+        },
+        {
+          "modality": "OC",
+          "label": "Phase 1 Clinical",
+          "value": false
+        }
+      ],
+      "candidatos_clinicos": [],
+      "n_candidatos": 0,
+      "reposicionables_por_fase": [],
+      "investigacionales": []
+    },
+    "CDC20": {
+      "ensembl": "ENSG00000117399",
+      "causal": false,
+      "tractabilidad": [
+        {
+          "modality": "SM",
+          "label": "Approved Drug",
+          "value": false
+        },
+        {
+          "modality": "SM",
+          "label": "Advanced Clinical",
+          "value": false
+        },
+        {
+          "modality": "SM",
+          "label": "Phase 1 Clinical",
+          "value": false
+        },
+        {
+          "modality": "SM",
+          "label": "Structure with Ligand",
+          "value": true
+        },
+        {
+          "modality": "SM",
+          "label": "High-Quality Ligand",
+          "value": false
+        },
+        {
+          "modality": "SM",
+          "label": "High-Quality Pocket",
+          "value": false
+        },
+        {
+          "modality": "SM",
+          "label": "Med-Quality Pocket",
+          "value": false
+        },
+        {
+          "modality": "SM",
+          "label": "Druggable Family",
+          "value": false
+        },
+        {
+          "modality": "AB",
+          "label": "Approved Drug",
+          "value": false
+        },
+        {
+          "modality": "AB",
+          "label": "Advanced Clinical",
+          "value": false
+        },
+        {
+          "modality": "AB",
+          "label": "Phase 1 Clinical",
+          "value": false
+        },
+        {
+          "modality": "AB",
+          "label": "UniProt loc high conf",
+          "value": false
+        },
+        {
+          "modality": "AB",
+          "label": "GO CC high conf",
+          "value": false
+        },
+        {
+          "modality": "AB",
+          "label": "UniProt loc med conf",
+          "value": false
+        },
+        {
+          "modality": "AB",
+          "label": "UniProt SigP or TMHMM",
+          "value": false
+        },
+        {
+          "modality": "AB",
+          "label": "GO CC med conf",
+          "value": false
+        },
+        {
+          "modality": "AB",
+          "label": "Human Protein Atlas loc",
+          "value": false
+        },
+        {
+          "modality": "PR",
+          "label": "Approved Drug",
+          "value": false
+        },
+        {
+          "modality": "PR",
+          "label": "Advanced Clinical",
+          "value": false
+        },
+        {
+          "modality": "PR",
+          "label": "Phase 1 Clinical",
+          "value": false
+        },
+        {
+          "modality": "PR",
+          "label": "Literature",
+          "value": true
+        },
+        {
+          "modality": "PR",
+          "label": "UniProt Ubiquitination",
+          "value": true
+        },
+        {
+          "modality": "PR",
+          "label": "Database Ubiquitination",
+          "value": true
+        },
+        {
+          "modality": "PR",
+          "label": "Half-life Data",
+          "value": false
+        },
+        {
+          "modality": "PR",
+          "label": "Small Molecule Binder",
+          "value": false
+        },
+        {
+          "modality": "OC",
+          "label": "Approved Drug",
+          "value": false
+        },
+        {
+          "modality": "OC",
+          "label": "Advanced Clinical",
+          "value": false
+        },
+        {
+          "modality": "OC",
+          "label": "Phase 1 Clinical",
+          "value": false
+        }
+      ],
+      "candidatos_clinicos": [],
+      "n_candidatos": 0,
+      "reposicionables_por_fase": [],
+      "investigacionales": []
+    },
+    "PLK1": {
+      "ensembl": "ENSG00000166851",
+      "causal": false,
+      "tractabilidad": [
+        {
+          "modality": "SM",
+          "label": "Approved Drug",
+          "value": false
+        },
+        {
+          "modality": "SM",
+          "label": "Advanced Clinical",
+          "value": true
+        },
+        {
+          "modality": "SM",
+          "label": "Phase 1 Clinical",
+          "value": false
+        },
+        {
+          "modality": "SM",
+          "label": "Structure with Ligand",
+          "value": true
+        },
+        {
+          "modality": "SM",
+          "label": "High-Quality Ligand",
+          "value": true
+        },
+        {
+          "modality": "SM",
+          "label": "High-Quality Pocket",
+          "value": true
+        },
+        {
+          "modality": "SM",
+          "label": "Med-Quality Pocket",
+          "value": false
+        },
+        {
+          "modality": "SM",
+          "label": "Druggable Family",
+          "value": true
+        },
+        {
+          "modality": "AB",
+          "label": "Approved Drug",
+          "value": false
+        },
+        {
+          "modality": "AB",
+          "label": "Advanced Clinical",
+          "value": false
+        },
+        {
+          "modality": "AB",
+          "label": "Phase 1 Clinical",
+          "value": false
+        },
+        {
+          "modality": "AB",
+          "label": "UniProt loc high conf",
+          "value": false
+        },
+        {
+          "modality": "AB",
+          "label": "GO CC high conf",
+          "value": false
+        },
+        {
+          "modality": "AB",
+          "label": "UniProt loc med conf",
+          "value": false
+        },
+        {
+          "modality": "AB",
+          "label": "UniProt SigP or TMHMM",
+          "value": false
+        },
+        {
+          "modality": "AB",
+          "label": "GO CC med conf",
+          "value": false
+        },
+        {
+          "modality": "AB",
+          "label": "Human Protein Atlas loc",
+          "value": false
+        },
+        {
+          "modality": "PR",
+          "label": "Approved Drug",
+          "value": false
+        },
+        {
+          "modality": "PR",
+          "label": "Advanced Clinical",
+          "value": false
+        },
+        {
+          "modality": "PR",
+          "label": "Phase 1 Clinical",
+          "value": false
+        },
+        {
+          "modality": "PR",
+          "label": "Literature",
+          "value": true
+        },
+        {
+          "modality": "PR",
+          "label": "UniProt Ubiquitination",
+          "value": true
+        },
+        {
+          "modality": "PR",
+          "label": "Database Ubiquitination",
+          "value": true
+        },
+        {
+          "modality": "PR",
+          "label": "Half-life Data",
+          "value": false
+        },
+        {
+          "modality": "PR",
+          "label": "Small Molecule Binder",
+          "value": true
+        },
+        {
+          "modality": "OC",
+          "label": "Approved Drug",
+          "value": false
+        },
+        {
+          "modality": "OC",
+          "label": "Advanced Clinical",
+          "value": false
+        },
+        {
+          "modality": "OC",
+          "label": "Phase 1 Clinical",
+          "value": false
+        }
+      ],
+      "candidatos_clinicos": [
+        {
+          "farmaco": "VOLASERTIB",
+          "chembl": "CHEMBL1233528",
+          "fase_maxima": "Phase_III"
+        },
+        {
+          "farmaco": "ONVANSERTIB",
+          "chembl": "CHEMBL1738758",
+          "fase_maxima": "Phase_II"
+        },
+        {
+          "farmaco": "BI-2536",
+          "chembl": "CHEMBL513909",
+          "fase_maxima": "Phase_II"
+        },
+        {
+          "farmaco": "CAFUSERTIB",
+          "chembl": "CHEMBL3545354",
+          "fase_maxima": "Phase_I"
+        },
+        {
+          "farmaco": "MK-1496",
+          "chembl": "CHEMBL5314387",
+          "fase_maxima": "Phase_I"
+        },
+        {
+          "farmaco": "GSK-461364",
+          "chembl": "CHEMBL1908394",
+          "fase_maxima": "Phase_I"
+        },
+        {
+          "farmaco": "TAK-960",
+          "chembl": "CHEMBL2392545",
+          "fase_maxima": "Phase_I"
+        },
+        {
+          "farmaco": "HMN-214",
+          "chembl": "CHEMBL3991927",
+          "fase_maxima": "Phase_I"
+        }
+      ],
+      "n_candidatos": 8,
+      "reposicionables_por_fase": [
+        {
+          "farmaco": "VOLASERTIB",
+          "chembl": "CHEMBL1233528",
+          "fase_maxima": "Phase_III"
+        }
+      ],
+      "investigacionales": [
+        {
+          "farmaco": "ONVANSERTIB",
+          "chembl": "CHEMBL1738758",
+          "fase_maxima": "Phase_II"
+        },
+        {
+          "farmaco": "BI-2536",
+          "chembl": "CHEMBL513909",
+          "fase_maxima": "Phase_II"
+        },
+        {
+          "farmaco": "CAFUSERTIB",
+          "chembl": "CHEMBL3545354",
+          "fase_maxima": "Phase_I"
+        },
+        {
+          "farmaco": "MK-1496",
+          "chembl": "CHEMBL5314387",
+          "fase_maxima": "Phase_I"
+        },
+        {
+          "farmaco": "GSK-461364",
+          "chembl": "CHEMBL1908394",
+          "fase_maxima": "Phase_I"
+        },
+        {
+          "farmaco": "TAK-960",
+          "chembl": "CHEMBL2392545",
+          "fase_maxima": "Phase_I"
+        },
+        {
+          "farmaco": "HMN-214",
+          "chembl": "CHEMBL3991927",
+          "fase_maxima": "Phase_I"
+        }
+      ]
+    },
+    "AURKB": {
+      "ensembl": "ENSG00000178999",
+      "causal": false,
+      "tractabilidad": [
+        {
+          "modality": "SM",
+          "label": "Approved Drug",
+          "value": false
+        },
+        {
+          "modality": "SM",
+          "label": "Advanced Clinical",
+          "value": true
+        },
+        {
+          "modality": "SM",
+          "label": "Phase 1 Clinical",
+          "value": false
+        },
+        {
+          "modality": "SM",
+          "label": "Structure with Ligand",
+          "value": true
+        },
+        {
+          "modality": "SM",
+          "label": "High-Quality Ligand",
+          "value": true
+        },
+        {
+          "modality": "SM",
+          "label": "High-Quality Pocket",
+          "value": false
+        },
+        {
+          "modality": "SM",
+          "label": "Med-Quality Pocket",
+          "value": false
+        },
+        {
+          "modality": "SM",
+          "label": "Druggable Family",
+          "value": true
+        },
+        {
+          "modality": "AB",
+          "label": "Approved Drug",
+          "value": false
+        },
+        {
+          "modality": "AB",
+          "label": "Advanced Clinical",
+          "value": false
+        },
+        {
+          "modality": "AB",
+          "label": "Phase 1 Clinical",
+          "value": false
+        },
+        {
+          "modality": "AB",
+          "label": "UniProt loc high conf",
+          "value": false
+        },
+        {
+          "modality": "AB",
+          "label": "GO CC high conf",
+          "value": false
+        },
+        {
+          "modality": "AB",
+          "label": "UniProt loc med conf",
+          "value": false
+        },
+        {
+          "modality": "AB",
+          "label": "UniProt SigP or TMHMM",
+          "value": false
+        },
+        {
+          "modality": "AB",
+          "label": "GO CC med conf",
+          "value": false
+        },
+        {
+          "modality": "AB",
+          "label": "Human Protein Atlas loc",
+          "value": false
+        },
+        {
+          "modality": "PR",
+          "label": "Approved Drug",
+          "value": false
+        },
+        {
+          "modality": "PR",
+          "label": "Advanced Clinical",
+          "value": false
+        },
+        {
+          "modality": "PR",
+          "label": "Phase 1 Clinical",
+          "value": false
+        },
+        {
+          "modality": "PR",
+          "label": "Literature",
+          "value": true
+        },
+        {
+          "modality": "PR",
+          "label": "UniProt Ubiquitination",
+          "value": true
+        },
+        {
+          "modality": "PR",
+          "label": "Database Ubiquitination",
+          "value": true
+        },
+        {
+          "modality": "PR",
+          "label": "Half-life Data",
+          "value": false
+        },
+        {
+          "modality": "PR",
+          "label": "Small Molecule Binder",
+          "value": true
+        },
+        {
+          "modality": "OC",
+          "label": "Approved Drug",
+          "value": false
+        },
+        {
+          "modality": "OC",
+          "label": "Advanced Clinical",
+          "value": false
+        },
+        {
+          "modality": "OC",
+          "label": "Phase 1 Clinical",
+          "value": false
+        }
+      ],
+      "candidatos_clinicos": [
+        {
+          "farmaco": "IBCASERTIB",
+          "chembl": "CHEMBL5095033",
+          "fase_maxima": "Phase_III"
+        },
+        {
+          "farmaco": "AT-9283",
+          "chembl": "CHEMBL495727",
+          "fase_maxima": "Phase_III"
+        },
+        {
+          "farmaco": "BARASERTIB",
+          "chembl": "CHEMBL415049",
+          "fase_maxima": "Phase_II"
+        },
+        {
+          "farmaco": "BI-811283",
+          "chembl": "CHEMBL3545395",
+          "fase_maxima": "Phase_II"
+        },
+        {
+          "farmaco": "ENMD-2076",
+          "chembl": "CHEMBL482968",
+          "fase_maxima": "Phase_II"
+        },
+        {
+          "farmaco": "ILORASERTIB",
+          "chembl": "CHEMBL1980297",
+          "fase_maxima": "Phase_II"
+        },
+        {
+          "farmaco": "TOZASERTIB",
+          "chembl": "CHEMBL572878",
+          "fase_maxima": "Phase_II"
+        },
+        {
+          "farmaco": "DANUSERTIB",
+          "chembl": "CHEMBL402548",
+          "fase_maxima": "Phase_II"
+        },
+        {
+          "farmaco": "CYC-116",
+          "chembl": "CHEMBL482967",
+          "fase_maxima": "Phase_I"
+        },
+        {
+          "farmaco": "TTP-607",
+          "chembl": "CHEMBL3545327",
+          "fase_maxima": "Phase_I"
+        },
+        {
+          "farmaco": "SNS-314",
+          "chembl": "CHEMBL482767",
+          "fase_maxima": "Phase_I"
+        },
+        {
+          "farmaco": "TAK-901",
+          "chembl": "CHEMBL3544932",
+          "fase_maxima": "Phase_I"
+        },
+        {
+          "farmaco": "KW-2449",
+          "chembl": "CHEMBL1908397",
+          "fase_maxima": "Phase_I"
+        },
+        {
+          "farmaco": "AMG-900",
+          "chembl": "CHEMBL2140408",
+          "fase_maxima": "Phase_I"
+        },
+        {
+          "farmaco": "MK-6592",
+          "chembl": "CHEMBL3545378",
+          "fase_maxima": "Phase_I"
+        },
+        {
+          "farmaco": "GSK-1070916",
+          "chembl": "CHEMBL1090479",
+          "fase_maxima": "Phase_I"
+        },
+        {
+          "farmaco": "PF-03814735",
+          "chembl": "CHEMBL4289017",
+          "fase_maxima": "Phase_I"
+        },
+        {
+          "farmaco": "CENISERTIB",
+          "chembl": "CHEMBL1967878",
+          "fase_maxima": "Phase_I"
+        }
+      ],
+      "n_candidatos": 18,
+      "reposicionables_por_fase": [
+        {
+          "farmaco": "IBCASERTIB",
+          "chembl": "CHEMBL5095033",
+          "fase_maxima": "Phase_III"
+        },
+        {
+          "farmaco": "AT-9283",
+          "chembl": "CHEMBL495727",
+          "fase_maxima": "Phase_III"
+        }
+      ],
+      "investigacionales": [
+        {
+          "farmaco": "BARASERTIB",
+          "chembl": "CHEMBL415049",
+          "fase_maxima": "Phase_II"
+        },
+        {
+          "farmaco": "BI-811283",
+          "chembl": "CHEMBL3545395",
+          "fase_maxima": "Phase_II"
+        },
+        {
+          "farmaco": "ENMD-2076",
+          "chembl": "CHEMBL482968",
+          "fase_maxima": "Phase_II"
+        },
+        {
+          "farmaco": "ILORASERTIB",
+          "chembl": "CHEMBL1980297",
+          "fase_maxima": "Phase_II"
+        },
+        {
+          "farmaco": "TOZASERTIB",
+          "chembl": "CHEMBL572878",
+          "fase_maxima": "Phase_II"
+        },
+        {
+          "farmaco": "DANUSERTIB",
+          "chembl": "CHEMBL402548",
+          "fase_maxima": "Phase_II"
+        },
+        {
+          "farmaco": "CYC-116",
+          "chembl": "CHEMBL482967",
+          "fase_maxima": "Phase_I"
+        },
+        {
+          "farmaco": "TTP-607",
+          "chembl": "CHEMBL3545327",
+          "fase_maxima": "Phase_I"
+        },
+        {
+          "farmaco": "SNS-314",
+          "chembl": "CHEMBL482767",
+          "fase_maxima": "Phase_I"
+        },
+        {
+          "farmaco": "TAK-901",
+          "chembl": "CHEMBL3544932",
+          "fase_maxima": "Phase_I"
+        },
+        {
+          "farmaco": "KW-2449",
+          "chembl": "CHEMBL1908397",
+          "fase_maxima": "Phase_I"
+        },
+        {
+          "farmaco": "AMG-900",
+          "chembl": "CHEMBL2140408",
+          "fase_maxima": "Phase_I"
+        },
+        {
+          "farmaco": "MK-6592",
+          "chembl": "CHEMBL3545378",
+          "fase_maxima": "Phase_I"
+        },
+        {
+          "farmaco": "GSK-1070916",
+          "chembl": "CHEMBL1090479",
+          "fase_maxima": "Phase_I"
+        },
+        {
+          "farmaco": "PF-03814735",
+          "chembl": "CHEMBL4289017",
+          "fase_maxima": "Phase_I"
+        },
+        {
+          "farmaco": "CENISERTIB",
+          "chembl": "CHEMBL1967878",
+          "fase_maxima": "Phase_I"
+        }
+      ]
+    },
+    "TTK": {
+      "ensembl": "ENSG00000112742",
+      "causal": false,
+      "tractabilidad": [
+        {
+          "modality": "SM",
+          "label": "Approved Drug",
+          "value": false
+        },
+        {
+          "modality": "SM",
+          "label": "Advanced Clinical",
+          "value": true
+        },
+        {
+          "modality": "SM",
+          "label": "Phase 1 Clinical",
+          "value": false
+        },
+        {
+          "modality": "SM",
+          "label": "Structure with Ligand",
+          "value": true
+        },
+        {
+          "modality": "SM",
+          "label": "High-Quality Ligand",
+          "value": true
+        },
+        {
+          "modality": "SM",
+          "label": "High-Quality Pocket",
+          "value": true
+        },
+        {
+          "modality": "SM",
+          "label": "Med-Quality Pocket",
+          "value": false
+        },
+        {
+          "modality": "SM",
+          "label": "Druggable Family",
+          "value": true
+        },
+        {
+          "modality": "AB",
+          "label": "Approved Drug",
+          "value": false
+        },
+        {
+          "modality": "AB",
+          "label": "Advanced Clinical",
+          "value": false
+        },
+        {
+          "modality": "AB",
+          "label": "Phase 1 Clinical",
+          "value": false
+        },
+        {
+          "modality": "AB",
+          "label": "UniProt loc high conf",
+          "value": false
+        },
+        {
+          "modality": "AB",
+          "label": "GO CC high conf",
+          "value": false
+        },
+        {
+          "modality": "AB",
+          "label": "UniProt loc med conf",
+          "value": false
+        },
+        {
+          "modality": "AB",
+          "label": "UniProt SigP or TMHMM",
+          "value": false
+        },
+        {
+          "modality": "AB",
+          "label": "GO CC med conf",
+          "value": false
+        },
+        {
+          "modality": "AB",
+          "label": "Human Protein Atlas loc",
+          "value": false
+        },
+        {
+          "modality": "PR",
+          "label": "Approved Drug",
+          "value": false
+        },
+        {
+          "modality": "PR",
+          "label": "Advanced Clinical",
+          "value": false
+        },
+        {
+          "modality": "PR",
+          "label": "Phase 1 Clinical",
+          "value": false
+        },
+        {
+          "modality": "PR",
+          "label": "Literature",
+          "value": true
+        },
+        {
+          "modality": "PR",
+          "label": "UniProt Ubiquitination",
+          "value": false
+        },
+        {
+          "modality": "PR",
+          "label": "Database Ubiquitination",
+          "value": true
+        },
+        {
+          "modality": "PR",
+          "label": "Half-life Data",
+          "value": false
+        },
+        {
+          "modality": "PR",
+          "label": "Small Molecule Binder",
+          "value": true
+        },
+        {
+          "modality": "OC",
+          "label": "Approved Drug",
+          "value": false
+        },
+        {
+          "modality": "OC",
+          "label": "Advanced Clinical",
+          "value": false
+        },
+        {
+          "modality": "OC",
+          "label": "Phase 1 Clinical",
+          "value": false
+        }
+      ],
+      "candidatos_clinicos": [
+        {
+          "farmaco": "BAY-1161909",
+          "chembl": "CHEMBL4303241",
+          "fase_maxima": "Phase_I"
+        },
+        {
+          "farmaco": "BAY-1217389",
+          "chembl": "CHEMBL4456085",
+          "fase_maxima": "Phase_I"
+        }
+      ],
+      "n_candidatos": 2,
+      "reposicionables_por_fase": [],
+      "investigacionales": [
+        {
+          "farmaco": "BAY-1161909",
+          "chembl": "CHEMBL4303241",
+          "fase_maxima": "Phase_I"
+        },
+        {
+          "farmaco": "BAY-1217389",
+          "chembl": "CHEMBL4456085",
+          "fase_maxima": "Phase_I"
+        }
+      ]
+    },
+    "MAD1L1": {
+      "ensembl": "ENSG00000002822",
+      "causal": false,
+      "tractabilidad": [
+        {
+          "modality": "SM",
+          "label": "Approved Drug",
+          "value": false
+        },
+        {
+          "modality": "SM",
+          "label": "Advanced Clinical",
+          "value": false
+        },
+        {
+          "modality": "SM",
+          "label": "Phase 1 Clinical",
+          "value": false
+        },
+        {
+          "modality": "SM",
+          "label": "Structure with Ligand",
+          "value": false
+        },
+        {
+          "modality": "SM",
+          "label": "High-Quality Ligand",
+          "value": false
+        },
+        {
+          "modality": "SM",
+          "label": "High-Quality Pocket",
+          "value": false
+        },
+        {
+          "modality": "SM",
+          "label": "Med-Quality Pocket",
+          "value": false
+        },
+        {
+          "modality": "SM",
+          "label": "Druggable Family",
+          "value": false
+        },
+        {
+          "modality": "AB",
+          "label": "Approved Drug",
+          "value": false
+        },
+        {
+          "modality": "AB",
+          "label": "Advanced Clinical",
+          "value": false
+        },
+        {
+          "modality": "AB",
+          "label": "Phase 1 Clinical",
+          "value": false
+        },
+        {
+          "modality": "AB",
+          "label": "UniProt loc high conf",
+          "value": false
+        },
+        {
+          "modality": "AB",
+          "label": "GO CC high conf",
+          "value": false
+        },
+        {
+          "modality": "AB",
+          "label": "UniProt loc med conf",
+          "value": false
+        },
+        {
+          "modality": "AB",
+          "label": "UniProt SigP or TMHMM",
+          "value": false
+        },
+        {
+          "modality": "AB",
+          "label": "GO CC med conf",
+          "value": false
+        },
+        {
+          "modality": "AB",
+          "label": "Human Protein Atlas loc",
+          "value": false
+        },
+        {
+          "modality": "PR",
+          "label": "Approved Drug",
+          "value": false
+        },
+        {
+          "modality": "PR",
+          "label": "Advanced Clinical",
+          "value": false
+        },
+        {
+          "modality": "PR",
+          "label": "Phase 1 Clinical",
+          "value": false
+        },
+        {
+          "modality": "PR",
+          "label": "Literature",
+          "value": false
+        },
+        {
+          "modality": "PR",
+          "label": "UniProt Ubiquitination",
+          "value": true
+        },
+        {
+          "modality": "PR",
+          "label": "Database Ubiquitination",
+          "value": true
+        },
+        {
+          "modality": "PR",
+          "label": "Half-life Data",
+          "value": true
+        },
+        {
+          "modality": "PR",
+          "label": "Small Molecule Binder",
+          "value": false
+        },
+        {
+          "modality": "OC",
+          "label": "Approved Drug",
+          "value": false
+        },
+        {
+          "modality": "OC",
+          "label": "Advanced Clinical",
+          "value": false
+        },
+        {
+          "modality": "OC",
+          "label": "Phase 1 Clinical",
+          "value": false
+        }
+      ],
+      "candidatos_clinicos": [],
+      "n_candidatos": 0,
+      "reposicionables_por_fase": [],
+      "investigacionales": []
+    },
+    "CENPE": {
+      "ensembl": "ENSG00000138778",
+      "causal": false,
+      "tractabilidad": [
+        {
+          "modality": "SM",
+          "label": "Approved Drug",
+          "value": false
+        },
+        {
+          "modality": "SM",
+          "label": "Advanced Clinical",
+          "value": false
+        },
+        {
+          "modality": "SM",
+          "label": "Phase 1 Clinical",
+          "value": false
+        },
+        {
+          "modality": "SM",
+          "label": "Structure with Ligand",
+          "value": true
+        },
+        {
+          "modality": "SM",
+          "label": "High-Quality Ligand",
+          "value": true
+        },
+        {
+          "modality": "SM",
+          "label": "High-Quality Pocket",
+          "value": false
+        },
+        {
+          "modality": "SM",
+          "label": "Med-Quality Pocket",
+          "value": true
+        },
+        {
+          "modality": "SM",
+          "label": "Druggable Family",
+          "value": false
+        },
+        {
+          "modality": "AB",
+          "label": "Approved Drug",
+          "value": false
+        },
+        {
+          "modality": "AB",
+          "label": "Advanced Clinical",
+          "value": false
+        },
+        {
+          "modality": "AB",
+          "label": "Phase 1 Clinical",
+          "value": false
+        },
+        {
+          "modality": "AB",
+          "label": "UniProt loc high conf",
+          "value": false
+        },
+        {
+          "modality": "AB",
+          "label": "GO CC high conf",
+          "value": false
+        },
+        {
+          "modality": "AB",
+          "label": "UniProt loc med conf",
+          "value": false
+        },
+        {
+          "modality": "AB",
+          "label": "UniProt SigP or TMHMM",
+          "value": false
+        },
+        {
+          "modality": "AB",
+          "label": "GO CC med conf",
+          "value": false
+        },
+        {
+          "modality": "AB",
+          "label": "Human Protein Atlas loc",
+          "value": false
+        },
+        {
+          "modality": "PR",
+          "label": "Approved Drug",
+          "value": false
+        },
+        {
+          "modality": "PR",
+          "label": "Advanced Clinical",
+          "value": false
+        },
+        {
+          "modality": "PR",
+          "label": "Phase 1 Clinical",
+          "value": false
+        },
+        {
+          "modality": "PR",
+          "label": "Literature",
+          "value": false
+        },
+        {
+          "modality": "PR",
+          "label": "UniProt Ubiquitination",
+          "value": true
+        },
+        {
+          "modality": "PR",
+          "label": "Database Ubiquitination",
+          "value": true
+        },
+        {
+          "modality": "PR",
+          "label": "Half-life Data",
+          "value": false
+        },
+        {
+          "modality": "PR",
+          "label": "Small Molecule Binder",
+          "value": true
+        },
+        {
+          "modality": "OC",
+          "label": "Approved Drug",
+          "value": false
+        },
+        {
+          "modality": "OC",
+          "label": "Advanced Clinical",
+          "value": false
+        },
+        {
+          "modality": "OC",
+          "label": "Phase 1 Clinical",
+          "value": false
+        }
+      ],
+      "candidatos_clinicos": [],
+      "n_candidatos": 0,
+      "reposicionables_por_fase": [],
+      "investigacionales": []
+    }
+  },
+  "resumen": {
+    "genes": 10,
+    "blancos_con_farmacos_clinicos": 3,
+    "blancos_undrugged": [
+      "BUB1B",
+      "BUB1",
+      "MAD2L1",
+      "BUB3",
+      "CDC20",
+      "MAD1L1",
+      "CENPE"
+    ],
+    "farmacos_ultima_etapa_por_blanco": {
+      "PLK1": [
+        "VOLASERTIB"
+      ],
+      "AURKB": [
+        "IBCASERTIB",
+        "AT-9283"
+      ]
+    },
+    "farmacos_ultima_etapa_sac_total": 3,
+    "conclusion": "BUB1B (gen causal) es un blanco 'undrugged' sin candidatos clínicos directos: no existe fármaco que module BUB1B/BUBR1 directamente, por lo que el reposicionamiento debe actuar a nivel de la vía/dosis proteica (eje NAD+/SIRT2 que eleva BUBR1) o modulando interactores con fármacos ya aprobados. Los interactores del checkpoint con más fármacos son PLK1 (8), AURKB (18), TTK (2) — pero TODOS son inhibidores (antimitóticos/anti-quinasas SAC) que debilitan aún más un checkpoint ya defectivo y están CONTRANDICADOS en MVA (ver FASE4.2 y reporte Track 2). El mapeo empírico valida la hipótesis: no hay fármaco aprobado que module la vía por activación; el candidato reposicionable real actúa sobre la DOSIS de BUBR1 (NMN/NAD+ via SIRT2), no sobre las kinasas del SAC."
+  }
+}

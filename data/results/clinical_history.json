@@ -1,0 +1,165 @@
+{
+  "schema": "mva-hackathon-2026_clinical_history_v1",
+  "proband": {
+    "id": "PROBAND01",
+    "sample_id": "WGS_EX2312012_HGWCNDSX7",
+    "wgs_sample": [
+      "EX2312012_HGWCNDSX7"
+    ],
+    "assembly": "GRCh38",
+    "vcf_format": "VCFv4.2",
+    "sequencing": "whole_genome_single_sample"
+  },
+  "source_documents": {
+    "clinical_history": "Challenge_Clinical_Phenotype_1.docx",
+    "genomic": "WGS_EX2312012_HGWCNDSX7.vcf.gz (315 MB, tabix indexed; variant extraction persisted in data/results/vcf_exonic_variants.txt)"
+  },
+  "clinical_phenotype": {
+    "summary": "Cluster of cancer predisposition + growth restriction + renal anomaly + adverse perinatal history + parental reproductive loss, characteristic of a chromosomal instability / aneuploidy syndrome (MVA).",
+    "phenotype_map_source": "docs/CORRELACION_GENOTIPO_FENOTIPO.md",
+    "traits": [
+      {
+        "text": "Rhabdomyosarcoma",
+        "hpo_term": "Rhabdomyosarcoma",
+        "hpo_id": "HP:0002859",
+        "domain": "neoplasia"
+      },
+      {
+        "text": "Nephrocalcinosis present since birth",
+        "hpo_term": "Nephrocalcinosis",
+        "hpo_id": "HP:0000121",
+        "domain": "renal"
+      },
+      {
+        "text": "Short stature",
+        "hpo_term": "Short stature",
+        "hpo_id": "HP:0004322",
+        "domain": "growth"
+      },
+      {
+        "text": "Failure to thrive",
+        "hpo_term": "Failure to thrive",
+        "hpo_id": "HP:0001508",
+        "domain": "growth"
+      },
+      {
+        "text": "Low muscle mass",
+        "hpo_term": "Skeletal muscle atrophy",
+        "hpo_id": "HP:0003202",
+        "domain": "musculoskeletal"
+      },
+      {
+        "text": "Prematurity (32 weeks)",
+        "hpo_term": "Premature birth",
+        "hpo_id": "HP:0001622",
+        "domain": "perinatal"
+      },
+      {
+        "text": "Very low birth weight (~1 kg)",
+        "hpo_term": "Small for gestational age",
+        "hpo_id": "HP:0001518",
+        "domain": "perinatal"
+      },
+      {
+        "text": "Recurrent miscarriages (parents)",
+        "hpo_term": "Recurrent spontaneous abortion",
+        "hpo_id": "HP:0200067",
+        "domain": "reproductive loss",
+        "note": "family signal consistent with heterozygous carriers"
+      }
+    ]
+  },
+  "genomic_findings": {
+    "variant_source": "data/results/vcf_exonic_variants.txt (extracted from WGS_EX2312012_HGWCNDSX7.vcf.gz)",
+    "candidate_genes": [
+      {
+        "gene": "BUB1B",
+        "mva": "MVA1 (OMIM 257300)",
+        "exonic_variants": 2,
+        "conclusion": "CAUSAL - compound heterozygous"
+      },
+      {
+        "gene": "CEP57",
+        "mva": "MVA2 (OMIM 614114)",
+        "exonic_variants": 0,
+        "conclusion": "EXCLUDED"
+      },
+      {
+        "gene": "TRIP13",
+        "mva": "MVA3 (OMIM 617598)",
+        "exonic_variants": 0,
+        "conclusion": "EXCLUDED"
+      }
+    ],
+    "variant_calls": [
+      {
+        "chr": "chr15",
+        "pos": 40209701,
+        "ref": "T",
+        "alt": "G",
+        "gt": "0/1",
+        "ad": "21,25",
+        "dp": 46,
+        "qual": 708.77,
+        "filter": "PASS",
+        "hgvs_c": "c.2210T>G",
+        "hgvs_p": "p.(Leu737Ter)",
+        "consequence": "stop_gained (loss of function)",
+        "db": {
+          "gnomad_af": "0.0000329 (rare)",
+          "clinvar": "RCV000641226 - Pathogenic (MVA1)",
+          "rsid": "rs759242053"
+        },
+        "acmg": "Pathogenic (PVS1+PM2+PM3)"
+      },
+      {
+        "chr": "chr15",
+        "pos": 40220612,
+        "ref": "T",
+        "alt": "G",
+        "gt": "0/1",
+        "ad": "15,13",
+        "dp": 28,
+        "qual": 344.77,
+        "filter": "PASS",
+        "hgvs_c": "c.3006T>G",
+        "hgvs_p": "p.(Asn1002Lys)",
+        "consequence": "missense, C-terminal kinase domain",
+        "db": {
+          "gnomad_af": "absent (novel)",
+          "clinvar": "not reported",
+          "alphamissense": "0.9229 - pathogenic"
+        },
+        "acmg": "Likely Pathogenic (PM2+PP3+PM3)"
+      }
+    ],
+    "secondary_findings": {
+      "screen": "ACMG SF v3.0 (53 actionable genes)",
+      "result": "0 actionable secondary findings",
+      "only_rare": "SMAD4 chr18:51084012 GCACA>G,GCACACA AF=0.70% - population polymorphism, not pathogenic"
+    }
+  },
+  "diagnosis": {
+    "disease": "Mosaic Variegated Aneuploidy Syndrome 1 (MVA1)",
+    "omim": "257300",
+    "mechanism": "compound-heterozygous (biallelic, in-trans) BUB1B loss of function",
+    "acmg": "Pathogenic + Likely Pathogenic",
+    "caveat": "in-trans phase inferred from single proband; parental segregation genotyping recommended to confirm (25%/pregnancy recurrence risk)",
+    "ranking_hypothesis": "BUB1B > CEP57 > TRIP13 (SAC spindle assembly checkpoint)"
+  },
+  "pipeline": {
+    "stages": [
+      "DOCX -> HPO phenotyping (LLM-assisted)",
+      "HPO -> gene ranking (SAC / MVA differential)",
+      "tabix single-pass canonical-exon scan over VCF",
+      "Annotation: VEP + gnomAD v4 + ClinVar + InterPro + AlphaMissense",
+      "ACMG interpretation"
+    ],
+    "reproducibility": "reproducible from public challenge VCF + public annotation databases (docs/ENTREGABLE_FINAL_MVA.md)"
+  },
+  "privacy": {
+    "consent": "patient-consented; no re-identification permitted",
+    "retention": "all data to be deleted after event close; notify Sage Bionetworks",
+    "reidentification": "prohibited"
+  }
+}

@@ -1,0 +1,60 @@
+﻿# ===== Datos crudos del paciente (GATED - NO VERSIONAR) =====
+WGS_*.vcf.gz
+WGS_*.vcf.gz.tbi
+Challenge_Clinical_Phenotype_*.docx
+*.bam
+*.cram
+*.fastq.gz
+
+# ===== Caches volumetricos / logs / artefactos intermedios =====
+_*.out
+_*.err
+_*.log
+_*.py
+_*.json
+_*.txt
+_*.md
+_*.csv
+
+# ===== Scripts intermedios en raiz (canónicos en src/) =====
+/*analyze_*.py
+/*build_*.py
+/*collect_acmg.py
+/*scan_acmg.py
+/*gnomad_*.py
+/*gnomad_retry*.py
+/*fase2_*.py
+vcf_*.txt
+vcf_candidates.txt
+vcf_counts.txt
+/clinical_history.json
+
+# ===== Raiz: reportes duplicados en docs/ (anclados SOLO a raiz) =====
+/*CHECKLIST_FASE1.md
+/*CORRELACION_GENOTIPO_FENOTIPO.md
+/*ENTREGABLE_FINAL_MVA.md
+/*ENTREGABLE_mva_diagnosis.md
+/*PREDICCION_IMPACTO_PROTEINAS.md
+/*PROPUESTA_TERAPEUTICA.md
+/*REPOSICIONAMIENTO_FARMACOS.md
+/*RESUMEN_PRESENTACION.md
+/*bibliografia_mva.md
+/*diagnostico_mva.md
+/*comparativa_participantes.md
+
+# ===== Duplicados =====
+entregables/
+
+# ===== Environments =====
+.env
+.venv/
+venv/
+*.egg-info/
+
+# ===== System =====
+Thumbs.db
+.DS_Store
+
+# ===== Python cache =====
+__pycache__/
+*.pyc

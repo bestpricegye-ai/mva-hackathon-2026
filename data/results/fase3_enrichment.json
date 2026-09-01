@@ -1,0 +1,102 @@
+{
+  "checkpoint_red_aristas": 45,
+  "checkpoint_red_primeras": [
+    "CENPE-MAD1L1:0.57",
+    "CENPE-BUB3:0.935",
+    "CENPE-MAD2L1:0.942",
+    "CENPE-TTK:0.968",
+    "CENPE-AURKB:0.975",
+    "CENPE-PLK1:0.977",
+    "CENPE-CDC20:0.989",
+    "CENPE-BUB1:0.991",
+    "CENPE-BUB1B:0.999",
+    "BUB1B-TTK:0.991",
+    "BUB1B-MAD1L1:0.993",
+    "BUB1B-PLK1:0.999",
+    "BUB1B-AURKB:0.999",
+    "BUB1B-BUB1:0.999",
+    "BUB1B-CDC20:0.999",
+    "BUB1B-MAD2L1:0.999",
+    "BUB1B-BUB3:0.999",
+    "MAD2L1-AURKB:0.93",
+    "MAD2L1-PLK1:0.933",
+    "MAD2L1-TTK:0.995",
+    "MAD2L1-BUB1:0.999",
+    "MAD2L1-CDC20:0.999",
+    "MAD2L1-MAD1L1:0.999",
+    "MAD2L1-BUB3:0.999",
+    "PLK1-TTK:0.653"
+  ],
+  "checkpoint_genes_en_red": [
+    "AURKB",
+    "BUB1",
+    "BUB1B",
+    "BUB3",
+    "CDC20",
+    "CENPE",
+    "MAD1L1",
+    "MAD2L1",
+    "PLK1",
+    "TTK"
+  ],
+  "top_vias_checkpoint": [
+    {
+      "categoria": "WikiPathways",
+      "term": "WP4240",
+      "desc": "Regulation of sister chromatid separation at the metaphase-anaphase transition",
+      "fdr": 6.97e-17,
+      "genes": 7
+    },
+    {
+      "categoria": "KEGG",
+      "term": "hsa04110",
+      "desc": "Cell cycle",
+      "fdr": 3.79e-14,
+      "genes": 8
+    },
+    {
+      "categoria": "WikiPathways",
+      "term": "WP179",
+      "desc": "Cell cycle",
+      "fdr": 4.86e-09,
+      "genes": 6
+    },
+    {
+      "categoria": "KEGG",
+      "term": "hsa04114",
+      "desc": "Oocyte meiosis",
+      "fdr": 4.07e-07,
+      "genes": 5
+    },
+    {
+      "categoria": "KEGG",
+      "term": "hsa05166",
+      "desc": "Human T-cell leukemia virus 1 infection",
+      "fdr": 3.98e-06,
+      "genes": 5
+    },
+    {
+      "categoria": "KEGG",
+      "term": "hsa04914",
+      "desc": "Progesterone-mediated oocyte maturation",
+      "fdr": 1.03e-05,
+      "genes": 4
+    },
+    {
+      "categoria": "WikiPathways",
+      "term": "WP5117",
+      "desc": "Cohesin complex - Cornelia de Lange syndrome",
+      "fdr": 0.0377,
+      "genes": 2
+    },
+    {
+      "categoria": "WikiPathways",
+      "term": "WP3878",
+      "desc": "ATM signaling in development and disease ",
+      "fdr": 0.0483,
+      "genes": 2
+    }
+  ],
+  "co_candidatos_en_checkpoint": [],
+  "conclusion": "BUB1B forma parte de la red del Spindle Assembly Checkpoint (en_red=True); los co-candidatos (TNNT2,SDHA,NUP107,CBS,LZTR1) NO interactuan con el checkpoint (solapamiento=[]). => confirma que la cascada alterada en el fenotipo (mitosis/cancer-predisposition) es exclusivamente la del checkpoint de BUB1B; los co-candidatos de Fase 2 no comparten via."
+}

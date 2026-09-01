@@ -1,0 +1,113 @@
+[
+  {
+    "var": "15:40220612:T>G",
+    "gene": "BUB1B",
+    "panel": "MVA",
+    "most_severe": "missense_variant",
+    "csq": "missense_variant",
+    "impact": "MODERATE",
+    "sift": "deleterious",
+    "polyphen": "probably_damaging",
+    "am": null,
+    "am_class": null,
+    "hgvsp": "",
+    "prot_pos": 1002,
+    "dominios": [
+      "Seg/Thr kinase Cat."
+    ]
+  },
+  {
+    "var": "1:201365254:G>A",
+    "gene": "TNNT2",
+    "panel": "panel2",
+    "most_severe": "synonymous_variant",
+    "csq": "synonymous_variant",
+    "impact": "LOW",
+    "sift": "",
+    "polyphen": "",
+    "am": null,
+    "am_class": null,
+    "hgvsp": "",
+    "prot_pos": 106
+  },
+  {
+    "var": "5:256828:C>T",
+    "gene": "SDHA",
+    "panel": "SAC",
+    "most_severe": "3_prime_UTR_variant",
+    "csq": "3_prime_UTR_variant",
+    "impact": "MODIFIER",
+    "sift": "",
+    "polyphen": "",
+    "am": null,
+    "am_class": null,
+    "hgvsp": ""
+  },
+  {
+    "var": "12:68743447:C>T",
+    "gene": "NUP107",
+    "panel": "panel2",
+    "most_severe": "3_prime_UTR_variant",
+    "csq": "3_prime_UTR_variant",
+    "impact": "MODIFIER",
+    "sift": "",
+    "polyphen": "",
+    "am": null,
+    "am_class": null,
+    "hgvsp": ""
+  },
+  {
+    "var": "21:43053757:G>C",
+    "gene": "CBS",
+    "panel": "panel2",
+    "most_severe": "3_prime_UTR_variant",
+    "csq": "3_prime_UTR_variant",
+    "impact": "MODIFIER",
+    "sift": "",
+    "polyphen": "",
+    "am": null,
+    "am_class": null,
+    "hgvsp": ""
+  },
+  {
+    "var": "21:43065240:G>A",
+    "gene": "CBS",
+    "panel": "panel2",
+    "most_severe": "synonymous_variant",
+    "csq": "synonymous_variant",
+    "impact": "LOW",
+    "sift": "",
+    "polyphen": "",
+    "am": null,
+    "am_class": null,
+    "hgvsp": "",
+    "prot_pos": 233
+  },
+  {
+    "var": "22:20996720:C>G",
+    "gene": "LZTR1",
+    "panel": "panel2",
+    "most_severe": "stop_gained",
+    "csq": "stop_gained",
+    "impact": "HIGH",
+    "sift": "",
+    "polyphen": "",
+    "am": null,
+    "am_class": null,
+    "hgvsp": "",
+    "prot_pos": 748
+  },
+  {
+    "var": "22:20998981:C>G",
+    "gene": "LZTR1",
+    "panel": "panel2",
+    "most_severe": "3_prime_UTR_variant",
+    "csq": "downstream_gene_variant",
+    "impact": "MODIFIER",
+    "sift": "",
+    "polyphen": "",
+    "am": null,
+    "am_class": null,
+    "hgvsp": ""
+  }
+]

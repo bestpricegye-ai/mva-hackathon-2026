@@ -1,0 +1,239 @@
+{
+  "targets_chembl": {
+    "BUB1B": {
+      "target_chembl_id": "CHEMBL4295998",
+      "pref_name": "Mitotic checkpoint serine/threonine-protein kinase BUB1 beta"
+    },
+    "BUB1": {
+      "target_chembl_id": "CHEMBL1772932",
+      "pref_name": "Mitotic checkpoint serine/threonine-protein kinase BUB1"
+    },
+    "MAD2L1": {
+      "target_chembl_id": null,
+      "pref_name": null
+    },
+    "BUB3": {
+      "target_chembl_id": "CHEMBL5724769",
+      "pref_name": "Mitotic checkpoint protein BUB3"
+    },
+    "CDC20": {
+      "target_chembl_id": "CHEMBL4523283",
+      "pref_name": "Cell division cycle protein 20 homolog"
+    },
+    "PLK1": {
+      "target_chembl_id": "CHEMBL3024",
+      "pref_name": "Serine/threonine-protein kinase PLK1"
+    },
+    "AURKB": {
+      "target_chembl_id": "CHEMBL2185",
+      "pref_name": "Aurora kinase B"
+    },
+    "TTK": {
+      "target_chembl_id": "CHEMBL3983",
+      "pref_name": "Dual specificity protein kinase TTK"
+    },
+    "MAD1L1": {
+      "target_chembl_id": null,
+      "pref_name": null
+    },
+    "CENPE": {
+      "target_chembl_id": "CHEMBL5870",
+      "pref_name": "Centromere-associated protein E"
+    }
+  },
+  "chambl_moa": {
+    "BUB1B": [],
+    "BUB1": [],
+    "MAD2L1": {
+      "error": "sin target ChEMBL humano"
+    },
+    "BUB3": [],
+    "CDC20": [],
+    "PLK1": [
+      {
+        "farmaco_chembl": "CHEMBL1908394",
+        "mecanismo_anotado": "Serine/threonine-protein kinase PLK1 inhibitor",
+        "es_inhibidor": true
+      },
+      {
+        "farmaco_chembl": "CHEMBL3991927",
+        "mecanismo_anotado": "Serine/threonine-protein kinase PLK1 inhibitor",
+        "es_inhibidor": true
+      },
+      {
+        "farmaco_chembl": "CHEMBL5314387",
+        "mecanismo_anotado": "Serine/threonine-protein kinase PLK1 inhibitor",
+        "es_inhibidor": true
+      },
+      {
+        "farmaco_chembl": "CHEMBL1738758",
+        "mecanismo_anotado": "Serine/threonine-protein kinase PLK1 inhibitor",
+        "es_inhibidor": true
+      },
+      {
+        "farmaco_chembl": "CHEMBL2392545",
+        "mecanismo_anotado": "Serine/threonine-protein kinase PLK1 inhibitor",
+        "es_inhibidor": true
+      },
+      {
+        "farmaco_chembl": "CHEMBL3545354",
+        "mecanismo_anotado": "Serine/threonine-protein kinase PLK1 inhibitor",
+        "es_inhibidor": true
+      },
+      {
+        "farmaco_chembl": "CHEMBL513909",
+        "mecanismo_anotado": "Serine/threonine-protein kinase PLK1 inhibitor",
+        "es_inhibidor": true
+      },
+      {
+        "farmaco_chembl": "CHEMBL1233528",
+        "mecanismo_anotado": "Serine/threonine-protein kinase PLK1 inhibitor",
+        "es_inhibidor": true
+      }
+    ],
+    "AURKB": [
+      {
+        "farmaco_chembl": "CHEMBL5095033",
+        "mecanismo_anotado": "Serine/threonine-protein kinase Aurora-B inhibitor",
+        "es_inhibidor": true
+      },
+      {
+        "farmaco_chembl": "CHEMBL1090479",
+        "mecanismo_anotado": "Serine/threonine-protein kinase Aurora-B inhibitor",
+        "es_inhibidor": true
+      },
+      {
+        "farmaco_chembl": "CHEMBL1908397",
+        "mecanismo_anotado": "Serine/threonine-protein kinase Aurora-B inhibitor",
+        "es_inhibidor": true
+      },
+      {
+        "farmaco_chembl": "CHEMBL4289017",
+        "mecanismo_anotado": "Serine/threonine-protein kinase Aurora-B inhibitor",
+        "es_inhibidor": true
+      },
+      {
+        "farmaco_chembl": "CHEMBL3544932",
+        "mecanismo_anotado": "Serine/threonine-protein kinase Aurora-B inhibitor",
+        "es_inhibidor": true
+      },
+      {
+        "farmaco_chembl": "CHEMBL495727",
+        "mecanismo_anotado": "Serine/threonine-protein kinase Aurora-B inhibitor",
+        "es_inhibidor": true
+      },
+      {
+        "farmaco_chembl": "CHEMBL3545395",
+        "mecanismo_anotado": "Serine/threonine-protein kinase Aurora-B inhibitor",
+        "es_inhibidor": true
+      },
+      {
+        "farmaco_chembl": "CHEMBL482968",
+        "mecanismo_anotado": "Serine/threonine-protein kinase Aurora-B inhibitor",
+        "es_inhibidor": true
+      },
+      {
+        "farmaco_chembl": "CHEMBL415049",
+        "mecanismo_anotado": "Serine/threonine-protein kinase Aurora-B inhibitor",
+        "es_inhibidor": true
+      }
+    ],
+    "TTK": [
+      {
+        "farmaco_chembl": "CHEMBL4303241",
+        "mecanismo_anotado": "Dual specificity protein kinase TTK inhibitor",
+        "es_inhibidor": true
+      },
+      {
+        "farmaco_chembl": "CHEMBL4456085",
+        "mecanismo_anotado": "Dual specificity protein kinase TTK inhibitor",
+        "es_inhibidor": true
+      }
+    ],
+    "MAD1L1": {
+      "error": "sin target ChEMBL humano"
+    },
+    "CENPE": []
+  },
+  "pubmed_evidencia": {
+    "BUB1B": {
+      "query": "\"BUB1B\" OR \"BUBR1\" AND (\"antimitotic\" OR \"mitotic arrest\" OR \"checkpoint inhibitor\")",
+      "n_articulos": 132
+    },
+    "MPS1_TTK": {
+      "query": "\"MPS1 inhibitor\" AND (\"mitotic arrest\" OR \"4N\")",
+      "n_articulos": 4
+    },
+    "AuroraB": {
+      "query": "\"Aurora B inhibitor\" AND (\"mitotic arrest\" OR \"monopolar spindle\" OR \"4N\")",
+      "n_articulos": 5
+    },
+    "PLK1": {
+      "query": "\"PLK1 inhibitor\" AND (\"mitotic arrest\" OR \"G2/M\" OR \"4N\")",
+      "n_articulos": 91
+    },
+    "CENPE": {
+      "query": "\"CENP-E inhibitor\" AND (\"mitotic arrest\" OR \"congression\")",
+      "n_articulos": 4
+    }
+  },
+  "resumen": {
+    "por_blanco": {
+      "BUB1B": {
+        "compuestos_con_moa": 0,
+        "anotados_inhibidores": 0
+      },
+      "BUB1": {
+        "compuestos_con_moa": 0,
+        "anotados_inhibidores": 0
+      },
+      "BUB3": {
+        "compuestos_con_moa": 0,
+        "anotados_inhibidores": 0
+      },
+      "CDC20": {
+        "compuestos_con_moa": 0,
+        "anotados_inhibidores": 0
+      },
+      "PLK1": {
+        "compuestos_con_moa": 8,
+        "anotados_inhibidores": 8
+      },
+      "AURKB": {
+        "compuestos_con_moa": 9,
+        "anotados_inhibidores": 9
+      },
+      "TTK": {
+        "compuestos_con_moa": 2,
+        "anotados_inhibidores": 2
+      },
+      "CENPE": {
+        "compuestos_con_moa": 0,
+        "anotados_inhibidores": 0
+      }
+    },
+    "undrugged_chembl": {
+      "BUB1B": {
+        "target_chembl_id": "CHEMBL4295998",
+        "pref_name": "Mitotic checkpoint serine/threonine-protein kinase BUB1 beta"
+      },
+      "BUB1": {
+        "target_chembl_id": "CHEMBL1772932",
+        "pref_name": "Mitotic checkpoint serine/threonine-protein kinase BUB1"
+      },
+      "BUB3": {
+        "target_chembl_id": "CHEMBL5724769",
+        "pref_name": "Mitotic checkpoint protein BUB3"
+      },
+      "CDC20": {
+        "target_chembl_id": "CHEMBL4523283",
+        "pref_name": "Cell division cycle protein 20 homolog"
+      },
+      "CENPE": {
+        "target_chembl_id": "CHEMBL5870",
+        "pref_name": "Centromere-associated protein E"
+      }
+    },
+    "conclusion": "ChEMBL (anotacion oficial de mecanismo) confirma que los interactores del SAC con farmacosanotados (PLK1, AURKB, TTK) tienen mecanismos de tipo INHIBIDOR; BUB1B y el resto estan undrugged (0 compuestos con MOA). La mineria PubMed por clase reporta articulos de arresto mitotico/4N para inhibidores de MPS1, Aurora B y PLK1, consistente con la clasificacion antimitotica. => Ningun farmaco anotado modula el SAC por ACTIVACION; el reposicionamiento para MVA1 debe restaurar la dosis de BUBR1 (NMN/NAD+ via SIRT2), no inhibir quinasas mitoticas."
+  }
+}
