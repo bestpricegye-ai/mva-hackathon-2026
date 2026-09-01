@@ -1,0 +1,22 @@
+{
+  "schema": "ucsc_hg38_context_v1",
+  "genome": "hg38",
+  "chrom": "chr15",
+  "source": "UCSC Genome Browser REST API (api.genome.ucsc.edu/getData/sequence)",
+  "download_time": "2026:09:01T20:04:35Z",
+  "note": "Ventanas de secuencia de referencia alrededor de los sitios BUB1B (coordenadas 1-based del VCF). Pos 0-based de ventana: base 1-based = start+1.",
+  "windows": {
+    "chr15:40209701": {
+      "vcf_ref": "T", "vcf_alt": "G", "type": "stop_gained p.Leu737Ter",
+      "start": 40209660, "end": 40209742,
+      "variant_offset_in_window": 40,
+      "seq": "TCACAGTATCGCAGACAGCTACTGAAGTCCCTACCAGAGTTAAGTGCCTCTGCAGAGTTGTGTATAGAAGACAGACCAATGC"
+    },
+    "chr15:40220612": {
+      "vcf_ref": "T", "vcf_alt": "G", "type": "missense p.Asn1002Lys",
+      "start": 40220570, "end": 40220652,
+      "variant_offset_in_window": 41,
+      "seq": "GATGGTGAATTGTGGAATAAATTCTTTGTGCGGATTCTGAATGCCAATGATGAGGCCACAGTGTCTGTTCTTGGGGAGCTTG"
+    }
+  }
+}

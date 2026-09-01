@@ -1,0 +1,107 @@
+{
+  "schema": "fase6_criterios_zhang_v1",
+  "principio": "Criterios de diseno de terapias CRISPR-Cas9 de Feng Zhang (MIT/Broad): (1) Especificidad/off-target, (2) Eficiencia/on-target, (3) PAM (SpCas9 NGG).",
+  "secuencia_referencia": "UCSC Genome Browser REST API (api.genome.ucsc.edu/getData/sequence)",
+  "variantes": [
+    {
+      "pos": "chr15:40209701",
+      "ref_vcf": "T",
+      "alt_vcf": "G",
+      "tipo": "stop_gained p.Leu737Ter",
+      "ref_verificado_en_hg38": true,
+      "contexto": "TCACAGTATCGCAGACAGCTACTGAAGTCCCTACCAGAGTTAAGTGCCTCTGCAGAGTTGTGTATAGAAGACAGACCAATGC",
+      "criterio_3_pam": {
+        "spcas9_NGG_presente_cerca_sitio": true,
+        "modo": "strand_opuesto",
+        "pam_observado": "CC"
+      },
+      "criterio_2_eficiencia": {
+        "score": 100,
+        "gc_pct": 50,
+        "bin": "ALTA",
+        "etiqueta": "heuristico_preliminar_Doench-ste_/DeepCRISPR_subset_validar_CRISPOR"
+      },
+      "criterio_1_especificidad": {
+        "estado": "PENDIENTE_CRISPOR",
+        "razon": "El scrapeo off-target del genoma completo requiere indice hg38 (CRISPOR/CasOFFinder, 751 MB); no ejecutable en el entorno del hackathon.",
+        "plan": [
+          "Ejecutar CRISPOR v4 o CasOFFinder contra GRCh38 con los espaciadores y el PAM NGG.",
+          "Aceptar gRNA solo con sitio canonicos 0-3 mismatches fuera del gen BUB1B.",
+          "Excluir sitios en oncogenes y genes del SAC (BUB1, MAD2L1, etc.) para no inducir aneuploidia.",
+          "Re-grasping alergico: desecho de gRNA con potenciales cortes en genomas paralogos."
+        ]
+      },
+      "mejor_gRNA_candidato": {
+        "strand": "-",
+        "spacer": "CACTTAACTCTGGTAGGGAC",
+        "pam": "CC",
+        "variant_in_spacer": true,
+        "variant_in_seed": false,
+        "variant_in_pam_triple": false,
+        "allele_specific": false,
+        "off_target": "NO_CALCULADO_LOCAL",
+        "eff_heur": {
+          "score": 100,
+          "gc_pct": 50,
+          "bin": "ALTA",
+          "etiqueta": "heuristico_preliminar_Doench-ste_/DeepCRISPR_subset_validar_CRISPOR"
+        },
+        "cut_rel": 43,
+        "dist_rel": 4
+      }
+    },
+    {
+      "pos": "chr15:40220612",
+      "ref_vcf": "T",
+      "alt_vcf": "G",
+      "tipo": "missense p.Asn1002Lys",
+      "ref_verificado_en_hg38": true,
+      "contexto": "GATGGTGAATTGTGGAATAAATTCTTTGTGCGGATTCTGAATGCCAATGATGAGGCCACAGTGTCTGTTCTTGGGGAGCTTG",
+      "criterio_3_pam": {
+        "spcas9_NGG_presente_cerca_sitio": true,
+        "modo": "strand_opuesto",
+        "pam_observado": "CC"
+      },
+      "criterio_2_eficiencia": {
+        "score": 100,
+        "gc_pct": 45,
+        "bin": "ALTA",
+        "etiqueta": "heuristico_preliminar_Doench-ste_/DeepCRISPR_subset_validar_CRISPOR"
+      },
+      "criterio_1_especificidad": {
+        "estado": "PENDIENTE_CRISPOR",
+        "razon": "El scrapeo off-target del genoma completo requiere indice hg38 (CRISPOR/CasOFFinder, 751 MB); no ejecutable en el entorno del hackathon.",
+        "plan": [
+          "Ejecutar CRISPOR v4 o CasOFFinder contra GRCh38 con los espaciadores y el PAM NGG.",
+          "Aceptar gRNA solo con sitio canonicos 0-3 mismatches fuera del gen BUB1B.",
+          "Excluir sitios en oncogenes y genes del SAC (BUB1, MAD2L1, etc.) para no inducir aneuploidia.",
+          "Re-grasping alergico: desecho de gRNA con potenciales cortes en genomas paralogos."
+        ]
+      },
+      "mejor_gRNA_candidato": {
+        "strand": "-",
+        "spacer": "CCTCATCATTGGCATTCAGA",
+        "pam": "CC",
+        "variant_in_spacer": true,
+        "variant_in_seed": false,
+        "variant_in_pam_triple": false,
+        "allele_specific": false,
+        "off_target": "NO_CALCULADO_LOCAL",
+        "eff_heur": {
+          "score": 100,
+          "gc_pct": 45,
+          "bin": "ALTA",
+          "etiqueta": "heuristico_preliminar_Doench-ste_/DeepCRISPR_subset_validar_CRISPOR"
+        },
+        "cut_rel": 52,
+        "dist_rel": 4
+      }
+    }
+  ],
+  "veredicto_global": {
+    "criterio_3_pam": "VERIFICADO (secuencia hg38 con PAM NGG cercano en ambos sitios)",
+    "criterio_2_eficiencia": "ESTIMADO (heuristica preliminar; requiere puntaje oficial CRISPOR/Doench)",
+    "criterio_1_especificidad": "PENDIENTE (off-target requiere indice hg38; plan definido)",
+    "nivel": "COBERTURA_PARCIAL"
+  }
+}
