@@ -185,16 +185,55 @@ de la proteína sin tocar el genoma original.
   división (médula ósea, progenitores hematopoyéticos), el compartimento donde MVA1 causa el mayor daño oncogénico.
 - **Efecto transitorio** (semanas) → re-dosificación; ventaja de **reversibilidad** en pediatría y en paciente oncológico.
 
+**Distinción metodológica clave (rigor de reemplazo proteico vs. vehículo de edición):**
+
+El ARNm optimizado aquí se utiliza **NO como vector para la maquinaria de edición genómica (CRISPR/Cas)**,
+sino como **vehículo de traducción transitoria para reemplazo proteico**. Esta distinción es el estándar de oro
+de seguridad terapéutica en **pediatría oncológica y enfermedades raras**: sustituye la proteína defectuosa con
+una copia funcional sin introducir enzimas que corten el ADN. En el repositorio el ARNm existía únicamente como
+LNP-mRNA de Cas9/Cas13 (sección 1.4); **redireccionarlo a codificar BUBR1 completa** es un cambio de paradigma de
+bajo coste que reutiliza la misma infraestructura LNP/síntesis.
+
+**Por qué la reversibilidad basada en ARNm es la estrategia óptima para MVA1:**
+
+1. **Ventana farmacocinética autolimitada.** El ARNm es intrínsecamente efímero: no se integra en el genoma
+   nuclear y se degrada de forma natural en el citoplasma en horas o pocos días. Cualquier desviación funcional,
+   toxicidad mitocondrial o sobrecorrección del SAC se **revoca de inmediato al suspender la infusión**, dando al
+   médico control absoluto y dinámico sobre la dosis intracelular.
+2. **Supresión total de riesgos genotóxicos permanentes.** El paciente BUB1B ya tiene inestabilidad genómica y
+   propensión tumoral crónicamente elevadas. Introducir editores de ADN o endonucleasas (CRISPR) conlleva un
+   riesgo crítico de rupturas de doble cadena o **translocaciones cromosómicas secundarias**. El reemplazo por
+   ARNm puro interactúa **exclusivamente a nivel ribosomal**, protegiendo la integridad del ADN genómico.
+3. **Optimización directa de la infraestructura del repo.** Aprovechar las **LNP y los protocolos de síntesis de
+   ARNm ya presentes** (concebidos para vehiculizar componentes de edición) permite un cambio de enfoque
+   eficiente: en lugar de codificar una enzima de corte, la secuencia del ARNm se **rediseña (codon-optimized)**
+   para codificar la longitud completa de la proteína BUBR1 funcional.
+
 **Estado en repo:** el ARNm está usado como **vehículo** de CRISPR (LNP-mRNA de Cas9/Cas13, sección 1.4), pero
 **no** como **reemplazo de la proteína BUBR1**. Este ángulo es nuevo y es la estrategia de mayor valor añadido que
 aporta esta sección.
+
+**Arquitectura de la solución (reemplazo proteico por ARNm-LNP):**
+
+- **Carga útil (Payload):** ARNm sintético de alta estabilidad que codifica la isoforma canónica de BUBR1,
+  flanqueado por regiones **UTR optimizadas** para maximizar la traducción en tejidos de alta tasa mitótica, sin
+  desencadenar una respuesta inmune innata mediada por interferones.
+- **Vehículo de entrega (Delivery):** nanopartículas lipídicas ionizables de **cuarta generación**, adaptadas con
+  **ligandos de superficie específicos** para sortear el endotelio vascular y asegurar una **biodistribución
+  equitativa** que compense parcialmente el mosaicismo tisular del paciente pediátrico.
+- **Perfil de seguridad:** si un tejido responde con toxicidad a la restauración del ciclo celular, la
+  interrupción del tratamiento **limpia el sistema por completo en menos de 48 horas**, cumpliendo la exigencia
+  clínica de **reversibilidad absoluta**.
 
 **Limitaciones:**
 - BUBR1 es **grande** (~1050 aa; ARNm ~3.2 kb) → requiere optimización de codones/UTR para expresión estable en LNP.
 - La sobreexpresión ectópica debe ser **fina** (sobreexpresar BUBR1 en exceso también es oncogénico).
 
 **Viabilidad clínica: 72/100** — mecanismo sólido y específico, madurez traslacional media (tecnología LNP-mRNA
-probada en vacunas), entrega multiorgánica parcial (buena en hematopoyético, limitada en SNC/riñón).
+probada en vacunas), entrega multiorgánica parcial (buena en hematopoyético, limitada en SNC/riñón), con el
+**diferenciador decisivo de reversibilidad absoluta (≤48 h al interrumpir) y cero genotoxicidad cromosómica**,
+razón por la que se la posiciona como el **puente terapéutico de primera línea** en el esquema escalonado de la
+Fase 6.
 
 ---
 

@@ -17,15 +17,18 @@ entregables/
 │   │   └── byronzunigao_bub1b-compound-het-acmg.csv   <- PREDICCIÓN (FORMATO EXACTO)
 │   └── report/
 │       └── byronzunigao_track1_report.md              <- REPORTE DE MÉTODOS Track 1
-└── track2/
+├── track2/
 │   ├── byronzunigao_track2_report.md                  <- REPORTE DE MÉTODOS Track 2
-│   └── video_script.md                                <- SCRIPT del pitch (pendiente grabación)
+│   ├── video_script.md                                <- SCRIPT del pitch
+│   ├── pitch_byronzunigao.mp4                         <- PITCH GRABADO (3:01, es-MX)
+│   └── pitch_build/                                   <- assets de montaje del video
 ├── track4/
 │   ├── FASE4_REPOSICIONAMIENTO.md                     <- Descubrimiento terapéutico (track 4)
 │   └── FASE4_VALIDACION_PROTOCOLO.md                  <- Validación en bases públicas
-└── consorcio/
-    ├── EVALUACION_5_FASES.md                          <- Auditoría interna de las 5 fases
-    └── VERIFICACION_MANEJO_CLINICO.md                 <- Veredicto médico del manejo MVA1
+├── consorcio/
+│   ├── EVALUACION_5_FASES.md                          <- Auditoría interna de las 5 fases
+│   └── VERIFICACION_MANEJO_CLINICO.md                 <- Veredicto médico del manejo MVA1
+└── (SUBMISION.md, pitch_byronzunigao.mp4)             <- pre-flight + assets
 ```
 
 ---
@@ -68,8 +71,11 @@ mecanismo → candidatos, declaración de LLM, fuentes públicas, abstract). Inc
 senolíticos, GH) + contraindicación de anti-mitóticos.
 
 ### 2. Pitch video (3 min)
-Graba un video de 3 minutos explicando el razonamiento (variante BUB1B → mecanismo SAC → NMN/NAD+ y
-otros) y súbelo a **YouTube/Vimeo**; pegar la URL en la tab de submit (campo obligatorio).
+Video de 3 minutos explicando el razonamiento (variante BUB1B → mecanismo SAC → NMN/NAD+ y otros):
+- **Grabado:** `track2/pitch_byronzunigao.mp4` (3:01, 1280x720, es-MX) — versionado en el repo.
+- **Script:** `track2/video_script.md` · **Assets de montaje:** `track2/pitch_build/`.
+- **Pendiente (manual):** subir a **YouTube/Vimeo** (Unlisted) y **pegar la URL** en la tab de submit
+  (campo obligatorio).
 
 ### 3. GitHub repo
 Compartir el mismo repo (contiene el pipeline de mecanismo + fuentes).
@@ -89,6 +95,10 @@ Compartir el mismo repo (contiene el pipeline de mecanismo + fuentes).
       (`docs/decision_reads_no_analizados.md`).
 - [x] Veredicto médico del manejo clínico MVA1 (`consorcio/VERIFICACION_MANEJO_CLINICO.md`).
 - [x] Track 2: **pitch grabado** (`track2/pitch_byronzunigao.mp4`, 3:01) — **falta pegar la URL** (YouTube/Vimeo) en la tab Submit-Track2.
+- [x] Track 2: **pitch mp4 + `pitch_build/` versionados** en el repo (decisión de equipo).
+- [x] Documentación de metodología y paper científico (`docs/PAPER_CIENTIFICO_MVA.md`,
+      `docs/METODOLOGIA_FLUJOGRAMA.md`) y ampliación de Fase 6 con estrategias de compensación/
+      reemplazo (`docs/fase6_zhang_influence.md`, sección 5, E1–E4).
 - [x] **GitHub repo** creado y pusheado: `https://github.com/bestpricegye-ai/mva-hackathon-2026`
       (privado; pegar la URL en la tab de submit — el LEEME recomienda hacerlo público al cierre).
 - [ ] Tras el evento: **borrar todos los datos locales** y confirmar a

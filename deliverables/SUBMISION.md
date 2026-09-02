@@ -37,25 +37,29 @@ anti-mitóticos (regla 3.1 del Consorcio).
 - `deliverables/consorcio/VERIFICACION_MANEJO_CLINICO.md` (veredicto médico MVA1)
 - `deliverables/consorcio/EVALUACION_5_FASES.md`
 - Track 4 (opcional): `deliverables/track4/FASE4_REPOSICIONAMIENTO.md` + `FASE4_VALIDACION_PROTOCOLO.md`
-- Consolidado completo sugerido para los jueces: pendiente generar `ENTREGABLE_FINAL_MVA.md`
+- `docs/ENTREGABLE_FINAL_MVA.md` (consolidado completo para jueces, incluye Track 2/3/4 + ACMG SF3)
+- `docs/PAPER_CIENTIFICO_MVA.md` (paper científico con citas y discusión metodológica)
+- `docs/METODOLOGIA_FLUJOGRAMA.md` (metodología + flujograma + manual + bitácora de API)
+- `docs/INFORME_REPRODUCIBILIDAD.md` + `docs/INFORME_TESTING_FRAMEWORK.md`
+  (18 entregables byte-idénticos, SHA-256; framework QC 6/6 PASS)
 
 ## Trabajo pendiente (acciones manuales del usuario)
 
 - [ ] Subir `pitch_byronzunigao.mp4` a YouTube/Vimeo (Unlisted) → pegar URL en Submit-Track 2.
 - [ ] Subir CSV + reportes en Submit-Track 1 (y Track 2) en las tabs de Synapse.
-- [ ] Decidir si se versiona el video (`pitch_byronzunigao.mp4`, 4.9 MB) y `src/hacer_video.py`
-      (hoy **untracked**; recomendado: commit del script del video + `video_script.md`, el mp4 puede quedarse local).
+- [x] **Decisión tomada:** versionar el pitch (**mp4 + `pitch_build/`**) junto con `src/hacer_video.py` y
+      `video_script.md` (todos ya trackeados en el repo).
 - [ ] Tras el evento: `gh repo edit bestpricegye-ai/mva-hackathon-2026 --visibility public`.
 - [ ] Rotar el token `ghp_*` con scope admin tras la publicación.
 - [ ] Borrar datos locales (VCF, DOCX originales, caches, `.env`) y confirmar a
       `RarediseaserealkidMVAhackathon2026@synapse.org` (regla de los 30 días).
 - [ ] Citación/acknowledgement oficial del challenge en cualquier publicación.
 
-## Estado del repo (al pre-flight)
+## Estado del repo (pre-subida final)
 
-- `master` en `6d734f9`..`d1dd04e` → últimos módulos: elegibilidad de terapia (95/100 ALTA) y
-  verificación de criterios Zhang (PAM verificado en hg38, eficiencia ALTA preliminar, off-target
-  pendiente CRISPOR).
-- Untracked al momento: `deliverables/track2/pitch_byronzunigao.mp4`, `deliverables/track2/pitch_build/`,
-  `src/hacer_video.py`.
+- `master` hasta `b409371` (y push final con pitch + docs) → incluye: elegibilidad de terapia génica
+  (95/100 ALTA), verificación de criterios Zhang (PAM verificado en hg38, eficiencia ALTA preliminar,
+  off-target pendiente CRISPOR), paper + metodología, ampliación de Fase 6 con estrategias de
+  compensación/reemplazo (sección 5, E1–E4).
+- **Todo versionado:** pitch mp4 + `pitch_build/`, `src/hacer_video.py`, `video_script.md`.
 - Auditoría de secretos pre-publicación: **OK** (tree=0 history=0, `docs/auditoria_secretos.md`).
