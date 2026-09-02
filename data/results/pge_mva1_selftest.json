@@ -1,0 +1,17 @@
+{
+  "schema": "pge_mva1_selftest_v1",
+  "n_worlds": 2000,
+  "seed": 42,
+  "distribution": {
+    "rescue": 375,
+    "cytostatic": 496,
+    "neutral": 525,
+    "sparse": 604
+  },
+  "deteccion_citostasis": 1.0,
+  "confirmacion_rescate": 0.21866666666666668,
+  "falsos_avance": 0.025,
+  "wilson_ucb_falsos_avance": 0.032806933498333926,
+  "fail_closed_en_escaso": 1.0,
+  "nota": "valida el ANALIZADOR sobre mundos sinteticos con verdad oculta; no evidencia clinica"
+}

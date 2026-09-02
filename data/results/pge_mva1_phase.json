@@ -1,0 +1,19 @@
+{
+  "schema": "pge_mva1_phase_v1",
+  "fase": "IN_TRANS_CONFIRMADO",
+  "variantes": [
+    {
+      "site": "chr15:40209701",
+      "origen": "paterno",
+      "paternal": "portador",
+      "maternal": "no_portador"
+    },
+    {
+      "site": "chr15:40220612",
+      "origen": "materno",
+      "paternal": "no_portador",
+      "maternal": "portador"
+    }
+  ],
+  "nota": "requiere WGS trios para confirmacion definitiva"
+}

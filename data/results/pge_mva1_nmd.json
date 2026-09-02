@@ -1,0 +1,178 @@
+{
+  "schema": "pge_mva1_nmd_v1",
+  "transcript": "ENST00000287598.11",
+  "rule": "EJC: PTC >55nt aguas arriba del splice-junction aguas abajo -> NMD-competente",
+  "nota_coord": "exones Ensembl 1-based-inclusive; ventana UCSC 0-based-hal-open (off-by-1 entre convenciones no afecta la llamada NMD por distancia)",
+  "exons": [
+    [
+      40161069,
+      40161255
+    ],
+    [
+      40165053,
+      40165196
+    ],
+    [
+      40170062,
+      40170121
+    ],
+    [
+      40170537,
+      40170681
+    ],
+    [
+      40176477,
+      40176673
+    ],
+    [
+      40183714,
+      40183883
+    ],
+    [
+      40185165,
+      40185379
+    ],
+    [
+      40185551,
+      40185642
+    ],
+    [
+      40196545,
+      40196774
+    ],
+    [
+      40199615,
+      40199727
+    ],
+    [
+      40200244,
+      40200359
+    ],
+    [
+      40200931,
+      40200980
+    ],
+    [
+      40202405,
+      40202465
+    ],
+    [
+      40202589,
+      40202694
+    ],
+    [
+      40206184,
+      40206458
+    ],
+    [
+      40208637,
+      40208770
+    ],
+    [
+      40209635,
+      40209775
+    ],
+    [
+      40210110,
+      40210210
+    ],
+    [
+      40212499,
+      40212648
+    ],
+    [
+      40213332,
+      40213474
+    ],
+    [
+      40217496,
+      40217667
+    ],
+    [
+      40218456,
+      40218562
+    ],
+    [
+      40220564,
+      40221123
+    ]
+  ],
+  "variantes": [
+    {
+      "pos": 40209701,
+      "ref": "T",
+      "alt": "G",
+      "label": "L737Ter",
+      "transcript": "ENST00000287598.11",
+      "exon_index": 17,
+      "exon": [
+        40209635,
+        40209775
+      ],
+      "dist_to_junction_nt": 74,
+      "last_exon": false,
+      "nmd_competent": true,
+      "status": "NMD_COMPETENTE"
+    },
+    {
+      "pos": 40220612,
+      "ref": "T",
+      "alt": "G",
+      "label": "N1002K",
+      "transcript": "ENST00000287598.11",
+      "exon_index": 23,
+      "exon": [
+        40220564,
+        40221123
+      ],
+      "dist_to_junction_nt": 511,
+      "last_exon": true,
+      "nmd_competent": false,
+      "status": "SIN_NMD"
+    }
+  ],
+  "aso_candidatos": [
+    {
+      "window": "chr15:40209688-40209707",
+      "offset_in_exon17": 53,
+      "seq20mer": "CCCTACCAGAGTTAAGTGCC",
+      "gc": 0.55,
+      "relative_ptc": "start-66..start+19-66"
+    },
+    {
+      "window": "chr15:40209693-40209712",
+      "offset_in_exon17": 58,
+      "seq20mer": "CCAGAGTTAAGTGCCTCTGC",
+      "gc": 0.55,
+      "relative_ptc": "start-66..start+19-66"
+    },
+    {
+      "window": "chr15:40209702-40209721",
+      "offset_in_exon17": 67,
+      "seq20mer": "AGTGCCTCTGCAGAGTTGTG",
+      "gc": 0.55,
+      "relative_ptc": "start-66..start+19-66"
+    },
+    {
+      "window": "chr15:40209703-40209722",
+      "offset_in_exon17": 68,
+      "seq20mer": "GTGCCTCTGCAGAGTTGTGT",
+      "gc": 0.55,
+      "relative_ptc": "start-66..start+19-66"
+    },
+    {
+      "window": "chr15:40209686-40209705",
+      "offset_in_exon17": 51,
+      "seq20mer": "GTCCCTACCAGAGTTAAGTG",
+      "gc": 0.5,
+      "relative_ptc": "start-66..start+19-66"
+    },
+    {
+      "window": "chr15:40209687-40209706",
+      "offset_in_exon17": 52,
+      "seq20mer": "TCCCTACCAGAGTTAAGTGC",
+      "gc": 0.5,
+      "relative_ptc": "start-66..start+19-66"
+    }
+  ]
+}
