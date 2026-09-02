@@ -1,13 +1,14 @@
 # Comparativa de Participantes — MVA Hackathon 2026 (Track 1 & Track 2)
 
 **Equipo:** byronzunigao (nosotros)
-**Fuente de datos:** repos públicos de GitHub de participantes + nuestro workspace.
+**Fuente de datos:** repos públicos de GitHub de participantes + nuestro workspace + **leaderboard oficial de Synapse**.
 **Cadencia:** actualización diaria automática (hasta el cierre del leaderboard, 24 oct 2026).
-**Última actualización:** (fecha automática al correr el monitor)
+**Última actualización:** 2026-09-02 (snapshot visible ranks 58-79 del leaderboard)
 
 > **Aviso importante sobre la métrica (confirmado por participante MikeRecognex, 2026-08-27):**
 > *"39 of 39 entries score 100.0 rank points and F-max 1.000"* — el leaderboard **automático de Track 1
 > está saturado**. Todo equipo que acierta el par BUB1B en rank 1 obtiene **100/100 pts y F-max 1.0**.
+> Snapshot 2026-09-02: **16 equipos más en 100.0 / 1.000** (ranks 58-73) confirman la saturación.
 > Por tanto, la métrica automática **no diferencia modelos**; la diferenciación real está en el
 > **Track 2 (panel de expertos)** y en la calidad/rigor del método documentado.
 
@@ -29,6 +30,14 @@ Cinco pipelines **independientes** (100% de consenso) convergen en el **mismo pa
 confirma de forma **robusta y reproducible**. La variante nonsense p.Leu737Ter (ClinVar
 Pathogenic) + el missense novel p.Asn1002Lys (AlphaMissense 0.923) en el dominio quinasa son el
 par molecular canónico de MVA1.
+
+> **Actualización 2026-09-02 (leaderboard oficial de Synapse, snapshot ranks 58-79):** la
+> convergencia ya no es anecdótica: aparte de por tecnología, **16 equipos adicionales** marcan
+> **100.0 Rank Points / F-max 1.000** (ranks 58-73), todos con pares BUB1B compound-het (por ejemplo
+> `bub1b-comphet-vep-targeted`, `bub1b-compound-het`, `vep-acmg-compound-het`, `bub1b-mva1-hypothesis`).
+> Incluso equipos con pipeline distinto (no-comphet, case-agnostic) alcanzan 50.0/0.5-0.57, subiendo a
+> 100/1.0 solo al acertar el par BUB1B. **Conclusión:** el caso es un estándar de oro cerrado; el
+> diagnóstico no es el diferenciador — el **método y el Track 2 sí lo son**.
 
 ---
 
@@ -56,7 +65,8 @@ par molecular canónico de MVA1.
 
 ## 3. ¿Ventaja competitiva?
 
-**Track 1 (automático):** NO hay diferenciación — leaderboard saturado en 100/1.0. Nuestra
+**Track 1 (automático):** NO hay diferenciación — leaderboard saturado en 100/1.0, re-confirmado
+con 16 equipos más al tope en el snapshot 2026-09-02. Nuestra
 ventaja es **defensiva/rigor**: caveat de fase in-trans declarado, exclusión de co-causa con
 paneles ampliados (equivalente al cis/trans de MikeRecognex).
 
@@ -78,3 +88,38 @@ A diferencia de la IA de grafos (TxGNN), nosotros **integramos la biología del 
 | 2026-08-31 | tfius (texdata) | github.com/tfius/mva-hackathon-2026 | Exomiser + TxGNN/PrimeKG track2 | Analizado |
 
 *(El monitor agrega filas aquí conforme detecta repos nuevos.)*
+
+### Participantes detectados vía leaderboard oficial (snapshot 2026-09-02, ranks 58-79)
+
+> **Nota de transparencia:** aquí el método se deduce **solo del nombre del archivo de predicción**
+> en el leaderboard (no de su repo). Acertar el par BUB1B da 100.0/1.000; fallarlo da puntuación parcial.
+
+| Rank | Participante | Archivo modelo (método deducido) | Score |
+|---|---|---|---|
+| 58 | agentis-federation (@ylohnitram) | `exomiser-lens` (panel + Exomiser) | 100.0 / 1.000 |
+| 59 | ShauryaS31 | `track1_predictions` | 100.0 / 1.000 |
+| 60 | @movingparticle | `bub1b-mva1-hypothesis` | 100.0 / 1.000 |
+| 61 | @Saruman-314 | `bub1b-comphet-vep-targeted` (VEP) | 100.0 / 1.000 |
+| 62 | hysa (@hernanysa) | `track1_borrador` | 100.0 / 1.000 |
+| 63 | AjaxDNA (@Juanto19) | `bub1b-compound-het` | 100.0 / 1.000 |
+| 64 | Soul (@ask-kausheek) | `hpo-vep-rankfusion` (HPO+VEP) | 100.0 / 1.000 |
+| 65 | ines28 | `mva_track1_submission` | 100.0 / 1.000 |
+| 66 | @octagono | `genoma-panel` | 100.0 / 1.000 |
+| 67 | @swoopeagle | `exomiser-union` | 100.0 / 1.000 |
+| 68 | @simulatedbuggy | `mva-findings` | 100.0 / 1.000 |
+| 69 | bonamame (@bonadossou) | `track1_v1_READY` | 100.0 / 1.000 |
+| 70 | @xcqtnr | `mva_track1` | 100.0 / 1.000 |
+| 71 | georgefifth | `bub1b-compound-het-v1` | 100.0 / 1.000 |
+| 72 | Himanshu Kumar | `bub1b-compound-het` | 100.0 / 1.000 |
+| 73 | Gummietech (@kemval) | `vep-acmg-compound-het` (VEP+ACMG) | 100.0 / 1.000 |
+| 74 | @kathya-sanchez-2002 | `hybrid-prioritization` | 50.0 / 0.500 |
+| 75 | mateoosm (@mateooSM) | `BUB1B_T_G_G_A_primary` | 50.0 / 0.500 |
+| 76 | @Remek | `m1-case-agnostic-acmg` | 25.0 / 0.571 |
+| 77 | f6 (@F606) | `nexus-f6-track1` | 0.0 / 0.000 |
+| 78 | @steppenwolf0 | `mva_candidates` | 0.0 / 0.000 |
+| 79 | studiopanorama.mx (@sangulfost) | `track1_predictions` | 0.0 / 0.000 |
+
+**Lectura competitiva:** el par BUB1B lo acierta cualquiera con pipeline razonable (16/22 en este
+snapshot al tope). El grupo 74-76 (50/25 pts) acertó **un alelo pero no el par completo** — confirma
+que la dificultad residual está en la **fase compound-het**, exactamente donde nosotros declaramos
+el caveat de fase in-trans. El **differentiator** sigue siendo el **Track 2 y el rigor del write-up**.

@@ -1,0 +1,6 @@
+file 'C:\starquake\hackathonmva\deliverables\track2\pitch_build_EN\s1.mp4'
+file 'C:\starquake\hackathonmva\deliverables\track2\pitch_build_EN\s2.mp4'
+file 'C:\starquake\hackathonmva\deliverables\track2\pitch_build_EN\s3.mp4'
+file 'C:\starquake\hackathonmva\deliverables\track2\pitch_build_EN\s4.mp4'
+file 'C:\starquake\hackathonmva\deliverables\track2\pitch_build_EN\s5.mp4'
+file 'C:\starquake\hackathonmva\deliverables\track2\pitch_build_EN\s6.mp4'
