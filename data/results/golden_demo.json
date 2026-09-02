@@ -1,0 +1,33 @@
+{
+  "schema": "pge_mva1_golden_v1",
+  "fuente": "vcf_exonic_variants.txt (WGS_EX2312012, GRCh38)",
+  "n_variantes": 2,
+  "variantes_orden_canonico": [
+    {
+      "chrom": "chr15",
+      "pos": 40209701,
+      "ref": "T",
+      "alt": "G",
+      "gt": "0/1",
+      "ad": "21,25",
+      "dp": 46,
+      "qual": 708.77,
+      "filter": "PASS"
+    },
+    {
+      "chrom": "chr15",
+      "pos": 40220612,
+      "ref": "T",
+      "alt": "G",
+      "gt": "0/1",
+      "ad": "15,13",
+      "dp": 28,
+      "qual": 344.77,
+      "filter": "PASS"
+    }
+  ],
+  "hash_canonico": "64a7f53a7d00f40977221ec41a44b1aeb862103fb5aebc1d2f9a8d2156a45eb5",
+  "control_patogenico_L737Ter": "chr15:40209701 T>G PVS1 NMD-competente",
+  "control_patogenico_N1002K": "chr15:40220612 T>G novel, dominio quinasa",
+  "nota_determinismo": "orden canonico (CHROM lex, POS num); mismo VCF+DB => mismo hash. Este golden se congela y NO se regenera."
+}
