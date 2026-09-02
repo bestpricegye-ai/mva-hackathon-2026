@@ -187,6 +187,28 @@ Reutiliza y extiende los resultados **ya ejecutados** en nuestra fase 6:
 
 ---
 
+### 3.4 Genoma real (GRCh38 + VCF WGS del paciente) → artefactos de edición y verificación
+
+Los pasos wet-lab de MD-µs, ARN-seq, readthrough y base editing **consumen inputs que aquí se generan desde el genoma realmente secuenciado**, no desde plantillas genéricas. Ejecutado con `src/pge_mva1_genome.py` (`artifacts`) sobre:
+
+- **VCF real** `WGS_EX2312012_HGWCNDSX7.vcf.gz` (GRCh38, FILTER=PASS) → `vcf_exonic_variants.txt`
+- **Referencia hg38 real** (ventanas UCSC cacheadas) para las homologías de reparación.
+- **Índice de referencia requerido:** los flujos GATK/CRISPOR/MD exigen el índice **GRCh38/hg38** (build oficial GATK, `gatk.broadinstitute.org/...-GRCh38-or-hg38`); el entorno local no montó el FASTA+dict indexado (751 MB), por lo que el off-target DeepSpCas9/CasOFFinder queda pendiente.
+
+**Artefactos reales por sitio (`data/results/pge_mva1_genome.json`):**
+
+| Sitio | VAF observado (VCF) | AF gnomAD | Donor HDR ssDNA | Primers amplicón (verificación edición) |
+|---|---|---|---|---|
+| chr15:40209701 (L737Ter) | 0.543 | 3.29e-05 | 61 nt, corr. a WT | `TCACAGTATCGCAGACAGCT` / `ATTGGTCTGTCTTCTATACA` |
+| chr15:40220612 (N1002K) | 0.464 | novel (AF=None) | 61 nt, corr. a WT | `ATGGTGAATTGTGGAATAAA` / `AAGCTCCCCAAGAACAGACA` |
+
+**Uso downstream (wet-lab, requiere HPC + biobanco):**
+- Donor HDR → HDR/prime editing en línea celular del paciente; la verificación por amplicón-PCR usa los primers generados.
+- VAF real → dosaje alélico para interpretar escape NMD por ARN-seq (fracción transcrito mutante).
+- BLOQUEO escalonado: fase in-trans sin segregación parental y edición celular sin biobanco se marcan **fail-closed** en el JSON, no se sobre-venden como confirmadas.
+
+---
+
 ## EJE 4 · Orquestación Autónoma (Closed-Loop · Python)
 
 ### 4.1 Módulos ejecutables (implementados en `src/pge_mva1.py`)
@@ -224,11 +246,12 @@ publican tras ejecución local (§5). Nunca se presentan como evidencia clínica
 |---|---|---|
 | PAM verificado ambos alelos, ref hg38 | **EJECUTADO (real)** | `fase6_criterios_zhang.json` |
 | Espaciadores candidatos + eficiencia ALTA heurística | **EJECUTADO (real)** | `data/results/fase6_criterios_zhang.json` |
-| Análisis NMD (exón 17, 74 nt > 55 nt) | **EJECUTADO (anotación real)** | §1.3 · `pge_mva1_nmd.json` |
+| Análisis NMD (exón 17, 74 nt > 55 nt) | **EJECUTADO (anotación real)** | §1.3 → `pge_mva1_nmd.json` |
 | Fase/paes in-trans | Implementado, **datos trios pendientes** (seg. parental) | `pge_mva1_phase.json` (sintético) |
 | Telemetría + fail-closed | Implementado, **validado en simulación sintética** | `pge_mva1_selftest.json` |
-| MD-µs, ARN-seq, readthrough, base editing wet-lab | **PROTOCOLO** (requiere HPC + biobanco) | §Ejes 1/3 |
-| Off-target CRISPOR | Pendiente índice GRCh38 (751 MB, entorno sin HPC) | `fase6_criterios_zhang.md` |
+| **Genoma real → artefactos de edición** (GRCh38 + VCF WGS real): donor HDR ssDNA, primers de amplicón-seq para verificación, VAF observado, AF gnomAD | **EJECUTADO (genoma real)** | `src/pge_mva1_genome.py` → `pge_mva1_genome.json` |
+| MD-µs, ARN-seq, readthrough, base editing wet-lab | **PROTOCOLO**; inputs reproductibles desde el genoma real ya generados | §Ejes 1/3 + `pge_mva1_genome.json` |
+| Off-target CRISPOR | Pendiente **índice GRCh38** (751 MB, entorno sin HPC); requerido para run → `gatk.broadinstitute.org GRCh38/hg38` | `fase6_criterios_zhang.md` |
 
 ## 8. Originalidad e independencia
 

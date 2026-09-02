@@ -1,0 +1,86 @@
+{
+  "schema": "pge_mva1_genome_v1",
+  "ensamblaje": "GRCh38/hg38 (GATK: GRCh38) - referencia real del VCF pull-down",
+  "fuente_vcf": "WGS_EX2312012_HGWCNDSX7.vcf.gz -> vcf_exonic_variants.txt",
+  "variantes": [
+    {
+      "site": "chr15:40209701",
+      "ref_hg38": "T",
+      "alt": "G",
+      "genotipo_vcf": "0/1",
+      "ad_vcf": "21,25",
+      "dp_vcf": 46,
+      "vaf_observado": 0.5434782608695652,
+      "qual": 708.77,
+      "filter": "PASS",
+      "gnomAD_af": 3.2857124081643385e-05,
+      "gnomAD_presente": true,
+      "donor_hdr_ssDNA": {
+        "template_ssDNA": "GCAGACAGCTACTGAAGTCCCTACCAGAGTTAAGTGCCTCTGCAGAGTTGTGTATAGAAGA",
+        "left_homology_arm": "GCAGACAGCTACTGAAGTCCCTACCAGAGT",
+        "right_homology_arm": "AAGTGCCTCTGCAGAGTTGTGTATAGAAGA",
+        "edited_base_is_wt": "T",
+        "arm_lengths_nt": [
+          30,
+          30
+        ]
+      },
+      "primers_verificacion_amplicon": {
+        "chr": "chr15",
+        "site": "chr15:40209701",
+        "forward_5p_3p": "TCACAGTATCGCAGACAGCT",
+        "reverse_5p_3p": "ATTGGTCTGTCTTCTATACA",
+        "amplicon_span_nt": 80
+      },
+      "fase_in_trans": "REQUIERE_SEGREGACION_PARENTAL",
+      "wet_lab_requerido": [
+        "MD-µs (OpenMM/GROMACS FEP)",
+        "ARN-seq alta profundidad",
+        "readthrough reporter",
+        "base/prime editing celular"
+      ]
+    },
+    {
+      "site": "chr15:40220612",
+      "ref_hg38": "T",
+      "alt": "G",
+      "genotipo_vcf": "0/1",
+      "ad_vcf": "15,13",
+      "dp_vcf": 28,
+      "vaf_observado": 0.4642857142857143,
+      "qual": 344.77,
+      "filter": "PASS",
+      "gnomAD_af": null,
+      "gnomAD_presente": false,
+      "donor_hdr_ssDNA": {
+        "template_ssDNA": "GTGGAATAAATTCTTTGTGCGGATTCTGAATGCCAATGATGAGGCCACAGTGTCTGTTCTT",
+        "left_homology_arm": "GTGGAATAAATTCTTTGTGCGGATTCTGAA",
+        "right_homology_arm": "GCCAATGATGAGGCCACAGTGTCTGTTCTT",
+        "edited_base_is_wt": "T",
+        "arm_lengths_nt": [
+          30,
+          30
+        ]
+      },
+      "primers_verificacion_amplicon": {
+        "chr": "chr15",
+        "site": "chr15:40220612",
+        "forward_5p_3p": "ATGGTGAATTGTGGAATAAA",
+        "reverse_5p_3p": "AAGCTCCCCAAGAACAGACA",
+        "amplicon_span_nt": 80
+      },
+      "fase_in_trans": "REQUIERE_SEGREGACION_PARENTAL",
+      "wet_lab_requerido": [
+        "MD-µs (OpenMM/GROMACS FEP)",
+        "ARN-seq alta profundidad",
+        "readthrough reporter",
+        "base/prime editing celular"
+      ]
+    }
+  ],
+  "nota_wetlab": "Los pasos que consumen estos artefactos (MD-µs FEP del dominio quinasa, ARN-seq para medir escape NMD, reportero readthrough, y edicion de bases en linea celular del paciente) son WET-LAB/HPC y quedan fuera del entorno local; los donors y primers aqui generados son los inputs reproductibles exactos.",
+  "fail_closed_escalonado": {
+    "fase_in_trans": "BLOQUEO hasta segregacion parental",
+    "edicion_celular": "BLOQUEO sin biobanco (iPSC/PBMC del paciente)"
+  }
+}
