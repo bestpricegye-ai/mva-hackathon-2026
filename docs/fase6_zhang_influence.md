@@ -150,3 +150,171 @@ FASE 6C — Optimización de resistencia y seguridad
 6. Escribir `docs/fase6_zhang_influence.md` con propuesta completa
 
 **Salida:** `data/results/fase6_zhang_influence.json` (análisis de factibilidad) + `docs/fase6_zhang_influence.md` (propuesta terapéutica completa)
+
+---
+
+## 5. Estrategias de compensación, estabilización y reemplazo (sin corrección genética directa)
+
+> **Principio rector:** La Fase 6 no se limita a corregir el ADN. En MVA1, la corrección genética directa
+> (CRISPR/HDR/ABE) es la de mayor complejidad por el **mosaicismo multiorgánico** (entrega sistémica a riñón,
+> músculo, SNC) y porque el daño embriológico ya establecido **no es reversible** post-natal. Cuando corregir el
+> defecto en el ADN o en la estructura original de la proteína es inviable, la farmacología y la bioingeniería
+> operan por **mecanismos alternativos de compensación, estabilización o reemplazo**. Esta sección las organiza y
+> las evalúa contra el genotipo BUB1B comp-het de la probanda.
+
+### 5.1 Marco de evaluación
+
+Cada estrategia se puntúa con una **escala de viabilidad clínica (0-100)** ponderando:
+- **Mecanismo** (¿restaura función BUBR1 o la compensa de forma biológicamente coherente con el SAC?)
+- **Seguridad en paciente oncológico pediátrico** (riesgo de inmunogenicidad / estimulación tumoral / toxicidad mitótica)
+- **Logística de entrega multiorgánica** (¿resuelve el reto del mosaicismo?)
+- **Madurez traslacional** (¿hay soporte preclínico/clínico publicado?)
+- **Reversibilidad** (capacidad de interrupción, relevante en pediatría)
+
+---
+
+### E1. ARNm sintético de reemplazo (Terapia de transcripción)
+
+**Concepto:** No se edita el gen nativo; se introducen **ARNm sintético codificante de BUBR1 sana** en
+nanopartículas lipídicas (LNP). Las células del paciente traducen el ARNm exógeno y producen copias funcionales
+de la proteína sin tocar el genoma original.
+
+**Aplicación a BUB1B/MVA1:**
+- BUB1B es **dosis-dependiente** (haploinsuficiente): restaurar niveles de BUBR1 rescata el SAC ([Baker 2013]).
+- Al ser una proteína **citosólica/nuclear** (no secretada), la entrega por LNP-mRNA es factible para células en
+  división (médula ósea, progenitores hematopoyéticos), el compartimento donde MVA1 causa el mayor daño oncogénico.
+- **Efecto transitorio** (semanas) → re-dosificación; ventaja de **reversibilidad** en pediatría y en paciente oncológico.
+
+**Estado en repo:** el ARNm está usado como **vehículo** de CRISPR (LNP-mRNA de Cas9/Cas13, sección 1.4), pero
+**no** como **reemplazo de la proteína BUBR1**. Este ángulo es nuevo y es la estrategia de mayor valor añadido que
+aporta esta sección.
+
+**Limitaciones:**
+- BUBR1 es **grande** (~1050 aa; ARNm ~3.2 kb) → requiere optimización de codones/UTR para expresión estable en LNP.
+- La sobreexpresión ectópica debe ser **fina** (sobreexpresar BUBR1 en exceso también es oncogénico).
+
+**Viabilidad clínica: 72/100** — mecanismo sólido y específico, madurez traslacional media (tecnología LNP-mRNA
+probada en vacunas), entrega multiorgánica parcial (buena en hematopoyético, limitada en SNC/riñón).
+
+---
+
+### E2. Estabilización mediante chaperonas farmacológicas
+
+**Concepto:** Si la mutación produce una proteína **inestable que se degrada demasiado rápido**, pequeñas
+moléculas (**chaperonas farmacológicas**) se unen al mutante, estabilizan su plegamiento 3D y alargan su
+vida media en la célula.
+
+**Aplicación a BUB1B/MVA1:**
+- **p.Asn1002Lys** (missense, AlphaMissense 0.923, exón terminal de la kinasa) es candidata a proteína mal
+  plegada → degradación proteosomal acelerada → **haploinsuficiencia funcional**.
+- Una chaperona que estabilice el dominio kinasa C-terminal podría recuperar BUBR1 parcialmente funcional.
+- Contexto ya documentado en el repo: la **estabilización de BUBR1 vía SIRT2/NAD+** (North 2014) es un caso
+  particular; aquí se propone el **mecanismo general de chaperona farmacológica** sobre la proteína mutante.
+- El **read-through (ataluren)** complementa: rescata la traducción del stop-gained (Leu737Ter), aunque produce un
+  polipéptido más largo y no restaura el plegamiento del dominio C-terminal truncado.
+
+**Estado en repo:** no hay chaperonas farmacológicas clásicas de plegamiento exploradas; solo read-through
+(ataluren) y SIRT2/NAD+ como estabilizadores indirectos. Ángulo nuevo.
+
+**Limitaciones:**
+- Requiere que el mutante **conserve plegamiento parcial** y que la chaperona sea **alelo-específica**.
+- La **Leu737Ter** no se beneficia de chaperonas (la truncación impide el plegamiento); solo la **missense N1002K**.
+
+**Viabilidad clínica: 58/100** — mecanismo plausible solo para el alelo missense N1002K, madurez traslacional baja
+(pocas chaperonas aprobadas fuera de Gaucher/fibrosis quística), no resuelve la haploinsuficiencia global.
+
+---
+
+### E3. Modulación de vías moleculares paralelas o redundantes del SAC
+
+**Concepto:** Si un componente clave del SAC (BUBR1) está defectuoso, la terapia hiperactiva **otras quinasas o
+proteínas de respaldo** que compensen parcialmente la falta de eficiencia del complejo fallido.
+
+**Aplicación a BUB1B/MVA1:**
+- Candidatos de la red del SAC ya identificados en Fase 3 (45 aristas; BUB1B hub con scores 0.999):
+  - **BUB1** (parálogo): sobreexpresión compensa parcialmente la pérdida de BUB1B
+  - **MAD2L1/MAD1L1** (clientes directos de BUBR1): amplificación estabiliza el complejo mitótico
+  - **TTK/Mps1, AURKB, PLK1**: quinasas del checkpoint que modulan la severidad del fenotipo
+- **CRISPRa** (activación transcripcional) de estos genes de respaldo podría restaurar la pausa mitótica que
+  BUBR1 ya no logra imponer.
+- **CRISPR screening** (ya propuesto en sección 1.3) alimenta esta estrategia: identificar supresores sintéticos.
+
+**Estado en repo:** parcialmente cubierto (screening de supresores sintéticos en 1.3, sobreexpresión SIRT2→BUBR1
+en propuesta terapéutica), pero **no** formalizado como estrategia de compensación de vías redundantes con
+puntuación de viabilidad.
+
+**Limitaciones:**
+- Riesgo de **toxicidad mitótica** (hiperactivar quinasas del checkpoint puede detener la mitosis en exceso).
+- **No corrige el riesgo oncológico** en las células que ya sobreexpresan BUBR1 (doble filo del tumor).
+
+**Viabilidad clínica: 64/100** — racional mecanístico fuerte y enriquecimiento de red validado (Fase 3), pero
+eficacia compensatoria no demostrada in vivo; perfil de seguridad delicado.
+
+---
+
+### E4. Intervención aguas abajo (downstream): ventana de oportunidad mitótica
+
+**Concepto:** En lugar de reparar el sensor dañado, se administran compuestos que **ralentizan la mitosis** de
+forma controlada, dando una "ventana de oportunidad" física más amplia para que la maquinaria defectuosa logre
+ensamblarse correctamente antes de la división.
+
+**Aplicación a BUB1B/MVA1:**
+- El SAC disfuncional no bloquea la anafase; un freno mitótico temporal podría reducir la segregación errónea
+  (aneuploidía variegada) al dar tiempo a la unión microtúbulo-cinetocoro.
+- **El repo ya documenta un CANDIDATO CONCRETO:** inhibidores de **APC/C** (proTAME/apcin, tosina) que restauran
+  de forma aguda y controlada la pausa mitótica que BUBR1 ya no impone (Propuesta terapéutica, Hipótesis A).
+
+**ADVERTENCIA CRÍTICA (honestidad anti-reposicionamiento):**
+- El repo marca a los **anti-mitóticos crónicos (taxanos)** como **contraindicados** por **ventana terapéutica
+  estrechísima** y toxicidad mitótica. Esta estrategia downstream solo es viable como **intervención aguda
+  controlada**, NO como terapia crónica.
+- En un paciente con **rabdomiosarcoma**, añadir frenos mitóticos sistémicos podría **interferir con la
+  quimioterapia anti-tumoral** (que depende de la mitosis para ser citotóxica).
+
+**Viabilidad clínica: 31/100** — racional mecanístico atractivo pero **peligrosa** en el contexto del probando
+(cáncer + tumor mitótico-dependiente + ventana estrecha). Prioridad media-baja, requiere calibración fina.
+
+---
+
+### 5.2 Matriz consolidada de viabilidad
+
+| # | Estrategia | Mecanismo | Alelo diana | Seguridad oncol.ped. | Entrega multiorg. | Madurez | Revers. | **Viabilidad** |
+|---|-----------|-----------|-------------|----------------------|-------------------|---------|---------|----------------|
+| E1 | ARNm sintético de reemplazo | Reemplazo (transcripción) | ambos (BUBR1 sana) | Media (LNP probado) | Parcial (hemato. buena) | Media (LNP-mRNA) | Alta | **72/100** |
+| E2 | Chaperonas farmacológicas | Estabilización | solo N1002K (missense) | Alta | Alta (oral) | Baja | Alta | **58/100** |
+| E3 | Vías redundantes SAC (BUB1/MAD2L1/TTK/AURKB) | Compensación paralela | ninguno (sistema) | Media-baja (toxicidad mitótica) | N/A (intracelular) | Media | Media | **64/100** |
+| E4 | Downstream (freno mitótico/APC/C) | Compensación downstream | ninguno | **Baja (contraindicado crónico)** | N/A | Baja | — | **31/100** |
+
+---
+
+### 5.3 Esquema de integración con la ruta de la Fase 6
+
+```
+DIMENSIÓN A: COMPENSACIÓN / REEMPLAZO (sin tocar ADN — puente inmediato)
+  E1 ARNm-LNP BUBR1        → sobrescimiento transitorio de BUBR1 (hematopoyético)   [72/100]
+  E3 Vías redundantes SAC    → CRISPRa BUB1/MAD2L1/TTK (compensación)               [64/100]
+  E2 Chaperona N1002K        → estabilizar missense (aditiva con E1/E3)             [58/100]
+  E4 Downstream (APC/C)      → SOLO agudo/controlado, NO crónico                    [31/100]
+
+DIMENSIÓN B: CORRECCIÓN GENÉTICA PERMANENTE (desarrollada en secciones 1-2)
+  6A Cas13 (puente ARN) → 6B Cas9/ABE + SEND (definitiva) → 6C screening
+
+ELECCIÓN CLÍNICA RECOMENDADA (escalonada):
+  1º E1 (ARNm-LNP BUBR1) como puente transitorio de rescate hematopoyético + vigilancia oncológica
+  2º E3 (compensación de vías del SAC) como apoyo mecanístico — requiere más validación
+  3º E2 (chaperona N1002K) como aditivo si la missense es degradada
+  4º Mantener 6B (CRISPR definitivo) como ruta curativa a largo plazo
+```
+
+---
+
+### 5.4 Conclusión de la sección
+
+La Fase 6, vista de forma integral, no debe reducirse a la corrección genética directa. La propuesta de
+**compensación/estabilización/reemplazo** aporta opciones clínicamente **más viables a corto plazo** en el contexto
+del mosaicismo sistémico de MVA1. La **terapia de reemplazo por ARNm sintético (E1)** es la de mayor potencial,
+ya que combina un mecanismo directamente dirigido a restaurar BUBR1 (la proteína dosis-dependiente afectada) con
+la madurez probada de la plataforma LNP-mRNA y un perfil reversible apropiado para un paciente pediátrico
+oncológico. La estrategia **downstream (E4)** es la menos recomendable y debe quedar **excluida como terapia
+crónica**. La integración escalonada (puente ARNm → compensación de vías → chaperona aditiva → corrección
+definitiva CRISPR) maximiza el rescate inmediato mientras la edición genética permanente madura.
