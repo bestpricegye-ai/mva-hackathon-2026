@@ -1,4 +1,4 @@
-# Pre-flight de subida — MVA Hackathon 2026 (byronzunigao)
+﻿# Pre-flight de subida — MVA Hackathon 2026 (byronzunigao)
 
 Checklist operativo para completar las pestañas de submit del challenge con los archivos
 ya generados en `deliverables/`. Marca cada ítem y rellena lo que falte.
@@ -24,16 +24,18 @@ Contenido del CSV (4 filas, verificado):
 | Campo | Valor |
 |---|---|
 | Reporte | `deliverables/track2/byronzunigao_track2_report.md` |
-| Pitch video (candidato) | `deliverables/track2/pitch_byronzunigao.mp4` (ES, 3:48 / 227.5s, 1280x720, es-MX) |
-| Pitch video (candidato, EN) | `deliverables/track2/pitch_byronzunigao_EN.mp4` (EN, 3:15 / 195.4s, 1280x720, en-US) — **requiere recorte a ≤3:00** |
+| Pitch video (ES) | `deliverables/track2/pitch_byronzunigao.mp4` (ES, **177.6s / 2:57**, 1280x720, es-MX) |
+| Pitch video (EN) | `deliverables/track2/pitch_byronzunigao_EN.mp4` (EN, **154.0s / 2:34**, 1280x720, en-US) - recorte a <= 3:00 cumplido (2026-09-03) |
 | URL del video (obligatoria) | ⏳ **PENDIENTE**: subir a YouTube/Vimeo (Unlisted) y pegar aquí |
 | GitHub repo URL | mismo repo de Track 1 |
 
-> **Nota de duraciones (re-medido 2026-09-02 con ffprobe):**
-> - `pitch_byronzunigao.mp4` (ES) = **227.5 s (3 min 48 s)**.
-> - `pitch_byronzunigao_EN.mp4` (EN) = **195.4 s (3 min 15 s)** — **por encima del límite de 3:00**.
-> El límite oficial del challenge es ~3:00 min. El video ES ha superado la duración anotada
-> originalmente (3:01 en commit `7f72089`) tras re-generación; re-medir antes de subir el que se elija.
+> **Estado de duraciones CORREGIDO (re-medido 2026-09-03 con ffprobe):**
+> - `pitch_byronzunigao.mp4` (ES) = **177.6 s (2:57)** - recortado desde 227.5s (eliminada la cola
+>   silenciosa; discurso completo a tempo natural 1.285, audio 177.1s). **Cumple límite 3:00** (margen 2.4s).
+> - `pitch_byronzunigao_EN.mp4` (EN) = **154.0 s (2:34)** - recortado desde 195.4s (eliminada la cola
+>   silenciosa; audio 152.1s). **Cumple límite 3:00** (margen 26s).
+> - Ambos conservan TODO el discurso a tempo natural (1.285); solo se recortó el silencio de cola
+>   que inflaba la duración. **Recomendado EN** (mayor margen + audiencia internacional del panel).
 
 Candidatos Track 2: NMN/NAD+, senolíticos, GH individualizada + contraindicación explícita de
 anti-mitóticos (regla 3.1 del Consorcio). + `byronzunigao_track2_report_v2_BOOST.md` (ampliación
@@ -53,8 +55,8 @@ contrataque 7 puntos, complementario del reporte base).
 
 ## Trabajo pendiente (acciones manuales del usuario)
 
-- [ ] **Decidir qué pitch subir** (ES 3:48 vs EN 3:15) — verificar límite de 3:00 del challenge.
-- [ ] (Si se elige EN) **Recortar `pitch_byronzunigao_EN.mp4` de 3:15 → ~3:00** (`src/hacer_video_EN.py`).
+- [x] **Pitch resuelto (2026-09-03):** ES = 177.6s (2:57) y EN = 154.0s (2:34); ambos cumplen el límite 3:00. Decisión: **subir EN** (mayor margen + panel internacional).
+- [x] **Recorte ejecutado (2026-09-03):** ambos videos recortados al eliminar silencio de cola (ES 177.6s, EN 154.0s), re-ensamblados desde `pitch_build/` y `pitch_build_EN/` a tempo natural 1.285.
 - [ ] Subir el pitch elegido a YouTube/Vimeo (Unlisted) → pegar URL en Submit-Track 2.
 - [ ] Subir CSV + reportes en Submit-Track 1 (y Track 2) en las tabs de Synapse.
 - [x] **Decisión tomada:** versionar el pitch (**mp4 + `pitch_build/`** y **`pitch_build_EN/`**) junto con

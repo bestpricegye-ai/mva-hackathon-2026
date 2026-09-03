@@ -1,4 +1,4 @@
-# Diagnóstico molecular y reposicionamiento terapéutico en el síndrome de aneuploidía variegada en mosaico tipo 1 (MVA1): un pipeline bioinformático reproducible WGS
+﻿# Diagnóstico molecular y reposicionamiento terapéutico en el síndrome de aneuploidía variegada en mosaico tipo 1 (MVA1): un pipeline bioinformático reproducible WGS
 
 **Hackathon MVA 2026 — Track 2 (Refinamiento del diagnóstico y estrategia terapéutica)**
 **Probanda:** WGS_EX2312012 (GRCh38, VCFv4.2, muestra única)
@@ -9,7 +9,11 @@
 
 El síndrome de aneuploidía variegada en mosaico tipo 1 (MVA1, OMIM #257300) es una enfermedad autosómica recesiva ultra-rara causada por variantes bialélicas en *BUB1B*, que codifica la proteína BUBR1, componente esencial del *spindle assembly checkpoint* (SAC). Reportamos un pipeline bioinformático reproducible de seis fases que, partiendo de un archivo VCF de exoma/genoma completo real (GRCh38), establece el diagnóstico molecular y evalúa el reposicionamiento terapéutico y la elegibilidad a terapia génica.
 
-El pipeline identificó en la probanda una **heterocigosidad compuesta bialélica en *BUB1B***: `c.2210T>G p.(Leu737Ter)` (variante *stop-gained* ligada a MVA1 en ClinVar, VAF 0.54) y `c.3006T>G p.(Asn1002Lys)` (missense no catalogada, VAF 0.46). Se descartaron los genes MVA2 (*CEP57*) y MVA3 (*TRIP13*). El diagnóstico se correlaciona con el fenotipo clínico (rabdomiosarcoma, nefrocalcinosis, talla baja, fallo de medrar, prematuridad). La puntuación de elegibilidad a terapia génica (criterios Zhang) fue **95/100 (nivel ALTO)**. El reposicionamiento farmacológico identificó como candidatos la vía **NAD+/SIRT2→BUBR1**, los **senolíticos** y los **inhibidores de cinasa mitótica** dirigidos al tumor que sobreexpresa BUB1B, excluyendo los agentes anti-mitóticos como terapia crónica. Todos los entregables fueron regenerados byte-idénticos (SHA-256) a un conjunto de referencia, demostrando reproducibilidad total del análisis.
+El pipeline identificó en la probanda una **heterocigosidad compuesta bialélica en *BUB1B***: `c.2210T>G p.(Leu737Ter)` (variante *stop-gained* ligada a MVA1 en ClinVar, VAF 0.54) y `c.3006T>G p.(Asn1002Lys)` (missense no catalogada, VAF 0.46). Se descartaron los genes MVA2 (*CEP57*) y MVA3 (*TRIP13*). Es notable que el residuo missense **1002** del
+alelo p.Asn1002Lys coincide con la posición modelada en ratones MVA (`Bubr1 +/L1002P`, Sieben CJ et al.,
+*J Clin Invest* 2020; OMIM 602860), que exhiben aneuploidía multitéjido y mayor riesgo tumoral — dotando a
+este missense de un **paralelo animal directamente aplicable** y reforzando una estrategia de rescate dirigida
+al alelo (estabilización/readthrough del compañero missense). El diagnóstico se correlaciona con el fenotipo clínico (rabdomiosarcoma, nefrocalcinosis, talla baja, fallo de medrar, prematuridad). La puntuación de elegibilidad a terapia génica (criterios Zhang) fue **95/100 (nivel ALTO)**. El reposicionamiento farmacológico identificó como candidatos la vía **NAD+/SIRT2→BUBR1**, los **senolíticos** y los **inhibidores de cinasa mitótica** dirigidos al tumor que sobreexpresa BUB1B, excluyendo los agentes anti-mitóticos como terapia crónica. Todos los entregables fueron regenerados byte-idénticos (SHA-256) a un conjunto de referencia, demostrando reproducibilidad total del análisis.
 
 **Palabras clave:** MVA1, BUB1B, aneuploidía variegada, WGS, heterocigosidad compuesta, reposicionamiento terapéutico, terapia génica, reproducibilidad.
 
@@ -82,13 +86,13 @@ La Fase 1 identificó **dos variantes exónicas heterocigotas (0/1) en *BUB1B* (
 
 | # | Posición (GRCh38) | HGVS (NM_001211.6) | Consecuencia | AD/DP | Frecuencia | VAF | Evidencia |
 |---|-------------------|---------------------|--------------|-------|------------|-----|-----------|
-| 1 | chr15:40,209,701 | c.2210T>G, p.(Leu737Ter) | stop_gained (LOF) | 21/25, 46 | ExAC 0.01% | 0.54 | ClinVar RCV000641226 (MVA1) |
+| 1 | chr15:40,209,701 | c.2210T>G, p.(Leu737Ter) | stop_gained (LOF) | 21/25, 46 | ExAC 0.005% (gnomAD 3.29e-05) | 0.54 | ClinVar RCV000641226 (MVA1) |
 | 2 | chr15:40,220,612 | c.3006T>G, p.(Asn1002Lys) | missense (exón terminal) | 15/13, 28 | no catalogada | 0.46 | novel (ausente en ClinVar/gnomAD) |
 
 **Interpretación ACMG:**
 
 - **p.Leu737Ter:** PVS1 (stop_gained en gen con mecanismo de haploinsuficiencia) + PM2 (rara/ausente) + PM3 (en *trans* con variante patogénica) → **Pathogenic** [15].
-- **p.Asn1002Lys:** PM2 (no catalogada) + PM3 (en *trans*) → **Likely Pathogenic / VUS-patogénica probable**.
+- **p.Asn1002Lys:** PM2 (no catalogada en ClinVar/gnomAD) + PM3 (en *trans*) + PM1 (dominio quinasa catalítico) + PP3 (AlphaMissense 0.9229) = **Likely Pathogenic**
 
 **Descarte:** 0 variantes exónicas en *CEP57* (MVA2) y *TRIP13* (MVA3).
 
@@ -158,3 +162,9 @@ El pipeline reproducible de seis fases estableció el diagnóstico de MVA1 (BUB1
 19. Pejaver V, et al. *Am J Hum Genet* (2022). Criterio PM2/PP3 (ClinGen).
 20. Laberko A, et al. *Orphanet J Rare Dis* 14:97 (2019). HSCT en MVA1, rechazo del injerto.
 21. Szklarczyk D, et al. STRING v12. Redes de interacción proteína-proteína.
+22. Sieben CJ, et al. *J Clin Invest* (2020); OMIM 602860. Modelos murinos `Bubr1 +/L1002P` y `+/X753`; el residuo 1002 del missense del probando tiene paralelo murino MVA.
+23. Marquis C, et al. *Nature Cancer* 5:66-84 (2024). Inhibidor KIF18A AM-1882 selectivo de tumores CIN, no mielosupresor.
+24. PMC13290091 / T&F (2026). KIF18A (AM-1882) reduce viabilidad de osteosarcoma.
+25. Expert Opin Investig Drugs (2026), DOI 10.1080/13543784.2026.2616752. VLS-1488 (Volastra) y candidato Amgen KIF18A en fase I/II humana.
+26. PMC10721522; GeroScience (2024). NMN en humanos: ~10 ensayos publicados, ~13 completados, ~11 en marcha; seguridad y subida de NAD+.
+27. UniteRare (2026). Sin fármacos FDA aprobados ni ensayos reclutando para MVA (openFDA/ClinicalTrials.gov sincronizados).

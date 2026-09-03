@@ -1,4 +1,4 @@
-# ENTREGABLE FINAL — MVA HACKATHON 2026
+﻿# ENTREGABLE FINAL — MVA HACKATHON 2026
 ## Motor de hipótesis de alta precisión: de la odisea diagnóstica al diagnóstico cerrado en una sesión computacional
 
 **Probanda:** WGS_EX2312012 (EX2312012_HGWCNDSX7) | **Build:** GRCh38 | **Formato:** VCFv4.2
@@ -15,7 +15,7 @@ Causa: **heterocigosidad compuesta (estado bialélico recesivo) en BUB1B (BUBR1)
 
 | Variante (NM_001211.6) | Efecto | Frecuencia | Clasificación ACMG |
 |---|---|---|---|
-| c.2210T>G, p.(Leu737Ter) | **stop_gained (LoF)** | ExAC 0.01% (rs759242053) | **Pathogenic** (PVS1+PM2+PM3) |
+| c.2210T>G, p.(Leu737Ter) | **stop_gained (LoF)** | ExAC 0.005% (gnomAD 3.29e-05) (rs759242053) | **Pathogenic** (PVS1+PM2+PM3) |
 | c.3006T>G, p.(Asn1002Lys) | **missense** dominio quinasa C-terminal | novel, ausente en gnomAD/ClinVar | **Likely Pathogenic** (PM2+PM3+PP3/AlphaMissense 0.92) |
 
 **Ruta: del expediente clínico en prosa → cluster fenotípico → ranking de genes → validación genómica → diagnóstico → propuesta terapéutica.** Todo el flujo (que en la práctica real toma años de "odisea diagnóstica") se ejecutó de forma **automática y reproducible** en una sola sesión, igual que los pipelines asistidos por IA de la Undiagnosed Diseases Network (UDN).
@@ -162,7 +162,7 @@ Validación genómica independiente **confirmó el ranking**: BUB1B bialélico; 
 (dominio que fosforila CDC20 y es esencial para inhibir APC/C en el SAC). Asn→Lys introduce **carga básica
 positiva (+1)** en una región catalítica restringida → error de plegado/unión.
 
-**Integración ACMG:** PM2 (ausente) + PP3 (SIFT+PolyPhen+AlphaMissense 0.92, múltiple concordante) + PM3 (en trans) → **Likely Pathogenic**. VUS resuelto.
+**Integración ACMG:** PM2 (ausente en gnomAD/ClinVar) + PM1 (residuo en dominio quinasa catalítica) + PP3 (SIFT+PolyPhen+AlphaMissense 0.9229, múltiple concordante) + PM3 (en trans) = **Likely Pathogenic**. VUS resuelto.
 
 ### 4.1 Detalle de las 19 sustituciones en la posición 1002
 
@@ -189,7 +189,7 @@ La clasificación **final** exige evidencia funcional y/o de segregación:
 | Criterio ACMG | Evidencia requerida | Estado actual |
 |---|---|---|
 | **PS1** (efecto funcional demostrado *in vitro*/*in vivo*) | Ensayo: N1002K **pierde la capacidad de unir/inhibir APC/C-Cdc20** o de fosforilar CDC20 | ❌ No realizado |
-| **PM1** (hotspot) | Posición 1002 con 18/19 sustituciones patogénicas | ✅ Cumplido |
+| **PM1** (hotspot) | Residuo 1002 en dominio quinasa; 6/7 sustituciones SNV puntuadas por AlphaMissense son likely_pathogenic (N1002S ambigua) | ✔ Cumplido |
 | **PM3** (en trans) | VUS en trans con Leu737Ter — requiere **segregación parental** | ⚠️ Pendiente (padres) |
 | **PP4** (fenotipo altamente específico) | Presentación MVA1 completa | ✅ Sólido |
 | **PS4** (reproducción en casos) | Segundo paciente MVA1 con variante del mismo hotspot | ❌ Pendiente |
@@ -225,6 +225,22 @@ y el asesoramiento de recurrencia — ver §2.5.
 **Fuente revisada (PMC10752072, RDCRN):** no contiene fármacos específicos para MVA1; confirma el marco
 de reposicionamiento como estándar de las redes de enfermedades raras. Nuestros candidatos provienen de la
 evidencia funcional propia de la vía BUB1R (Baker Nat Cell Biol 2013; North EMBO J 2014), no de ese artículo.
+
+**Evidencia 2025-2026 que da impacto y reduce densidad de narrativa (ver `docs/bibliografia_mva.md` Parte E):**
+
+- **Vacío terapéutico (impacto):** a 2026 **no existe fármaco aprobado por la FDA ni ensayo clínico
+  reclutando para MVA** (UniteRare/openFDA/ClinicalTrials.gov, mar 2026; < 50 casos MVA Society). Todo
+  candidato propuesto es **novedoso en esta enfermedad** — argumento de alto impacto/escalabilidad.
+- **Alelo missense con modelo murino directo (E1):** el missense **Asn1002Lys** del probando está en el
+  **residuo 1002, exactamente el modelado en ratones MVA** (`Bubr1 +/L1002P`, Sieben CJ et al., *J Clin
+  Invest* 2020; OMIM 602860) → refuerza la Vía B dirigida a alelo con un paralelo animal aplicable.
+- **Oncología selectiva CIN - KIF18A (E2):** los inhibidores KIF18A (AM-1882, Marquis *Nat Cancer* 2024)
+  son selectivos de tumores CIN, no mielosupresores, superan osteosarcoma (PMC13290091, 2026) y la clase
+  (VLS-1488/Amgen) entró en **fase I/II humana**. Opción oncológica experimental secundaria contra la
+  dependencia del rabdomiosarcoma de la inestabilidad — distinta de los anti-SAC contraindicados.
+- **NAD+ humano (E3):** NMN con ~10 ensayos publicados + 13 completados + 11 en marcha, y MIB-626
+  (MetroBiotech) en ensayos clínicos → plataforma humana de seguridad establecida (PMC10721522;
+  GeroScience 2024).
 
 ---
 

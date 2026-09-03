@@ -1,7 +1,16 @@
-# Track 2 Report — Boost v2 (Ampliación de la propuesta repurposing)
+﻿# Track 2 Report — Boost v2 (Ampliación de la propuesta repurposing)
 
 **Team:** byronzunigao
 **Fecha:** 2026-09-02
+
+> **Generative-AI / LLM disclosure *(requerido según update 28 ago 2026):*** Este reporte fue preparado con
+> asistencia de LLM para síntesis de literatura y organización de la hipótesis de reposicionamiento.
+> **Provider/modelo:** Anthropic API, Claude (términos comerciales). **Plan/tier:** API comercial; **sin
+> entrenamiento sobre contenido del cliente.** **Manejo de datos:** ningún dato identificable del paciente
+> más allá del texto clínico del challenge; datos eliminados a los 30 días del cierre. Todas las hipótesis
+> de mecanismo se anclan a la literatura primaria citada (Baker NCB 2013; North EMBO J 2014; McElroy 2013;
+> Nacarelli NCB 2019), no son fabricadas por el LLM.
+
 **Relación con el entregable base:** este es un **documento complementario y ampliado**. El reporte
 canónico es `byronzunigao_track2_report.md` (y su versión `_EN.md`). Este v2 NO reemplaza el reporte
 base: **añade 7 secciones de refuerzo competitivo y clínico** que convierten la propuesta en un
@@ -29,7 +38,33 @@ Esta frase es el **titular diferenciador** para el panel (Punto 7). Resumen de l
    rabdomiosarcoma) se maneja con monitorización, no con bandera roja simplista.
 3. **Auditoría oncológica severa (Fase 5):** cada candidato evaluado contra el sarcoma activo del niño.
 4. **Ruta de resolución definitiva:** jerarquía ARNm-LNP → chaperona → CRISPR (lo que ningún rival ofrece).
-5. **Plan clínico integral:** vigilancia + GH + consejo reproductivo como tesis de cierre.
+5. **Plan clínico integral:** vigilancia + GH + 5. **Plan clínico integral:** vigilancia + GH + consejo reproductivo como tesis de cierre.
+
+> **Diferenciador de alelo mis-sense (NUEVO en v2):** el missense **Asn1002Lys** del probando está en el
+> **residuo 1002 — exactamente el modelado en ratones MVA publicados** (`Bubr1 +/L1002P`, Sieben CJ et al.,
+> *J Clin Invest* 2020; OMIM 602860). Esos ratones haploinsuficientes muestran aneuploidía multitéjido y
+> mayor riesgo tumoral. Esto da al alelo missense un **paralelo animal directamente aplicable** y refuerza la
+> **Vía B dirigida a alelo (estabilización/readthrough del compañero missense)** con un modelo concreto, no un
+> argumento abstracto de reemplazo génico.
+
+> **Encuadre de doble vía (tesis A/B):** la propuesta no es una lista plana sino **dos vías complementarias**
+> que responden a los 4 criterios del panel desde ángulos distintos:
+> - **Vía A — rescate de *dosis* con agentes aprobados/disponibles (impacto clínico inmediato):**
+>   NMN/NAD+ vía SIRT2 (restaura BUBR1; ataca el defecto de *dose* del gen haploinsuficiente),
+>   senolíticos (limpia la senescencia progeroide), y GH (SOC del fallo de crecimiento). Farmacología
+>   aprobada/off-label-disponible con una barrera oncológica estricta.
+> - **Vía B — reparación de *alelo* (innovación + escalabilidad):** readthrough del codón PTC Leu737Ter
+>   (el único candidato que actúa sobre el alelo mutado *in trans*), luego reemplazo de longitud completa
+>   **ARNm-LNP** y finalmente edición **CRISPR**. Ruta por etapas con barreras regulatorias/toxicológicas
+>   en cada fase.
+> - Las dos vías **no compiten**: la Vía A compra tiempo clínico y ataca el defecto de *dosis* hoy; la Vía B
+>   entrega la reparación *aleloespecífica* duradera. Es el marco que diferencia la submission en los 4 criterios
+>   simultáneamente y que este v2 hace explícito (A1 del contrataque).
+>
+> **Vacío terapéutico que da impacto a todo lo demás:** a 2026 **no existe fármaco aprobado por la FDA ni
+> ensayo clínico reclutando para MVA** (UniteRare/openFDA/ClinicalTrials.gov sincronizados, mar 2026; < 50 casos
+> confirmados según la MVA Society). Todo candidato repurposing presentado aquí es **novedoso en esta
+> enfermedad** — no hay fármaco que competir, lo que hace la propuesta **alto-impacto y escalable**.
 
 ---
 
@@ -182,6 +217,17 @@ candidato es **el filtro decisivo** — no un apéndice.
 documento de la competición que pone el **riesgo oncogénico en sarcoma activo como filtro decisivo por
 candidato**, con el nivel de severidad pediátrica que exige el Consorcio.
 
+**Opción oncológica selectiva contra la CIN (NUEVO en v2, adyacente a Vía B) — KIF18A:** más allá de la
+auditoría conservadora, existe una opción *investigacional* que explota la dependencia del tumor de la
+inestabilidad cromosómica **sin tocar el SAC ya defectuoso**. Los tumores con CIN alta (como este
+rabdomiosarcoma, que sobreexpresa BUB1B) dependen de **KIF18A**; los inhibidores selectivos
+(AM-1882, Marquis C et al., *Nature Cancer* 5:66-84, 2024) son **respetuosos con las células diploides
+normales y no mielosupresores**, reducen viabilidad en **osteosarcoma** (PMC13290091, 2026), y la clase
+(VLS-1488/Volastra; candidato de Amgen) ha entrado en **fase I/II humana** (*Expert Opin Investig Drugs*,
+DOI 10.1080/13543784.2026.2616752). Es una palanca oncológica **secundaria, experimental**, distinta de y
+más segura que los anti-SAC contraindicados — pero sigue en etapa de investigación y se lista junto a la
+Vía B, no como acción de Vía A a corto plazo.
+
 ---
 
 ## S7. Matriz de posición competitiva (Punto 7 — refuerzo para el panel)
@@ -215,6 +261,10 @@ es **el más balanceado y el único con salida de reemplazo génico**.
 | VAC es SOC del rabdomiosarcoma pediátrico | Chen PMC8586416; Arndt 19770373; Walterhouse ARST0331 (HECHO VERIFICADO) |
 | Riesgo de mielodisplasia en MVA | Laberko (documentado) (HECHO VERIFICADO) |
 | ARNm-LNP 72/100, chaperona 58/100, vías SAC 64/100, APC/C 31/100 | `docs/fase6_zhang_influence.md` (HECHO VERIFICADO, repo) |
+| El missense Asn1002Lys del probando está en el residuo 1002, modelado en ratones `Bubr1 +/L1002P` | Sieben CJ et al., *J Clin Invest* 2020 (OMIM 602860) (HECHO VERIFICADO) |
+| Sin fármaco aprobado ni ensayo reclutando para MVA a 2026 | UniteRare/openFDA/ClinicalTrials.gov, mar 2026 (HECHO VERIFICADO) |
+| Inhibidor KIF18A selectivo de tumores CIN; supera osteosarcoma; fase I/II humana | Marquis Nat Cancer 2024; PMC13290091 (2026); Expert Opin Invest Drugs 10.1080/13543784.2026.2616752 (HECHO VERIFICADO) |
+| NAD+ humano: ~10 ensayos NMN publicados, ~13 completados, ~11 en marcha; MIB-626 en ensayos | PMC10721522; GeroScience 2024; NCT07013591/NCT05517122 (HECHO VERIFICADO) |
 
 **Transparencia:** puntajes de viabilidad de la Fase 6 (72/58/64/31) son **criterio interno del Consorcio**,
 no métricas publicadas externamente y deben leerse como jerarquización cualitativa, no como calibración
@@ -225,7 +275,7 @@ aprobado es **teórico/preclínico** y requiere validación in-vitro/in-vivo/IRB
 
 ## S9. Cerrar: posición final del v2
 
-Este v2 **no sustituye** el reporte base — lo **completa** con:
+Este v2 **completa** el reporte base - juntos forman una única entrega final consolidada - añadiendo:
 
 - Un **titular diferenciador** (S0).
 - Blindaje del readthrough por evidencia (S1).
@@ -238,3 +288,9 @@ Este v2 **no sustituye** el reporte base — lo **completa** con:
 
 Todo con la misma disciplina de rigor: hechos verificados, interpretación separada, y lo pendiente
 marcado como tal.
+
+
+**Reproducibilidad cuantificada (A6):** el análisis es reproducible byte-idénticamente - fingerprints
+SHA-256 de los 18 entregables *golden* congelados en git (diff vacío, hashes 100% coincidentes) y el
+framework QC pasa **6/6 tests** (determinismo + regresión). Evidencia completa:
+`docs/INFORME_REPRODUCIBILIDAD.md` (sha256 `4094d92bb276810b...`). Afirmación cuantificada, no declarativa.

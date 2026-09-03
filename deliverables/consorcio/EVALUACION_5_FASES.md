@@ -1,4 +1,4 @@
-# EVALUACIÓN CONSORCIO — MVA1 (BUB1B) · MVA Hackathon 2026
+﻿# EVALUACIÓN CONSORCIO — MVA1 (BUB1B) · MVA Hackathon 2026
 **Estándares:** UDN · ACMG/AMP 2015 + ClinGen SVI · Vigilancia oncológica AACR/COG pediátrica
 **Consorcio:** Médico Auditor (ERN) · Genetista Molecular/Clínico · Farmacólogo Clínico · Ingeniero Biomolecular
 **Fuerza de afirmación:** [HECHO VERIFICADO] / [INTERPRETACIÓN] / [HIPÓTESIS / PENDIENTE]
@@ -18,7 +18,7 @@
 
 **Criterios ACMG aplicados:**
 - **p.Leu737Ter** → **Patogénica**: `PVS1` (nonsense en gen con mecanismo LoF confirmado para MVA1 — OMIM 257300) + `PM2` (ausente en controles de gnomAD v4) + concordancia con fenotipo MVA (PP4 sensible). [INTERPRETACIÓN: certeza alta; la herencia *in trans* con el alelo 2 la confirma compound-heterocigosis].
-- **p.Asn1002Lys** → **Probablemente patogénica/Likely Pathogenic**: `PM2` (no presente en gnomAD v4) + `PM1` (ubica en dominio catalítico quinasa de BUBR1) + `PP3_strong` (AlphaMissense 0.923 > umbral patogénico + 2 predictores funcionales concordantes) + `PM3` (en *trans* con variante patogénica en enfermedad recesiva) = Likely Pathogenic con refuerzo hacia Pathogenic si se confirma segregación parental. [INTERPRETACIÓN]
+- **p.Asn1002Lys** → **Probablemente patogénica/Likely Pathogenic**: `PM2` (no presente en gnomAD v4) + `PM1` (ubicada en dominio catalítico quinasa de BUBR1) + `PP3` (AlphaMissense 0.9229 > umbral patogénico + SIFT/Polyphen concordantes) + `PM3` (en *trans* con variante patogénica en enfermedad recesiva) = Likely Pathogenic con refuerzo hacia Pathogenic si se confirma segregación parental. [INTERPRETACIÓN]
 
 **Barreras y profundidad que faltan** (PENDIENTE — solicitadas al remitente):
 - **Segregación parental** (confirma arreglo *in trans* y riesgo de recurrencia 25%).

@@ -1,4 +1,4 @@
-# DIAGNÓSTICO MOLECULAR — MVA HACKATHON 2026
+﻿# DIAGNÓSTICO MOLECULAR — MVA HACKATHON 2026
 
 **Probanda:** WGS_EX2312012 (GRCh38, VCFv4.2, muestras único)
 **Fecha de análisis:** 2026
@@ -16,7 +16,7 @@ Mecanismo: **heterocigosidad compuesta (bialélica) en BUB1B** — herencia auto
 
 | # | Posición (GRCh38) | HGVS (NM_001211.6) | Consecuencia | Genotipo | AD/DP | Frecuencia | Evidencia |
 |---|-------------------|---------------------|--------------|----------|-------|------------|-----------|
-| 1 | chr15:40,209,701 | c.2210T>G, p.(Leu737Ter) | **stop_gained (LOF)** | 0/1 (het) | 21,25 / 46 | ExAC 0.01% | ClinVar RCV000641226 asociada a MVA1 |
+| 1 | chr15:40,209,701 | c.2210T>G, p.(Leu737Ter) | **stop_gained (LOF)** | 0/1 (het) | 21,25 / 46 | ExAC 0.005% (gnomAD 3.29e-05) | ClinVar RCV000641226 asociada a MVA1 |
 | 2 | chr15:40,220,612 | c.3006T>G, p.(Asn1002Lys) | **missense** (exón terminal) | 0/1 (het) | 15,13 / 28 | no catalogada (rara) | novel, ausente en ClinVar/gnomAD |
 
 Ambas variantes están **heterocigotas (0/1) y en alelos distintos (en trans)** → **heterocigosis compuesta** = estado bialélico patogénico.
@@ -42,7 +42,7 @@ El perfil se ajusta perfectamente a MVA1:
 ## Interpretación ACMG (borrador)
 
 - **p.Leu737Ter:** PVS1 (stop_gained LOF en gen con haploinsuficiencia como mecanismo de MVA1) + PM2 (rara/ausente) + PM3 (en trans con variante patogénica/likely pathogenic) → **Pathogenic**
-- **p.Asn1002Lys:** PM2 (no catalogada) + PM3 (en trans con variante patogénica) [+ PM1/PP3 si se confirma dominio]) → **Likely Pathogenic / VUS-patogénica probable**
+- **p.Asn1002Lys:** PM2 (no catalogada en gnomAD/ClinVar) + PM3 (en trans con variante patogénica) + PM1 (ubicada en dominio quinasa catalítica de BUBR1) + PP3 (SIFT/Polyphen/AlphaMissense 0.9229 deletéreos) = **Likely Pathogenic**
 
 **Diagnóstico final: MVA1 por heterocigosis compuesta bialélica en BUB1B.**
 

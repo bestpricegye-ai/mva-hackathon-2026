@@ -1,4 +1,4 @@
-# ENTREGABLE MVA HACKATHON 2026 — DIAGNÓSTICO GENÉTICO
+﻿# ENTREGABLE MVA HACKATHON 2026 — DIAGNÓSTICO GENÉTICO
 
 **Probanda:** WGS_EX2312012 | **Build:** GRCh38 | **Formato:** VCF 4.2 | **Fecha:** 2026
 
@@ -13,10 +13,10 @@
 Dos variantes heterocigotas (0/1) en alelos distintos (en trans) del transcrito canónico:
 | Variante (NM_001211.6) | Efecto | Frecuencia poblacional | Evidencia clínica |
 |---|---|---|---|
-| **c.2210T>G, p.(Leu737Ter)** | **stop_gained** (truncante/LoF) | ExAC 0.01% (rarísima) | **ClinVar RCV000641226 — asociada a MVA1** |
+| **c.2210T>G, p.(Leu737Ter)** | **stop_gained** (truncante/LoF) | ExAC 0.005% (gnomAD 3.29e-05) (rarísima) | **ClinVar RCV000641226 — asociada a MVA1** |
 | **c.3006T>G, p.(Asn1002Lys)** | missense (exón terminal, dominio C-terminal) | no catalogada (novel) | heredada en trans con la variante truncante |
 
-**Clasificación ACMG:** Pathogenic (variante 1) + Likely Pathogenic (variante 2, por PM2/PM3/PM1 candidato).
+**Clasificación ACMG:** Pathogenic (variante 1) + Likely Pathogenic (variante 2, por PM2/PM3/PM1/PP3).
 
 ---
 
@@ -55,8 +55,8 @@ Dos variantes heterocigotas (0/1) en alelos distintos (en trans) del transcrito 
 
 ## 3. INTERPRETACIÓN CLÍNICA (borrador ACMG)
 
-- **p.Leu737Ter:** PVS1 (stop_gained, LoF en gen cuya haploinsuficiencia causa MVA1, ausente/excepcionalmente raro en controles) + PM2 (ExAC 0.01%) + PM3 (en trans) → **PATHOGENIC**
-- **p.Asn1002Lys:** PM2 (no en gnomAD/ClinVar) + PM3 (en trans con variante patogénica) + PM1 probable (dominio funcional C-terminal) → **LIKELY PATHOGENIC**
+- **p.Leu737Ter:** PVS1 (stop_gained, LoF en gen cuya haploinsuficiencia causa MVA1, ausente/excepcionalmente raro en controles) + PM2 (ExAC 0.005% (gnomAD 3.29e-05)) + PM3 (en trans) → **PATHOGENIC**
+- **p.Asn1002Lys:** PM2 (no en gnomAD/ClinVar) + PM3 (en trans con variante patogénica) + PM1 (dominio quinasa catalítico C-terminal) + PP3 (SIFT/Polyphen/AlphaMissense 0.9229)  = **LIKELY PATHOGENIC**
 
 **Estado: PATOGÉNICO (compuesto heterocigoto)**
 

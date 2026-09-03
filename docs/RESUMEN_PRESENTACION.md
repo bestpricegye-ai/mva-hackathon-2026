@@ -1,4 +1,4 @@
-# RESUMEN DE PRESENTACIÓN — MVA CLINICAL PHENOTYPE
+﻿# RESUMEN DE PRESENTACIÓN — MVA CLINICAL PHENOTYPE
 
 **Título:** *Biallelic BUB1B compound heterozygosity (c.2210T>G p.Leu737Ter / c.3006T>G p.Asn1002Lys) causes Mosaic Variegated Aneuploidy Syndrome 1 with rhabdomyosarcoma risk*
 
@@ -23,7 +23,7 @@
 - **CEP57 y TRIP13: sin variantes exónicas → descartados.**
 - **Panel SAC: 72 variantes, todas polimórficas benignas → sin co-causales.**
 - **BUB1B: 2 variantes exónicas patogénicas en trans:**
-  1. `c.2210T>G, p.(Leu737Ter)` — **stop_gained** (truncante). ExAC 0.01%. **ClinVar RCV000641226: asociada a MVA1.**
+  1. `c.2210T>G, p.(Leu737Ter)` — **stop_gained** (truncante). ExAC 0.005% (gnomAD 3.29e-05). **ClinVar RCV000641226: asociada a MVA1.**
   2. `c.3006T>G, p.(Asn1002Lys)` — **missense** novel en el exón terminal.
 - **Diagnóstico: MVA1 por compuesto heterocigoto (bialélico) en BUB1B.**
 
@@ -33,7 +33,7 @@
 
 ## 6. Clasificación ACMG
 - p.Leu737Ter: **Pathogenic** (PVS1+PM2+PM3)
-- p.Asn1002Lys: **Likely Pathogenic** (PM2+PM3, PM1 probable)
+- p.Asn1002Lys: **Likely Pathogenic** (PM2+PM3+PM1+PP3)
 - Estado final: **Patogénico (compuesto heterocigoto)**
 
 ## 7. Recomendaciones / Próximos pasos

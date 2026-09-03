@@ -1,125 +1,132 @@
-# Comparativa de Participantes — MVA Hackathon 2026 (Track 1 & Track 2)
+﻿# Comparativa Completa de Participantes — MVA Hackathon 2026 (82 equipos)
 
 **Equipo:** byronzunigao (nosotros)
-**Fuente de datos:** repos públicos de GitHub de participantes + nuestro workspace + **leaderboard oficial de Synapse**.
-**Cadencia:** actualización diaria automática (hasta el cierre del leaderboard, 24 oct 2026).
-**Última actualización:** 2026-09-02 (snapshot visible ranks 58-79 del leaderboard)
-
-> **Aviso importante sobre la métrica (confirmado por participante MikeRecognex, 2026-08-27):**
-> *"39 of 39 entries score 100.0 rank points and F-max 1.000"* — el leaderboard **automático de Track 1
-> está saturado**. Todo equipo que acierta el par BUB1B en rank 1 obtiene **100/100 pts y F-max 1.0**.
-> Snapshot 2026-09-02: **16 equipos más en 100.0 / 1.000** (ranks 58-73) confirman la saturación.
-> Por tanto, la métrica automática **no diferencia modelos**; la diferenciación real está en el
-> **Track 2 (panel de expertos)** y en la calidad/rigor del método documentado.
+**Fuente:** Leaderboard oficial (extraído por API Gradio del espacio, snapshot **3 sept 2026**, 82 filas)
+**Alcance:** Comparativa 82 participantes vs nuestro trabajo, con fortalezas/debilidades y selección final.
 
 ---
 
-## 1. Convergencia en el diagnóstico (Track 1)
+## 0. Lo que el leaderboard revela (dato duro)
 
-Cinco pipelines **independientes** (100% de consenso) convergen en el **mismo par causal**:
-
-| | Alelo 1 (BUB1B) | Alelo 2 (BUB1B) | Score declarado |
-|---|---|---|---|
-| **byronzunigao (nosotros)** | chr15:40209701 T>G · p.Leu737Ter | chr15:40220612 T>G · p.Asn1002Lys | 100 / F-max 1.0 |
-| michalbutkiewicz0000 | chr15:40209701 T>G · p.Leu737Ter | chr15:40220612 T>G · p.Asn1002Lys | 100/100 · F-max 1.0 |
-| bralewild | chr15:40209701 T>G · p.Leu737Ter | chr15:40220612 T>G · p.Asn1002Lys | 100/100 · F-max 1.0 (epcr 0.95) |
-| MikeRecognex | BUB1B (posición no revelada) | BUB1B | 100.0 / F-max 1.000 |
-| tfius (texdata) | BUB1B | BUB1B | 100/100 · full match rank 1 |
-
-**Interpretación:** el diagnóstico **MVA1 (OMIM 257300) por compound-heterocigosis BUB1B** se
-confirma de forma **robusta y reproducible**. La variante nonsense p.Leu737Ter (ClinVar
-Pathogenic) + el missense novel p.Asn1002Lys (AlphaMissense 0.923) en el dominio quinasa son el
-par molecular canónico de MVA1.
-
-> **Actualización 2026-09-02 (leaderboard oficial de Synapse, snapshot ranks 58-79):** la
-> convergencia ya no es anecdótica: aparte de por tecnología, **16 equipos adicionales** marcan
-> **100.0 Rank Points / F-max 1.000** (ranks 58-73), todos con pares BUB1B compound-het (por ejemplo
-> `bub1b-comphet-vep-targeted`, `bub1b-compound-het`, `vep-acmg-compound-het`, `bub1b-mva1-hypothesis`).
-> Incluso equipos con pipeline distinto (no-comphet, case-agnostic) alcanzan 50.0/0.5-0.57, subiendo a
-> 100/1.0 solo al acertar el par BUB1B. **Conclusión:** el caso es un estándar de oro cerrado; el
-> diagnóstico no es el diferenciador — el **método y el Track 2 sí lo son**.
+- **82 equipos** registrados, **76 con Rank Points = 100.0 y F-max = 1.000** (éxito total en el par BUB1B).
+- **4 equipos por debajo:** kathya-sanchez (RP 50), mateooSM (RP 50), Remek (RP 25, F 0.571), y 3 a 0 pts (f6/F606, steppenwolf0, sangulfost).
+- **Conclusión 1:** Track 1 **satúrado e irrelevante para diferenciación**. El caso es un estándar de oro cerrado; quien acierta el par BUB1B en rank 1 obtiene 100/1.0.
+- **Conclusión 2:** la **diferenciación real ocurre en Track 2**, evaluado por panel independiente con **4 criterios: rigor científico, impacto potencial, innovación, escalabilidad**.
+- **Conclusión 3:** Track 2 es **"Drug Repurposing" de medicamentos APROBADOS** (no diseño nuevo). Nuestra bioingeniería (mRNA-LNP/ASO) es el *resolver futuro*, pero el eje del track son **fármacos aprobados reposicionados** → nuestra vía NAD+/SIRT2 (NMN/NR, suplementos aprobados) y senolíticos (dasatinib+quercetina, aprobados) son los que encajan.
 
 ---
 
-## 2. Tabla comparativa de métodos y modelos
+## 1. Distribución metodológica de los 82 (por nombre de archivo de submission)
 
-### Track 1 — Variant prediction
-
-| Participante | Herramientas / "modelos" | Enfoque | Fortaleza |
+| Categoría | # equipos | Ejemplos | Implicación para nosotros |
 |---|---|---|---|
-| **byronzunigao (nosotros)** | Claude LLM (HPO) + Ensembl VEP + gnomAD v4 GraphQL + ClinVar + AlphaMissense + ACMG | Fenotipo→HPO→genes (MVA) → escaneo de exones tabix → anotación → ACMG | Evidencia-first determinista; LLM nunca toca coordenadas; exclusión con paneles SAC + cancer/renal |
-| michalbutkiewicz0000 | gnomAD r4 GraphQL + CADD + PhyloP + SpliceAI + SIFT/PolyPhen | Streaming VCF → hard QC → priorización impacto×rareza → compound-het pairing | Barrido de 106 genes SAC/cohesión/DDR/centrosoma; re-verificación live contra gnomAD/ClinVar/dbSNP |
-| bralewild | SnpEff + HPO semantic similarity + herencia/frecuencia | **Blind** genome-wide (5,012,204 vars, 140 genes, sin pistas) | Método "ciego" sin nombres de enfermedad; margen 22.8% sobre ZFP57 rank2 |
-| MikeRecognex | Hard-filter (QD/MQ/FS, no VQSR) + ClinVar join + depth scan 47 bins + IGV manual | Triage + **revisión de fase cis/trans** + exclusión de deleción grande | Máxima transparencia de discard ledger; mejor manejo de fase y falsos positivos |
-| tfius (texdata) | **Exomiser** (fenotipo-gen) + ClinVar scan + SV/coverage + align + phasing | 10 pasos: ref→normalize→clinvar→deepdive→phanerode→SV→phase | Usa gold-standard clínico (Exomiser); manejo de SV/aneuploidía |
+| **Compound-het estándar BUB1B** | 24 | noqcks, michailch, silico-evEE, gummietech… | El enfoque mayoritario; sin diferenciación. |
+| **Generic / sin método visible** | 25 | bigbag, 0xbryce, psydoc, track1_predictions… | Mayoría sin mérito metodológico declarado. |
+| **ACMG-based** | 8 | Gamow (sentieon+acmg), genobank, axolotl… | Clasificación ACMG = estándar, como nosotros. |
+| **VEP-based** | 6 | samistus, mikerecognex, saruman, sniffle… | Herramienta de anotación, no método. |
+| **Exomiser (fenotipo-gen)** | 4 | paraxaQQ, droov, swoopeagle, agentis | Priorización clínica gold-standard (fenotipo). |
+| **Panel/targeted SAC** | 4 | IaSantiago, octagono, ciberpty, floodemo | Enfoque panel = como nuestro panel SAC ampliado. |
+| **HPO-driven** | 3 | matcha, k-dense, ciberpty | Fenotipo→genes (como nuestro primer paso). |
+| **WGS blind** | 2 | bralewild, jakeelamb | Ciego genoma-completo, sin pistas. |
+| **AlphaFold / estructura** | 1 | meanjanroy | Uso de estructura proteica (cercano a nuestro PM1/dominio). |
+| **Alignment-free / kmer** | 1 | ericmodesitt, antocad3, mikerecognex | Innovación algorítmica (sin alineación). |
+| **CADD-tiered** | 1 | benshap | Escalado por CADD + herencia recesiva. |
+| **Readthrough / GNN / fetal** | (ver Track 2) | texdata (GNN), bralewild (readthrough) | Solo estos 2 + nosotros profundizan Track 2. |
 
-### Track 2 — Drug repurposing
+> **Lectura:** El 95% de los equipos ganó Track 1 con pipelines estándar (VEP+gnomAD+ACMG+compound-het).
+> Solo una minoría aporta método diferenciado (WGS blind, kmer/alignment-free, GNN, estructura).
+> **Ningún filenombre de Track 1 anuncia bioingeniería o plan clínico** → nuestro Track 2 es estructuralmente único.
 
-| Participante | Herramientas / "modelos" | Mecanismo | Candidatos | Resultado clave |
+---
+
+## 2. Fortalezas y debilidades — nosotros vs el campo
+
+### 2.1 Nuestras FORTALEZAS (ventajas defensivas)
+| Fortaleza | Detalle | Contestación al campo |
+|---|---|---|
+| **Evidencia-first determinista** | LLM nunca toca coordenadas; escaneo de exones tabix → anotación → ACMG | 24 equipos lo resuelven igual; nosotros lo documentamos con reproducibilidad e testing (sha256 de 14 archivos) |
+| **Exclusión de co-causa con paneles ampliados** | Panel SAC 24 genes + cáncer/renal; 72 variantes polimórficas benignas excluidas | Equivalente al mejor manejo de fase (mikerecognex), documentado en discard ledger |
+| **Guardrail anti-mitótico explícito** | Dicotomía vincristina (SOC) vs anti-SAC (sabotaje); auditoría Fase 5 severa | Casi nadie en el campo distingue esto con severidad pediátrica |
+| **Integración de la biología del variant** | Hypomorph BubR1; checkpoint roto → descarta taxanos/TTK | texdata (GNN) cometió el error y lo autocrítica; nosotros lo evitamos **desde el diseño** |
+| **Plan clínico integral** | Vigilancia oncológica q3m, GH con sign-off, senolíticos under oncology, consejo reproductivo | Bienes muebles que ningún filenombre del campo declara |
+| **Ruta de reemplazo génico** | mRNA-LNP BUBR1 (roadmap E1, reversibilidad 48h) | **Único** en el campo para resolver la dosis cuando la química no baste |
+| **Reproducibilidad total** | 14 archivos regenerados byte-idénticos (SHA-256) | Prueba de software engineering que el panel valora en "rigor" |
+
+### 2.2 Nuestras DEBILIDADES (ventanas de ataque del campo — a corregir)
+| Debilidad | Riesgo | Corrección necesaria |
+|---|---|---|
+| **El foco debe abrir con aprobados, no con bioingeniería** | Panel puede puntuar "viabilidad inmediata" bajo si solo subrayamos mRNA-LNP | **RESUELTO (A1):** el reporte ahora abre con la tesis de doble vía A/B: Vía A = NMN/NAD+ vía SIRT2 (aprobado, in-vivo Baker 2013) + senolíticos (aprobados) + GH (SOC) primero; Vía B = readthrough ➔ ARNm-LNP ➔ CRISPR como ruta de futuro. El reporte «abre con el reposicionable ya», no con la ingeniería. |
+| **Disclosure de LLM obligatorio** (update 28 ago 2026) | No declarar uso de IA puede descalificar | **RESUELTO (A7):** disclosure añadido a v2_BOOST (provider Anthropic/Claude, plan comercial, sin training, 30 días); el reporte base ya lo tenía (sec. 3). |
+| **Pitch a 3:48/3:15 fuera de límite** | Infracción de formato = descuento | **RESUELTO (A5):** ambos videos recortados - ES=177.6s (2:57), EN=154.0s (2:34); cumplen ≤ 3:00 conservando todo el discurso (tempo 1.285, solo se quitó cola silenciosa). |
+| **2 entregables con errores ACMG/K250 ya corregidos** | Corregidos en docs; falta verificar que no estén en el reporte final | **RESUELTO:** K250→K668 en la bibliografía del reporte final, ExAC 0.01%→0.005% en los 5 docs, y matriz ACMG unificada (PM2+PM1+PP3+PM3) aplicada en el reporte de submission. |
+
+---
+
+## 3. Progreso de los 82 — los competidores realmente fuertes (top defensa)
+
+Solo 3-5 equipos muestran método Track 2 sustantivo en el líder (por filenames + repos conocidos):
+
+| Competidor | Método Track 2 | Debilidad que explotamos |
+|---|---|---|
+| **texdata (tfius)** | GNN (TxGNN/PrimeKG) → "BubR1 undrugged" + CBP/p300 | GNN recomendó anti-mitóticos (error que autocrítica, pero no es candidato accionable); CBP/p300 es epigenéticamente promiscuo, sin in-vivo |
+| **bralewild** | Screen DGIdb + readthrough → **Escina** | Escina = efecto pequeño admitido; readthrough es el mecanismo más incierto (PTC124 falló ensayos independientes); ignora el alelo missense Asn1002Lys |
+| **meanjanroy (AlphaFold)** | Estructura + panel → uso de AlphaFold | Estructura in-silico sin plan clínico ni toxicidad |
+| **mikerecognex** | kmer/readlevel/alignment-free + phase audit | Innovación algorítmica fuerte en Track 1, sin entregable terapéutico documentado |
+| **matcha / k-dense (HPO)** | Fenotipo→genes | Sin especificidad terapéutica para MVA |
+
+---
+
+## 4. Selección — Los 10 candidatos sólidos más fuertes (top 10 del campo)
+
+Criterio: solidez del método + calidad/rigor documentado + señal de Track 2, por evidencias del leaderboard y repos públicos.
+
+| # | Equipo (handle) | Método (Track 1 / señal Track 2) | Fortaleza | Debilidad |
 |---|---|---|---|---|
-| **byronzunigao (nosotros)** | Razonamiento mecanístico + literatura + análisis de vías | Hypomorph BubR1 residual; checkpoint roto | **NMN/NAD+ (vía SIRT2)**, **senolíticos**, **GH** | Anti-mitóticos **contraindicados** |
-| tfius (texdata) | **TxGNN** (GNN zero-shot) + **PrimeKG/OptimusKG** + ChEMBL | "Más BubR1" por 3 vías independientes | NMN/nicotinamide riboside (SIRT2), inhibidores CREBBP/EP300, readthrough | **Los grafos recomiendan anti-mitóticos (contraindicados)** — el GNN no sabe que el checkpoint está roto; valida nuestra vía NAD⁺/SIRT2 (*Baker NCB 2013*) |
-| bralewild | Screen unbiased readthrough (~1,600 fármacos) + filtro HPO | Readthrough del alelo nulo p.Leu737Ter | **Escina** (readthrough), gentamicina, ataluren, amlexanox | Escina gana por estar comercializada y sin conflicto con nefrocalcinosis |
+| 1 | **Gamow (@GamowLabs)** | Sentieon VCF + targeted ACMG (RP 100, rank1🥇) | Pipeline de grado clínico industrial (Sentieon); rank #1 | Enfoque estándar ACMG; sin Track 2 declarado |
+| 2 | **bralewild** | Blind WGS triage + HPO semantic + screen readthrough→**Escina** | Método ciego + control positivo CFTR/PAH (validación robusta); candidato comercializado | Readthrough = mecanismo incierto; efecto pequeño; ignora missense |
+| 3 | **texdata (tfius)** | Exomiser + GNN/PrimeKG → "BubR1 undrugged" + CBP/p300 | Análisis de knowledge-graph genuino; autocrítica honesta | GNN recomendó anti-mitóticos; CBP/p300 especulativo; sin in-vivo ni plan clínico |
+| 4 | **matcha (@ChaimaeEH)** | HPO-variants-top (rank2🥈, RP 100) | Priorización fenotipo→gen limpia; rank #2 | Sin especificidad terapéutica MVA |
+| 5 | **@scottmastro** | BUB1B-targeted-ACMG (rank3🥉) | ACMG targeted; rank #3 | Estándar; sin diferenciación Track 2 |
+| 6 | **mikerecognex** | kmer/readlevel-verified + phase audit + VEP | Innovación alignment-free + mejor manejo de fase/discard ledger | Algoritmo fuerte Track 1, sin entregable terapéutico |
+| 7 | **@ericmodesitt** | readlevel-verified-ACMG | Verificación a nivel read + ACMG | Método de verificación, no terapéutico |
+| 8 | **meanjanroy** | MVA-panel + AlphaFold (estructura) | Uso de estructura proteica para priorización | In-silico sin validación funcional ni plan clínico |
+| 9 | **@antocad3** | Ensemble sin alineación | Ensamble de modelos sin alineación (ingeniería) | Innovación técnica; sin Track 2 |
+| 10 | **@benshap (Eleanor-)** | GO-tiered-CADD-recessive | Escalado por CADD + ontología GO + recesivo (rank4) | Std. por CADD; sin terapéutica |
+
+> **Nota de calidad:** entre los 10 más sólidos, SOLO 2 (bralewild, texdata) son competidores reales en
+> Track 2. El resto gana Track 1 con pipelines sólidos pero **no proponen terapia reposicionable**.
+> Nuestro Track 2 (candidatos + plan clínico + reemplazo génico + toxicidad) **no tiene homólogo en el top 10**.
 
 ---
 
-## 3. ¿Ventaja competitiva?
-
-**Track 1 (automático):** NO hay diferenciación — leaderboard saturado en 100/1.0, re-confirmado
-con 16 equipos más al tope en el snapshot 2026-09-02. Nuestra
-ventaja es **defensiva/rigor**: caveat de fase in-trans declarado, exclusión de co-causa con
-paneles ampliados (equivalente al cis/trans de MikeRecognex).
-
-**Track 2 (panel de expertos — donde sí puntúa):** nuestras hipótesis (NAD⁺/SIRT2 + readthrough +
-senolíticos) están **alineadas con la evidencia de mayor respaldo biológico** (ver tfius/Baker).
-A diferencia de la IA de grafos (TxGNN), nosotros **integramos la biología del variant**
-(checkpoint roto), evitando el error de recomendar anti-mitóticos.
 
 ---
 
-## 4. Registro de monitoreo (nuevos participantes)
+## 4.5 ¿Hay oportunidad real de ganar vs los 10 mejores? (análisis honesto)
 
-| Fecha | Participante | Repo | Método resumido | Estado |
-|---|---|---|---|---|
-| 2026-08-31 | byronzunigao | (local) | Pipeline HPO+genómico determinista ACMG | Analizado |
-| 2026-08-31 | michalbutkiewicz0000 | github.com/michalbutkiewicz0000/mva-hackathon-2026 | VCF streaming + gnomAD r4 + compound-het | Analizado |
-| 2026-08-31 | bralewild | github.com/bralewild/mva-hackathon-2026 | Blind WGS triage + HPO semantic rank | Analizado |
-| 2026-08-31 | MikeRecognex | github.com/MikeRecognex/mva-hackathon-2026 | Triage + hard-filter + fase + discard ledger | Analizado |
-| 2026-08-31 | tfius (texdata) | github.com/tfius/mva-hackathon-2026 | Exomiser + TxGNN/PrimeKG track2 | Analizado |
+Respuesta corta: **sí, pero solo en Track 2, y la ventana es estrecha.** Peso la evidencia:
 
-*(El monitor agrega filas aquí conforme detecta repos nuevos.)*
+**Por qué sí (a favor nuestro):**
+- Track 1 no decide (76/82 empate a 100/1.0). Quien entre en el top-3 de Track 2 marca la diferencia real.
+- De los 10 competidores más sólidos, **solo 2 (texdata, bralewild) proponen terapia reposicionable**; el resto gana Track 1 sin entregable terapéutico. Nuestro Track 2 integra: candidato aprobado con in-vivo (NAD+/SIRT2, Baker 2013) + plan clínico + resolver génico + auditoría de toxicidad pediátrica. **Ningún rival ofrece ese paquete completo.**
+- Los 4 criterios del panel (rigor, impacto, innovación, escalabilidad): cubrimos los 4 en una sola propuesta, mientras texdata (innovación, débil en viabilidad) y bralewild (impacto dudoso, mecanismo incierto) cubren parcialmente.
+- Diferenciadores que acabamos de blindar (A1-A8): doble vía explícita, tabla Fase-5 de toxicidad en sarcoma activo, diferencial anti-mitótico, reproducibilidad cuantificada (SHA-256, 6/6 QC), disclosure LLM, plan clínico integral.
 
-### Participantes detectados vía leaderboard oficial (snapshot 2026-09-02, ranks 58-79)
+**Por qué es estrecho (riesgos que nos quitan la victoria):**
+- **texdata en innovación:** un knowledge-graph (TxGNN/PrimeKG) genuino impresiona al panel más que un razonamiento manual, aún si su candidato (CBP/p300) es especulativo. Pueden robar el criterio "innovación".
+- **bralewild en rigor/validación:** su triage ciego WGS + control positivo CFTR/PAH es metodológicamente limpio y les da credibilidad de "método validado".
+- **Riesgo de que el panel lea APROBADOS de forma literal** y descuente a cualquiera que acentúe no-aprobados (NMN/NAD+ es suplemento, no fármaco aprobado para MVA). Nuestra Vía A mitiga esto al abrir con GH (aprobado SOC) y senolíticos (aprobados), pero NMN/NAD+ requiere que la evidencia in-vivo hable por sí misma.
+- **Jurado humano:** subjetividad. Un panel puede premiar la historia más clara; nosotros tenemos la narrativa más densa y argumentos que exigirán atención, no una lectura de 2 min.
 
-> **Nota de transparencia:** aquí el método se deduce **solo del nombre del archivo de predicción**
-> en el leaderboard (no de su repo). Acertar el par BUB1B da 100.0/1.000; fallarlo da puntuación parcial.
+**Veredicto ponderado:** probabilidad subjetiva de top-3 Track 2 ~40-55% (somos el único paquete completo), y de **ganar (~25-30%)** - la competencia real es texdata (innovación) y bralewild (rigor), y ambos tienen un hueco que explotamos (anti-mitótico erróneo / mecanismo incierto + alelo ignorado). Es una oportunidad genuina, no una certeza.
 
-| Rank | Participante | Archivo modelo (método deducido) | Score |
-|---|---|---|---|
-| 58 | agentis-federation (@ylohnitram) | `exomiser-lens` (panel + Exomiser) | 100.0 / 1.000 |
-| 59 | ShauryaS31 | `track1_predictions` | 100.0 / 1.000 |
-| 60 | @movingparticle | `bub1b-mva1-hypothesis` | 100.0 / 1.000 |
-| 61 | @Saruman-314 | `bub1b-comphet-vep-targeted` (VEP) | 100.0 / 1.000 |
-| 62 | hysa (@hernanysa) | `track1_borrador` | 100.0 / 1.000 |
-| 63 | AjaxDNA (@Juanto19) | `bub1b-compound-het` | 100.0 / 1.000 |
-| 64 | Soul (@ask-kausheek) | `hpo-vep-rankfusion` (HPO+VEP) | 100.0 / 1.000 |
-| 65 | ines28 | `mva_track1_submission` | 100.0 / 1.000 |
-| 66 | @octagono | `genoma-panel` | 100.0 / 1.000 |
-| 67 | @swoopeagle | `exomiser-union` | 100.0 / 1.000 |
-| 68 | @simulatedbuggy | `mva-findings` | 100.0 / 1.000 |
-| 69 | bonamame (@bonadossou) | `track1_v1_READY` | 100.0 / 1.000 |
-| 70 | @xcqtnr | `mva_track1` | 100.0 / 1.000 |
-| 71 | georgefifth | `bub1b-compound-het-v1` | 100.0 / 1.000 |
-| 72 | Himanshu Kumar | `bub1b-compound-het` | 100.0 / 1.000 |
-| 73 | Gummietech (@kemval) | `vep-acmg-compound-het` (VEP+ACMG) | 100.0 / 1.000 |
-| 74 | @kathya-sanchez-2002 | `hybrid-prioritization` | 50.0 / 0.500 |
-| 75 | mateoosm (@mateooSM) | `BUB1B_T_G_G_A_primary` | 50.0 / 0.500 |
-| 76 | @Remek | `m1-case-agnostic-acmg` | 25.0 / 0.571 |
-| 77 | f6 (@F606) | `nexus-f6-track1` | 0.0 / 0.000 |
-| 78 | @steppenwolf0 | `mva_candidates` | 0.0 / 0.000 |
-| 79 | studiopanorama.mx (@sangulfost) | `track1_predictions` | 0.0 / 0.000 |
+---
 
-**Lectura competitiva:** el par BUB1B lo acierta cualquiera con pipeline razonable (16/22 en este
-snapshot al tope). El grupo 74-76 (50/25 pts) acertó **un alelo pero no el par completo** — confirma
-que la dificultad residual está en la **fase compound-het**, exactamente donde nosotros declaramos
-el caveat de fase in-trans. El **differentiator** sigue siendo el **Track 2 y el rigor del write-up**.
+## 5. Conclusión competitiva
+
+1. **Track 1:** 76/82 empatados a 100/1.0 → **no diferencia**. Nuestro pipeline es equivalente y reproducible.
+2. **Track 2:** compiten de verdad **solo texdata, bralewild y nosotros**. Su punto débil común:
+   - texdata: GNN que erró el anti-mitótico + CBP/p300 especulativo.
+   - bralewild: readthrough (mecanismo incierto) como única apuesta + ignora alelo missense.
+   - **Nosotros: única propuesta que integra candidato aprobado (NAD+/SIRT2 con in-vivo Baker 2013) + plan clínico + resolver génico + auditoría de toxicidad pediátrica.**
+3. **Acción crítica:** reordenar el reporte Track 2 para **abrir con el reposicionamiento de aprobados** (NAD+/SIRT2, senolíticos) y presentar mRNA-LNP como futuro — alineando con el encargo del track y cerrando nuestra única ventana de debilidad.
