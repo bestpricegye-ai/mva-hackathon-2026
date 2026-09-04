@@ -58,8 +58,9 @@ mva-hackathon-2026/
 ├── deliverables/                 <- READY-TO-SUBMIT files (Track 1 + 2 + 4 + consorcio)
 │   ├── track1/predictions/byronzunigao_bub1b-compound-het-acmg.csv
 │   ├── track1/report/byronzunigao_track1_report.md
-│   ├── track2/byronzunigao_track2_report.md
-│   ├── track2/byronzunigao_track2_report_v2_BOOST.md
+│   ├── track2/byronzunigao_track2_report_FINAL.md    <- REPORTE ÚNICO/CANÓNICO Track 2 (entrega)
+│   ├── track2/byronzunigao_track2_report.md          <- base EN (respaldo histórico)
+│   ├── track2/byronzunigao_track2_report_v2_BOOST.md <- refuerzos 7 puntos (respaldo)
 │   ├── track2/pitch_byronzunigao.mp4       <- pitch video ES (2:57/177.6s)
 │   ├── track2/pitch_byronzunigao_EN.mp4    <- pitch video EN (2:34/154.0s, ≤3:00, recomendado)
 │   ├── track2/video_script.md / video_script_EN.md
@@ -132,10 +133,12 @@ See **`deliverables/LEEME.md`** for the full submission checklist. Summary:
   (columns match the official template; `proband_id=PROBAND01`; GRCh38; expects **100 pts / 1.000 F-max**).
 - **Track 1 report** — `deliverables/track1/report/byronzunigao_track1_report.md`
   (follows the official methods template, incl. the **required LLM disclosure**).
-- **Track 2 report** — `deliverables/track2/byronzunigao_track2_report.md`
+- **Track 2 report** — `deliverables/track2/byronzunigao_track2_report_FINAL.md`
+  (**entrega única/canónica** de Track 2; consolida plantilla 1-11 + refuerzos v2_BOOST + evidencia 2025-2026)
   (drug repurposing for MVA1, dual-pathway: Vía A NMN/NAD+-SIRT2, senolytics, growth hormone; Vía B
-  readthrough→mRNA-LNP→CRISPR; anti-mitotics contraindicated; Fase-5 oncology toxicity audit)
-  + **v2_BOOST** `deliverables/track2/byronzunigao_track2_report_v2_BOOST.md`
+  readthrough→mRNA-LNP→CRISPR; anti-mitotics contraindicated with vincristine/SOC dichotomy; Fase-5 oncology
+  toxicity audit)
+  + **v2_BOOST (respaldo)** `deliverables/track2/byronzunigao_track2_report_v2_BOOST.md`
   + **pitch videos** `deliverables/track2/pitch_byronzunigao.mp4` (2:57/177.6s, es-MX) y
   `pitch_byronzunigao_EN.mp4` (2:34/154.0s, en-US, ≤3:00 — recomendado).
 - **Track 4** — `deliverables/track4/FASE4_REPOSICIONAMIENTO.md` + `FASE4_VALIDACION_PROTOCOLO.md`.

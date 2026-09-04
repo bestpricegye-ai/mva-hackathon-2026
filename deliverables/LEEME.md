@@ -18,9 +18,10 @@ entregables/
 │   └── report/
 │       └── byronzunigao_track1_report.md              <- REPORTE DE MÉTODOS Track 1
 ├── track2/
-│   ├── byronzunigao_track2_report.md                  <- REPORTE DE MÉTODOS Track 2 (EN, canónico)
-│   ├── byronzunigao_track2_report_EN.md               <- copia byte-idéntica del canónico (EN)
-│   ├── byronzunigao_track2_report_v2_BOOST.md         <- ampliación contrarreloj 7 puntos (ES)
+│   ├── byronzunigao_track2_report_FINAL.md            <- REPORTE ÚNICO/CANÓNICO Track 2 (entrega)
+│   ├── byronzunigao_track2_report.md                  <- base EN (plantilla 1-11, respaldo histórico)
+│   ├── byronzunigao_track2_report_EN.md               <- copia byte-idéntica del base (respaldo)
+│   ├── byronzunigao_track2_report_v2_BOOST.md         <- refuerzos 7 puntos (respaldo)
 │   ├── video_script.md / video_script_EN.md           <- SCRIPT del pitch (ES/EN)
 │   ├── pitch_byronzunigao.mp4                         <- PITCH GRABADO (2:57/177.6s, es-MX)
 │   ├── pitch_byronzunigao_EN.mp4                      <- PITCH EN (2:34/154.0s, en-US) — recorte ≤3:00 (recomendado)
@@ -71,11 +72,17 @@ durante el evento). Rellenar el campo "GitHub repo URL" en la tab de submit.
 **Cuota:** hasta 3 submissions/equipo; el panel revisa **solo la última**.
 
 ### 1. Reporte
-`track2/byronzunigao_track2_report.md` — sigue la plantilla de métodos de Track 2 (approach del
-mecanismo → candidatos, declaración de LLM, fuentes públicas, abstract). Estrategia de **doble vía**:
-Vía A (rescate de dosis con agentes aprobados: NMN/NAD+ vía SIRT2, senolíticos, GH) + Vía B (reparación
-de alelo: readthrough → ARNm-LNP → CRISPR), con guardrail anti-mitótico (TTK/MPS1 contraindicados) y
-auditoría de toxicidad Fase 5 por candidato en sarcoma activo. Complemento ES: `byronzunigao_track2_report_v2_BOOST.md`.
+`track2/byronzunigao_track2_report_FINAL.md` — **entrega ÚNICA y canónica** de Track 2. Sigue la plantilla
+de métodos (approach del mecanismo → candidatos, declaración de LLM, fuentes públicas, abstract) y **consolida**:
+el reporte base (plantilla 1-11) + los 7 puntos de refuerzo del v2_BOOST (readthrough candidato #4, dicotomía
+clínica vincristina vs TTK/MPS1, ARNm-LNP como sección propia, control NMN/NAD+, plan clínico integrado, tabla
+de toxicidad Fase-5 por candidato, matriz competitiva) + evidencia 2025-2026 (E1-E7: paralelo murino L1002P,
+vacío terapéutico 2026, KIF18A, NMN humano) + matriz de trazabilidad por fuente. Estrategia de **doble vía**:
+Vía A (rescate de dosis con agentes aprobados: NMN/NAD+ vía SIRT2, senolíticos, GH) + Vía B (reparación de
+alelo: readthrough → ARNm-LNP → CRISPR), con guardrail dicotómico anti-mitótico (TTK/MPS1 contraindicados,
+vincristina SOC con monitorización) y auditoría de toxicidad Fase-5 por candidato en sarcoma activo.
+Los archivos `byronzunigao_track2_report.md`, `_EN.md` y `_v2_BOOST.md` se conservan **solo como respaldo de
+trazabilidad**; no se suben para evitar duplicidad (el panel revisa solo la última submission).
 
 ### 2. Pitch video (3 min)
 Video de 3 minutos explicando el razonamiento (variante BUB1B → mecanismo SAC → NMN/NAD+ y otros):

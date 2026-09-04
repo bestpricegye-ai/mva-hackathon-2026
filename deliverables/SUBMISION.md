@@ -23,7 +23,7 @@ Contenido del CSV (4 filas, verificado):
 
 | Campo | Valor |
 |---|---|
-| Reporte | `deliverables/track2/byronzunigao_track2_report.md` |
+| Reporte | `deliverables/track2/byronzunigao_track2_report_FINAL.md` (**entrega ÚNICA y canónica** de Track 2: plantilla 1-11 + refuerzos v2 + evidencia 2025-2026) |
 | Pitch video (ES) | `deliverables/track2/pitch_byronzunigao.mp4` (ES, **177.6s / 2:57**, 1280x720, es-MX) |
 | Pitch video (EN) | `deliverables/track2/pitch_byronzunigao_EN.mp4` (EN, **154.0s / 2:34**, 1280x720, en-US) - recorte a <= 3:00 cumplido (2026-09-03) |
 | URL del video (obligatoria) | ⏳ **PENDIENTE**: subir a YouTube/Vimeo (Unlisted) y pegar aquí |
@@ -38,8 +38,11 @@ Contenido del CSV (4 filas, verificado):
 >   que inflaba la duración. **Recomendado EN** (mayor margen + audiencia internacional del panel).
 
 Candidatos Track 2: NMN/NAD+, senolíticos, GH individualizada + contraindicación explícita de
-anti-mitóticos (regla 3.1 del Consorcio). + `byronzunigao_track2_report_v2_BOOST.md` (ampliación
-contrataque 7 puntos, complementario del reporte base).
+anti-mitóticos (regla 3.1 del Consorcio). **Entrega única = `byronzunigao_track2_report_FINAL.md`**
+(consolida la plantilla base + los 7 refuerzos del v2_BOOST + evidencia 2025-2026 E1-E7). Los archivos
+`byronzunigao_track2_report.md`, `_EN.md` y `_v2_BOOST.md` se conservan como material de trazabilidad/
+respaldo, pero **NO se suben como entregables** para evitar duplicidad (el panel solo revisa la última
+submission).
 
 ## Otros entregables (para jueces, opcional)
 
