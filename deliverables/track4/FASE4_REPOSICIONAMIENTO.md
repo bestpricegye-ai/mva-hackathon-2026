@@ -115,6 +115,24 @@ blanco), clasificados por fase máxima.
 
 ---
 
+## 4.4 Evidencia 2025–2026 que refuerza el reposicionamiento (ver `docs/bibliografia_mva.md` Parte E)
+
+- **Vacío terapéutico:** a 2026 **no existe fármaco aprobado por la FDA ni ensayo clínico reclutando para
+  MVA** (UniteRare/openFDA/ClinicalTrials.gov, mar 2026; < 50 casos MVA Society) → alto impacto/escalabilidad.
+- **Alelo missense con modelo murino directo:** el missense **Asn1002Lys** del probando está en el
+  **residuo 1002, el modelado en ratones MVA** (`Bubr1 +/L1002P`, Sieben CJ et al., *J Clin Invest* 2020;
+  OMIM 602860) → refuerza la estrategia dirigida al alelo (estabilización/readthrough del compañero missense).
+- **NAD+/NMN humano:** ~10 ensayos publicados + ~13 completados + ~11 en marcha, y MIB-626 (MetroBiotech)
+  en ensayos (PMC10721522; GeroScience 2024) → plataforma humana de seguridad contra la objeción "solo ratones".
+- **Oncología selectiva CIN - KIF18A:** inhibidores KIF18A (AM-1882, Marquis *Nat Cancer* 2024) selectivos
+  de tumores CIN, no mielosupresores, superan osteosarcoma (PMC13290091) y la clase (VLS-1488/Amgen) entró
+  en **fase I/II humana** (Expert Opin Investig Drugs, 2026) — opción oncológica experimental distinta de
+  los anti-SAC contraindicados.
+- **Senolíticos en sobrevivientes de cáncer infantil:** SEN-SURVIVORS (NCT04733534, St. Jude) +
+  precedente pediátrico de dasatinib (NCT00777036).
+
+---
+
 ## Artefactos de Fase 4
 
 | Artefacto | Ruta |
