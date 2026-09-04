@@ -48,7 +48,7 @@ mva-hackathon-2026/
 │   ├── fase4_mapeo_blancos.py / fase4_validacion_farmacos.py  <- Fase 4 (Open Targets/ChEMBL/PubMed)
 │   ├── fase6_criterios_zhang.py / fase6_elegibilidad.py / fase6_zhang_influence.py  <- Fase 6
 │   ├── pge_mva1.py / pge_mva1_genome.py  <- precision genomic engineering (NMD/phase/HDR/VAF)
-│   ├── hacer_video.py            <- pitch-video generator (edge-tts + Pillow, optional)
+│   ├── hacer_video.py / hacer_video_EN.py  <- pitch-video generators (edge-tts + Pillow, optional)
 │   └── verificacion_dirigida_vcf.py / auditar_repo.py
 ├── data/
 │   ├── panels/                   <- panel exon coordinates (public, Ensembl GRCh38)
@@ -59,12 +59,16 @@ mva-hackathon-2026/
 │   ├── track1/predictions/byronzunigao_bub1b-compound-het-acmg.csv
 │   ├── track1/report/byronzunigao_track1_report.md
 │   ├── track2/byronzunigao_track2_report.md
-│   ├── track2/pitch_byronzunigao.mp4       <- pitch video (3:01)
-│   ├── track2/video_script.md
+│   ├── track2/byronzunigao_track2_report_v2_BOOST.md
+│   ├── track2/pitch_byronzunigao.mp4       <- pitch video ES (2:57/177.6s)
+│   ├── track2/pitch_byronzunigao_EN.mp4    <- pitch video EN (2:34/154.0s, ≤3:00, recomendado)
+│   ├── track2/video_script.md / video_script_EN.md
 │   ├── track4/FASE4_REPOSICIONAMIENTO.md
 │   ├── track4/FASE4_VALIDACION_PROTOCOLO.md
 │   ├── consorcio/VERIFICACION_MANEJO_CLINICO.md
 │   ├── consorcio/EVALUACION_5_FASES.md
+│   ├── consorcio/CONTRASTE_PLATAFORMAS_2026.md
+│   ├── consorcio/INFORME_REVISION_CRITICA_COMITE.md
 │   ├── methods_description_form.xlsx
 │   ├── LEEME.md / SUBMISION.md
 │   └── track1_submission_template.csv
@@ -129,10 +133,13 @@ See **`deliverables/LEEME.md`** for the full submission checklist. Summary:
 - **Track 1 report** — `deliverables/track1/report/byronzunigao_track1_report.md`
   (follows the official methods template, incl. the **required LLM disclosure**).
 - **Track 2 report** — `deliverables/track2/byronzunigao_track2_report.md`
-  (drug repurposing for MVA1: NMN/NAD+, senolytics, growth hormone; anti-mitotics contraindicated)
-  + **pitch video** `deliverables/track2/pitch_byronzunigao.mp4` (3:01, es-MX).
+  (drug repurposing for MVA1, dual-pathway: Vía A NMN/NAD+-SIRT2, senolytics, growth hormone; Vía B
+  readthrough→mRNA-LNP→CRISPR; anti-mitotics contraindicated; Fase-5 oncology toxicity audit)
+  + **v2_BOOST** `deliverables/track2/byronzunigao_track2_report_v2_BOOST.md`
+  + **pitch videos** `deliverables/track2/pitch_byronzunigao.mp4` (2:57/177.6s, es-MX) y
+  `pitch_byronzunigao_EN.mp4` (2:34/154.0s, en-US, ≤3:00 — recomendado).
 - **Track 4** — `deliverables/track4/FASE4_REPOSICIONAMIENTO.md` + `FASE4_VALIDACION_PROTOCOLO.md`.
-- **Consorcio** — `deliverables/consorcio/VERIFICACION_MANEJO_CLINICO.md` + `EVALUACION_5_FASES.md`.
+- **Consorcio** — `deliverables/consorcio/VERIFICACION_MANEJO_CLINICO.md` + `EVALUACION_5_FASES.md` + `CONTRASTE_PLATAFORMAS_2026.md` + `INFORME_REVISION_CRITICA_COMITE.md`.
 
 ### Pipeline phases (reproducible, `src/`)
 

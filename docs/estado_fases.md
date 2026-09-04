@@ -137,6 +137,13 @@ interactores del SAC son **inhibidores** de quinasas mitóticas → en un proban
 la aneuploidía → **confirmación empírica** del guardrail / lista de contraindicaciones del Track 2
 (volasertib, BAY-1161909, taxanos, vincristina…).
 
+> **Actualización de literatura 2025-2026 (ver `docs/bibliografia_mva.md` Parte E):** se confirmó el vacío
+> terapéutico (sin fármaco FDA aprobado ni ensayo reclutando para MVA a 2026), el paralelo murino del
+> missense del probando (`Bubr1 +/L1002P`, residuo 1002 — Sieben 2020), la traducción humana del NMN
+> (~10 ensayos publicados; MIB-626 en ensayos), los senolíticos en sobrevivientes de cáncer infantil
+> (SEN-SURVIVORS NCT04733534) y la diana oncológica selectiva KIF18A (AM-1882 en fase I/II humana).
+> Todo ello anclado a los reportes de Track 2 y consolidados.
+
 ### F4-B: Hipótesis de tratamiento (LLM + integración experta)
 
 - **Candidato 1 — NMN/NAD+**: rescate de **dosificación de BUBR1** vía SIRT2 (K668); única estrategia con

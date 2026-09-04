@@ -18,16 +18,21 @@ entregables/
 │   └── report/
 │       └── byronzunigao_track1_report.md              <- REPORTE DE MÉTODOS Track 1
 ├── track2/
-│   ├── byronzunigao_track2_report.md                  <- REPORTE DE MÉTODOS Track 2
-│   ├── video_script.md                                <- SCRIPT del pitch
-│   ├── pitch_byronzunigao.mp4                         <- PITCH GRABADO (3:01, es-MX)
-│   └── pitch_build/                                   <- assets de montaje del video
+│   ├── byronzunigao_track2_report.md                  <- REPORTE DE MÉTODOS Track 2 (EN, canónico)
+│   ├── byronzunigao_track2_report_EN.md               <- copia byte-idéntica del canónico (EN)
+│   ├── byronzunigao_track2_report_v2_BOOST.md         <- ampliación contrarreloj 7 puntos (ES)
+│   ├── video_script.md / video_script_EN.md           <- SCRIPT del pitch (ES/EN)
+│   ├── pitch_byronzunigao.mp4                         <- PITCH GRABADO (2:57/177.6s, es-MX)
+│   ├── pitch_byronzunigao_EN.mp4                      <- PITCH EN (2:34/154.0s, en-US) — recorte ≤3:00 (recomendado)
+│   └── pitch_build/ + pitch_build_EN/                 <- assets de montaje del video
 ├── track4/
 │   ├── FASE4_REPOSICIONAMIENTO.md                     <- Descubrimiento terapéutico (track 4)
 │   └── FASE4_VALIDACION_PROTOCOLO.md                  <- Validación en bases públicas
 ├── consorcio/
 │   ├── EVALUACION_5_FASES.md                          <- Auditoría interna de las 5 fases
-│   └── VERIFICACION_MANEJO_CLINICO.md                 <- Veredicto médico del manejo MVA1
+│   ├── VERIFICACION_MANEJO_CLINICO.md                 <- Veredicto médico del manejo MVA1
+│   ├── CONTRASTE_PLATAFORMAS_2026.md                  <- Contraste de plataformas 2026
+│   └── INFORME_REVISION_CRITICA_COMITE.md             <- Revisión crítica del comité
 └── (SUBMISION.md, pitch_byronzunigao.mp4)             <- pre-flight + assets
 ```
 
@@ -67,13 +72,16 @@ durante el evento). Rellenar el campo "GitHub repo URL" en la tab de submit.
 
 ### 1. Reporte
 `track2/byronzunigao_track2_report.md` — sigue la plantilla de métodos de Track 2 (approach del
-mecanismo → candidatos, declaración de LLM, fuentes públicas, abstract). Incluye 3 candidatos (NMN/NAD+,
-senolíticos, GH) + contraindicación de anti-mitóticos.
+mecanismo → candidatos, declaración de LLM, fuentes públicas, abstract). Estrategia de **doble vía**:
+Vía A (rescate de dosis con agentes aprobados: NMN/NAD+ vía SIRT2, senolíticos, GH) + Vía B (reparación
+de alelo: readthrough → ARNm-LNP → CRISPR), con guardrail anti-mitótico (TTK/MPS1 contraindicados) y
+auditoría de toxicidad Fase 5 por candidato en sarcoma activo. Complemento ES: `byronzunigao_track2_report_v2_BOOST.md`.
 
 ### 2. Pitch video (3 min)
 Video de 3 minutos explicando el razonamiento (variante BUB1B → mecanismo SAC → NMN/NAD+ y otros):
-- **Grabado:** `track2/pitch_byronzunigao.mp4` (3:01, 1280x720, es-MX) — versionado en el repo.
-- **Script:** `track2/video_script.md` · **Assets de montaje:** `track2/pitch_build/`.
+- **Grabado ES:** `track2/pitch_byronzunigao.mp4` (**2:57/177.6s**, 1280x720, es-MX) — versionado.
+- **Grabado EN:** `track2/pitch_byronzunigao_EN.mp4` (**2:34/154.0s**, 1280x720, en-US) — recorte a ≤3:00 cumplido. **Recomendado subir EN** (mayor margen + panel internacional).
+- **Scripts:** `track2/video_script.md` + `video_script_EN.md` · **Assets:** `track2/pitch_build/` + `pitch_build_EN/`.
 - **Pendiente (manual):** subir a **YouTube/Vimeo** (Unlisted) y **pegar la URL** en la tab de submit
   (campo obligatorio).
 
@@ -94,7 +102,7 @@ Compartir el mismo repo (contiene el pipeline de mecanismo + fuentes).
       (`docs/verificacion_dirigida_vcf.md`) y registro de decisión sobre reads
       (`docs/decision_reads_no_analizados.md`).
 - [x] Veredicto médico del manejo clínico MVA1 (`consorcio/VERIFICACION_MANEJO_CLINICO.md`).
-- [x] Track 2: **pitch grabado** (`track2/pitch_byronzunigao.mp4`, 3:01) — **falta pegar la URL** (YouTube/Vimeo) en la tab Submit-Track2.
+- [x] Track 2: **pitch grabado y recortado a ≤3:00** — ES `track2/pitch_byronzunigao.mp4` (2:57/177.6s) + EN `track2/pitch_byronzunigao_EN.mp4` (2:34/154.0s) — **falta pegar la URL** (YouTube/Vimeo) en la tab Submit-Track2.
 - [x] Track 2: **pitch mp4 + `pitch_build/` versionados** en el repo (decisión de equipo).
 - [x] Documentación de metodología y paper científico (`docs/PAPER_CIENTIFICO_MVA.md`,
       `docs/METODOLOGIA_FLUJOGRAMA.md`) y ampliación de Fase 6 con estrategias de compensación/

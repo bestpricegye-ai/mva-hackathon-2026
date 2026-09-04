@@ -90,7 +90,32 @@ inmunitaria tumoral. Requiere oncología.
   fármacos aplica a BUB1B**; los candidatos de este informe (vía SIRT2/NAD+/NMN, senolíticos,
   GH) se derivan de la evidencia funcional propia de la vía BUBR1, no de ese artículo.
 
+## 7. Evidencia 2025–2026 (consolidada — ver `docs/bibliografia_mva.md` Parte E)
+
+- **Vacío terapéutico (impacto):** a 2026 **no existe fármaco aprobado por la FDA ni ensayo clínico
+  reclutando para MVA** (UniteRare/openFDA/ClinicalTrials.gov, mar 2026; < 50 casos MVA Society). Todo
+  candidato reposicionado aquí es **novedoso en esta enfermedad**.
+- **Alelo missense con modelo murino directo:** el missense **Asn1002Lys** del probando está en el
+  **residuo 1002, exactamente el modelado en ratones MVA** (`Bubr1 +/L1002P`, Sieben CJ et al., *J Clin
+  Invest* 2020; OMIM 602860) → refuerza una estrategia dirigida al alelo (estabilización/readthrough).
+- **Traducción humana de NAD+/NMN:** ~10 ensayos NMN publicados + ~13 completados + ~11 en marcha, y
+  MIB-626 (MetroBiotech) en ensayos clínicos (PMC10721522; GeroScience 2024) → plataforma humana de
+  seguridad establecida contra la objeción "solo ratones".
+- **Oncología selectiva CIN - KIF18A:** los inhibidores KIF18A (AM-1882, Marquis *Nat Cancer* 2024) son
+  selectivos de tumores CIN, no mielosupresores, superan osteosarcoma (PMC13290091, 2026) y la clase
+  (VLS-1488/Amgen) entró en **fase I/II humana** (*Expert Opin Investig Drugs*, 2026) — opción oncológica
+  experimental contra el rabdomiosarcoma, distinta de los anti-SAC contraindicados.
+- **Senolíticos en sobrevivientes de cáncer infantil:** ensayo SEN-SURVIVORS (NCT04733534, St. Jude)
+  con dasatinib+quercetina/fisetina + precedente de seguridad pediátrica de dasatinib (NCT00777036).
+
 ## Referencias clave
+- Sieben CJ et al. **Bubr1 +/L1002P mouse models** (JMol/OMIM 602860), 2020.
+- Marquis C et al. **KIF18A inhibitor AM-1882.** Nature Cancer 5:66–84, 2024.
+- PMC13290091 / T&F (2026): KIF18A reduce viabilidad de osteosarcoma.
+- Expert Opin Investig Drugs (2026) DOI 10.1080/13543784.2026.2616752: VLS-1488/Amgen fase I/II.
+- PMC10721522; GeroScience (2024): NMN en humanos (seguridad y subida de NAD+).
+- SEN-SURVIVORS NCT04733534; NCT00777036 (dasatinib pediátrico).
+- UniteRare (2026): sin fármacos FDA aprobados ni ensayos reclutando para MVA.
 - Baker DJ et al. **Increased expression of BubR1 protects against aneuploidy and cancer and extends healthy lifespan.** Nat Cell Biol 15:96–102, 2013 (ncb2643).
 - North BJ et al. **SIRT2 induces the checkpoint kinase BubR1 to increase lifespan.** EMBO J 33:1438–1453, 2014 (PMC4194088).
 - Baker DJ et al. **Opposing roles for p16Ink4a and p19Arf in senescence and ageing caused by BubR1 insufficiency.** Nat Cell Biol 10:825, 2008.
