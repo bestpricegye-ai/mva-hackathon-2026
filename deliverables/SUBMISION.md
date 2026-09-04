@@ -26,7 +26,7 @@ Contenido del CSV (4 filas, verificado):
 | Reporte | `deliverables/track2/byronzunigao_track2_report_FINAL.md` (**entrega ÚNICA y canónica** de Track 2: plantilla 1-11 + refuerzos v2 + evidencia 2025-2026) |
 | Pitch video (ES) | `deliverables/track2/pitch_byronzunigao.mp4` (ES, **177.6s / 2:57**, 1280x720, es-MX) |
 | Pitch video (EN) | `deliverables/track2/pitch_byronzunigao_EN.mp4` (EN, **154.0s / 2:34**, 1280x720, en-US) - recorte a <= 3:00 cumplido (2026-09-03) |
-| URL del video (obligatoria) | ⏳ **PENDIENTE**: subir a YouTube/Vimeo (Unlisted) y pegar aquí |
+| URL del video (obligatoria) | ✅ **`https://youtu.be/cvajPje8gl8`** (YouTube Unlisted, video EN) |
 | GitHub repo URL | mismo repo de Track 1 |
 
 > **Estado de duraciones CORREGIDO (re-medido 2026-09-03 con ffprobe):**
@@ -60,7 +60,7 @@ submission).
 
 - [x] **Pitch resuelto (2026-09-03):** ES = 177.6s (2:57) y EN = 154.0s (2:34); ambos cumplen el límite 3:00. Decisión: **subir EN** (mayor margen + panel internacional).
 - [x] **Recorte ejecutado (2026-09-03):** ambos videos recortados al eliminar silencio de cola (ES 177.6s, EN 154.0s), re-ensamblados desde `pitch_build/` y `pitch_build_EN/` a tempo natural 1.285.
-- [ ] Subir el pitch elegido a YouTube/Vimeo (Unlisted) → pegar URL en Submit-Track 2.
+- [x] **Subido y URL registrada (2026-09-04):** `https://youtu.be/cvajPje8gl8` (YouTube Unlisted, video EN) — campo obligatorio de Submit-Track 2 resuelto.
 - [ ] Subir CSV + reportes en Submit-Track 1 (y Track 2) en las tabs de Synapse.
 - [x] **Decisión tomada:** versionar el pitch (**mp4 + `pitch_build/`** y **`pitch_build_EN/`**) junto con
       `src/hacer_video.py` y `video_script.md` (todos ya trackeados en el repo).

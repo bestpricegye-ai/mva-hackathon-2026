@@ -89,8 +89,7 @@ Video de 3 minutos explicando el razonamiento (variante BUB1B → mecanismo SAC 
 - **Grabado ES:** `track2/pitch_byronzunigao.mp4` (**2:57/177.6s**, 1280x720, es-MX) — versionado.
 - **Grabado EN:** `track2/pitch_byronzunigao_EN.mp4` (**2:34/154.0s**, 1280x720, en-US) — recorte a ≤3:00 cumplido. **Recomendado subir EN** (mayor margen + panel internacional).
 - **Scripts:** `track2/video_script.md` + `video_script_EN.md` · **Assets:** `track2/pitch_build/` + `pitch_build_EN/`.
-- **Pendiente (manual):** subir a **YouTube/Vimeo** (Unlisted) y **pegar la URL** en la tab de submit
-  (campo obligatorio).
+- **Video subido (2026-09-04):** **`https://youtu.be/cvajPje8gl8`** — YouTube **Unlisted** (video EN). Campo obligatorio de Submit-Track 2 resuelto.
 
 ### 3. GitHub repo
 Compartir el mismo repo (contiene el pipeline de mecanismo + fuentes).
@@ -109,7 +108,7 @@ Compartir el mismo repo (contiene el pipeline de mecanismo + fuentes).
       (`docs/verificacion_dirigida_vcf.md`) y registro de decisión sobre reads
       (`docs/decision_reads_no_analizados.md`).
 - [x] Veredicto médico del manejo clínico MVA1 (`consorcio/VERIFICACION_MANEJO_CLINICO.md`).
-- [x] Track 2: **pitch grabado y recortado a ≤3:00** — ES `track2/pitch_byronzunigao.mp4` (2:57/177.6s) + EN `track2/pitch_byronzunigao_EN.mp4` (2:34/154.0s) — **falta pegar la URL** (YouTube/Vimeo) en la tab Submit-Track2.
+- [x] Track 2: **pitch grabado, recortado y subido** — EN subido a `https://youtu.be/cvajPje8gl8` (YouTube Unlisted); ES `track2/pitch_byronzunigao.mp4` (2:57/177.6s) versionado como respaldo.
 - [x] Track 2: **pitch mp4 + `pitch_build/` versionados** en el repo (decisión de equipo).
 - [x] Documentación de metodología y paper científico (`docs/PAPER_CIENTIFICO_MVA.md`,
       `docs/METODOLOGIA_FLUJOGRAMA.md`) y ampliación de Fase 6 con estrategias de compensación/
